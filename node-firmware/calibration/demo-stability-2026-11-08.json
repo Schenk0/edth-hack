@@ -1,0 +1,171 @@
+{
+  "status": "Complete: userconfirmedliveOpera mapfollowsN3movementandsettles",
+  "goal": "Coherent node-computed USB layout; preserve rawranges andexistingwire2",
+  "baseline_image_sha256": "380483e218507964c66cc0831b6b920279afc9ba1819f0014fd64c9d7358e189",
+  "no_RF_calibration_changes": true,
+  "source_hashes_before_integration": {
+    "CMakeLists.txt": "31e3f613ff376e8a570b18988c8a1fe508911ba657d1b37a7ecf99544fd5c61f",
+    "src/protocol.hpp": "6ee03359d3063fbbd6bd46827020371e4f422b78b89698b77153d2e9e60d0495",
+    "src/mesh.cpp": "508f142572d2714fc3668157509235775856214176691e584c78c632a6dece4e",
+    "src/json_output.hpp": "c846f4cd3b9321724404f54597273533cd9ad7bc404feeb5475f61b8adc27b8a",
+    "src/config.hpp": "27828cdd3a7b2ca4b654678190bd0029055db881f1ea3fdd2cec6a8e7c54efb9",
+    "src/usb_output.cpp": "a6711d9fdef2225fe731072b19898ca0ef5846b660c5364e72feab6ad28d3715",
+    "src/protocol.cpp": "04ab833e9519e279680cc778081713207e389be9c2cadc6f9a58769cce2d8349",
+    "src/mesh.hpp": "d8b07f68a6e4eed22dd671760f1f5cc8f578299abfe01abbeeabd8b8ba1c1ded",
+    "src/main.cpp": "ad754b19588cdd39e660a8bdff50c4ae161098e0b0e304224d30e39e6d63bfec"
+  },
+  "candidate_sha256": "db43750f240007513b7315d74d621896edeb72ada219f6e7f55ce2f2ff218f2d",
+  "programmed_end_exclusive": "0x10010700",
+  "candidate_source_hashes": {
+    "src/radio.hpp": "6226e621f0d10372a499b64bb904436d336a0dc633c8a9079fe6a34c7a3f4d51",
+    "src/protocol.hpp": "6ee03359d3063fbbd6bd46827020371e4f422b78b89698b77153d2e9e60d0495",
+    "src/mesh.cpp": "508f142572d2714fc3668157509235775856214176691e584c78c632a6dece4e",
+    "src/settings.h": "148e1d431c92af6369c954c355b7910083c89432075d7017471061fccf033f6b",
+    "src/usb_output.hpp": "9701b836a8e5f55e221dc25ee7fce62e901b98e280666d6f1503341050e7aeeb",
+    "src/json_output.hpp": "c846f4cd3b9321724404f54597273533cd9ad7bc404feeb5475f61b8adc27b8a",
+    "src/setup.cpp": "87e81949f367aa0dddaa5031976351043945348bd40b4739bf1852f9b3b85dc3",
+    "src/config.hpp": "27828cdd3a7b2ca4b654678190bd0029055db881f1ea3fdd2cec6a8e7c54efb9",
+    "src/platform.c": "18969b24b3597e6db171044b88957e8b1ac14ecd180558326ed99099a2019fbb",
+    "src/usb_output.cpp": "a6711d9fdef2225fe731072b19898ca0ef5846b660c5364e72feab6ad28d3715",
+    "src/json_output.cpp": "4ca8d04ffc955d57d824384d8d17d11537dede48265d5093cebb881baf34cf0c",
+    "src/setup.hpp": "9581e98110e3e35df395b472344864af31387aac4d838268b07c47dbe0a053c7",
+    "src/radio.cpp": "b1f67bbf8392a6f2bdd11bb64a81b2f860603caff3a5ccb06461017e9b9bf9c1",
+    "src/protocol.cpp": "04ab833e9519e279680cc778081713207e389be9c2cadc6f9a58769cce2d8349",
+    "src/mesh.hpp": "d8b07f68a6e4eed22dd671760f1f5cc8f578299abfe01abbeeabd8b8ba1c1ded",
+    "src/main.cpp": "a4cf6783831a8892c8c89c9352fa316ff18a6b3f9dce508585008cc8be3e4a27",
+    "src/boot.c": "70e76b2c89e5f84fa3fcc5f4ad5e12ed1213e4aee28bcbc7b8fe261ad495a1e1"
+  },
+  "settings_backup_sha256": "a17dbf31f35de0d3c7601c18fbec4fac588da79c616a5a8753be12f39fba5ea6",
+  "first_live_check": "Allradiopeerspresent but currentrangesinconsistent; requestedbroadtriangle, nolayoutfabricated",
+  "protocol": "Wirev2unchanged; USB-onlylayout_version1",
+  "reference_targets": {
+    "status": "BothRP2350UF2crossbuildpass; notflashedorRFvalidated",
+    "library": "libdeca",
+    "sha": "226f3db3bc4ef2be9c143e8340a3851cd571cce9",
+    "images": {
+      "initiator": "351f8759616b1e159abeebe8852957fc691b649611e188ae7de34b689fc8fd72",
+      "responder": "f7320fb3e058cc52782b0d8ec95f4535b2c53cd0c321a9e1f919517917e532a3"
+    }
+  },
+  "after_identity": {
+    "v": 1,
+    "type": "identity",
+    "source": "N2",
+    "node_id": 2,
+    "setup_version": 1,
+    "geometry": "relative-triangle",
+    "wire_version": 2,
+    "board_id": "88E80DCAE67A7A54",
+    "boot": 44,
+    "network": 60785,
+    "line_length_mm": 0,
+    "channel": 5,
+    "tx_power": "fdfdfdfd",
+    "tx_ant_delay": 16354,
+    "rx_ant_delay": 16354,
+    "radio_ready": true,
+    "cs_gpio": 26,
+    "reset_gpio": 28,
+    "irq_gpio": 27,
+    "layout_version": 1,
+    "position_filter": "median3-3s",
+    "usb_delay_ms": 1
+  },
+  "live_validation": {
+    "layoutMessages": 20,
+    "positionedLayouts": 20,
+    "statusCounts": {
+      "relative": 20
+    },
+    "invalidLines": 0,
+    "maxInternalSideMismatchM": 0.0004764044929421729,
+    "layoutFreshAtCaptureEnd": true,
+    "roomReady": true,
+    "identity": {
+      "v": 1,
+      "type": "identity",
+      "source": "N2",
+      "node_id": 2,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "88E80DCAE67A7A54",
+      "boot": 44,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16354,
+      "rx_ant_delay": 16354,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "layout_version": 1,
+      "position_filter": "median3-3s",
+      "usb_delay_ms": 1
+    },
+    "latestLayout": {
+      "v": 1,
+      "type": "layout",
+      "receiver": "N2",
+      "source": "N2",
+      "boot": 44,
+      "seq": 6312,
+      "status": "relative",
+      "age_ms": 2780,
+      "hops": 0,
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "calibrated": false,
+      "positions": [
+        {
+          "id": "N1",
+          "x_m": 0,
+          "y_m": 0
+        },
+        {
+          "id": "N2",
+          "x_m": 2.345,
+          "y_m": 0
+        },
+        {
+          "id": "N3",
+          "x_m": 1.697,
+          "y_m": 1.646
+        }
+      ],
+      "ranges_mm": [
+        2345,
+        2364,
+        1769
+      ],
+      "usb_delay_ms": 2
+    }
+  },
+  "verification": [
+    "FullASan/UBSanhost suites",
+    "23monitor/accuracyunit checks",
+    "Mockbrowserlegacy/newlayout/stale/failurepaths",
+    "PicoSDK2.2/GCC14.2Releasebuild",
+    "N2flashverifyand11savedidentity/RF/pinkeysunchanged",
+    "20livepositionedlayouts,zeroinvalidlines,input/sideconsistencyunder2mm",
+    "Realcapturebrowserreplayrendered3nodesfromcoherentlayout",
+    "Optionalpinnedlibdecareferenceinitiator/respondercrossbuildandUF2boundchecks"
+  ],
+  "limitations": [
+    "No calibrationorRFparameterchanges; physicalrangebias remains.",
+    "Physicalstraight-linegeometrywaswithheldwhenrawrangeswereinconsistent; currentfunctionalcheckusesoperatorbroadtriangle.",
+    "No claimofimprovedphysicalaccuracyorcontrolledbefore/aftermovementperformance.",
+    "OnlyN2USBnodeupdated; N1/N3remainwire2compatible.",
+    "Automaticradio-initretryreviewed/builds; failurepathnotphysicallyforced.",
+    "ReferencefirmwareRFnotyettested;notinstalledonliveunits."
+  ],
+  "user_movement_confirmation_utc": "2026-11-08T10:40:04.610976+00:00",
+  "confirmed_demo_configuration": {
+    "N2": "MacUSBdata/power,coherentlayoutfirmware",
+    "N1": "externallypowered,fixedreference",
+    "N3": "stableexternalUSBpower,movementnode",
+    "geometry": "broadtriangle"
+  }
+}

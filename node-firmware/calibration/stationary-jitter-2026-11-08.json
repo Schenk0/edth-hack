@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-08",
+  "status": "Measurement tools implemented and tested; independent tape reference pending",
+  "raw_capture": "node-firmware/.deps/device-backups/room-deployment/stationary-jitter-60s.json",
+  "conditions": "User reported stationary assemblies and was away. Surroundings were not independently observed. No measured ground-truth distances supplied.",
+  "firmware_and_rf_settings_changed": false,
+  "analysis": {
+    "durationMs": 60000,
+    "settleMs": 5000,
+    "observer": "N2",
+    "reference": null,
+    "availability": {
+      "fraction": 1,
+      "readyMs": 55000,
+      "totalMs": 55000
+    },
+    "ranges": [
+      {
+        "edge": "N1-N2",
+        "count": 28,
+        "medianM": 1.2925,
+        "stdDevM": 0.010694593897121041,
+        "p95RadiusM": 0.01979999999999996,
+        "accuracy": null
+      },
+      {
+        "edge": "N1-N3",
+        "count": 28,
+        "medianM": 1.453,
+        "stdDevM": 0.015004584837227795,
+        "p95RadiusM": 0.02330000000000002,
+        "accuracy": null
+      },
+      {
+        "edge": "N2-N3",
+        "count": 56,
+        "medianM": 1.1535,
+        "stdDevM": 0.02397492602537237,
+        "p95RadiusM": 0.05174999999999991,
+        "accuracy": null
+      }
+    ],
+    "nodes": [
+      {
+        "id": "N1",
+        "count": 52,
+        "median": {
+          "xM": 0,
+          "yM": 0
+        },
+        "stdXM": 0,
+        "stdYM": 0,
+        "p95RadiusM": 0,
+        "firstLastShiftM": 0,
+        "constrained": true,
+        "accuracy": null
+      },
+      {
+        "id": "N2",
+        "count": 53,
+        "median": {
+          "xM": 1.293,
+          "yM": 0
+        },
+        "stdXM": 0.010427891871439708,
+        "stdYM": 0,
+        "p95RadiusM": 0.020999999999999908,
+        "firstLastShiftM": 0.01200000000000001,
+        "constrained": false,
+        "accuracy": null
+      },
+      {
+        "id": "N3",
+        "count": 52,
+        "median": {
+          "xM": 0.949,
+          "yM": 1.1
+        },
+        "stdXM": 0.028647879160457163,
+        "stdYM": 0.01863097212095885,
+        "p95RadiusM": 0.06670388396005006,
+        "firstLastShiftM": 0.016124515496597113,
+        "constrained": false,
+        "accuracy": null
+      }
+    ],
+    "warnings": [
+      "1 invalid serial line ignored.",
+      "N1 is the defined origin; its zero movement is not an independent accuracy measurement. N2 y=0 is also imposed by the coordinate convention.",
+      "First-to-last shift describes this window only; it does not prove long-term drift or its cause.",
+      "No measured distances supplied. Repeatability is available; absolute error is unknown."
+    ]
+  },
+  "interpretation": [
+    "These repeatability figures do not establish absolute range or coordinate accuracy.",
+    "The N1/N2 canonical frame fixes N1 and N2 y by convention. The USB-centred display additionally subtracts the USB node position from every marker.",
+    "The cause of variability between the earlier stationary capture and this recording remains unresolved; no calibration adjustment was made."
+  ],
+  "post_interruption": {
+    "all_three_live_ranges_and_reports": true,
+    "radio_boots": {
+      "N1": 37,
+      "N2": 16,
+      "N3": 19
+    },
+    "boots_unchanged": true,
+    "demo_server_port": 5192,
+    "hardware_bench_server_restored_port": 5191
+  },
+  "verification": {
+    "focused_analysis_tests_passed": 7,
+    "demo_build_passed": true,
+    "mocked_browser_suite_passed": true,
+    "synthetic_known_bias_preserved": true,
+    "invalid_tape_triangle_rejected": true
+  },
+  "next_reference_required": [
+    "N1-N2 antenna-to-antenna tape distance in metres",
+    "N1-N3 antenna-to-antenna tape distance in metres",
+    "N2-N3 antenna-to-antenna tape distance in metres"
+  ]
+}

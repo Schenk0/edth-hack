@@ -1,0 +1,3667 @@
+{
+  "date": "2026-11-08",
+  "status": "Offline verification complete; subsequent hardware comparison recorded separately",
+  "settings_changed": false,
+  "candidate": {
+    "spec": {
+      "max_samples_per_edge": 3,
+      "filter_window_ms": 3000,
+      "raw_ttl_ms": 6000,
+      "even_count": "rounded mean of two",
+      "fallback": "latest raw range if still fresh",
+      "report_age": "oldest sample actually used in solution",
+      "raw_telemetry_and_gossip": "unchanged",
+      "invalid_filtered_geometry": "Use latest raw triangle only when raw is valid and fresh; otherwise retain filtered failure"
+    },
+    "uf2": "build-filtered/mesh-node.uf2",
+    "sha256": "380483e218507964c66cc0831b6b920279afc9ba1819f0014fd64c9d7358e189",
+    "source_hashes": {
+      "mesh.cpp": "e7779121af3783c875c0c2d9feff122c3f732a7d172d4d07e0103629e857661c",
+      "mesh.hpp": "5c4f78c42e49dacb5ceb10358e15aa658792c3122b8a7eb52cc31f2dd119f001",
+      "config.hpp": "27828cdd3a7b2ca4b654678190bd0029055db881f1ea3fdd2cec6a8e7c54efb9"
+    },
+    "uf2_validation": {
+      "programmed_end_exclusive": "0x10010400",
+      "settings_start": "0x101fe000",
+      "ignored_erratum_block_matches_baseline": true
+    }
+  },
+  "preserved_baseline": {
+    "file": ".deps/device-backups/room-deployment/room-node.uf2",
+    "sha256": "51bf39df31294a6929eba6ce6e454f40ecf891a3bd1562c3b6c54ef938a8c405"
+  },
+  "replay": {
+    "actual_cpp": true,
+    "sanitizers": [
+      "ASan",
+      "UBSan"
+    ],
+    "stream_count": 12,
+    "reports": 690,
+    "positioned_filtered": 690,
+    "raw_reproduction_within_1mm": 690,
+    "cases": [
+      {
+        "label": "room-A",
+        "file": "node-firmware/.deps/device-backups/room-deployment/accuracy-107-172-119-complete-capture.json",
+        "actual_USB_observer": "N2",
+        "reference": {
+          "n1n2M": 1.07,
+          "n1n3M": 1.72,
+          "n2n3M": 1.19
+        },
+        "reference_limit": "Independent operator tape reference; measurement uncertainty unquantified",
+        "duration_ms": 60000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 61,
+          "type:measurement": 124,
+          "type:report": 180,
+          "type:diagnostics": 60,
+          "type:radio-quality": 180
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 145,
+          "maximum_clamp_ms": 1
+        },
+        "raw": {
+          "report_count": 45,
+          "located_count": 45,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 45
+          },
+          "component_median_xy_m": [
+            1.595,
+            0.0
+          ],
+          "sample_sd_x_m": 0.023471452679991733,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.04299999999999993,
+          "reported_input_age_ms": {
+            "count": 45,
+            "median": 1553,
+            "sample_sd": 452.65130067194104,
+            "min": 957,
+            "max": 3539
+          },
+          "reference_xy_m": [
+            1.07,
+            0
+          ],
+          "accuracy": {
+            "median_position_error_m": 0.5249999999999999,
+            "rmse_m": 0.5295088919618505,
+            "p95_position_error_m": 0.5679999999999998
+          },
+          "imposed_coordinates": "y=0"
+        },
+        "filtered": {
+          "report_count": 45,
+          "located_count": 45,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 45
+          },
+          "component_median_xy_m": [
+            1.595,
+            0.0
+          ],
+          "sample_sd_x_m": 0.019974175246244254,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.04080000000000002,
+          "reported_input_age_ms": {
+            "count": 45,
+            "median": 2698,
+            "sample_sd": 204.56974311461556,
+            "min": 2222,
+            "max": 3539
+          },
+          "reference_xy_m": [
+            1.07,
+            0
+          ],
+          "accuracy": {
+            "median_position_error_m": 0.5249999999999999,
+            "rmse_m": 0.5295462418167296,
+            "p95_position_error_m": 0.5658
+          },
+          "imposed_coordinates": "y=0"
+        },
+        "local_status_changes": {
+          "relative -> relative": 45
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 45,
+          "same_status": 45,
+          "located_reports_compared": 45,
+          "position_within_1mm": 45,
+          "input_age_difference_ms": {
+            "count": 45,
+            "median": 1,
+            "sample_sd": 2.267914095250158,
+            "min": -5,
+            "max": 6
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 24,
+            "median_m": 1.5965,
+            "sample_sd_m": 0.023721779572514305,
+            "median_bias_m": 0.5265,
+            "min_m": 1.565,
+            "max_m": 1.663
+          },
+          "N1-N3": {
+            "count": 22,
+            "median_m": 1.7725,
+            "sample_sd_m": 0.014367245696992471,
+            "median_bias_m": 0.05249999999999999,
+            "min_m": 1.74,
+            "max_m": 1.796
+          },
+          "N2-N3": {
+            "count": 47,
+            "median_m": 1.918,
+            "sample_sd_m": 0.03124090987125246,
+            "median_bias_m": 0.728,
+            "min_m": 1.854,
+            "max_m": 1.969
+          }
+        },
+        "receive_acceptance": {
+          "True": 124
+        }
+      },
+      {
+        "label": "room-B",
+        "file": "node-firmware/.deps/device-backups/room-deployment/accuracy-210-220-119-capture.json",
+        "actual_USB_observer": "N2",
+        "reference": {
+          "n1n2M": 2.1,
+          "n1n3M": 2.2,
+          "n2n3M": 1.19
+        },
+        "reference_limit": "Independent operator tape reference; measurement uncertainty unquantified",
+        "duration_ms": 60000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 61,
+          "type:report": 180,
+          "type:diagnostics": 60,
+          "type:radio-quality": 180,
+          "type:measurement": 120
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 161,
+          "maximum_clamp_ms": 2
+        },
+        "raw": {
+          "report_count": 45,
+          "located_count": 45,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 45
+          },
+          "component_median_xy_m": [
+            2.128,
+            0.0
+          ],
+          "sample_sd_x_m": 0.013706040841743978,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.027000000000000135,
+          "reported_input_age_ms": {
+            "count": 45,
+            "median": 1602,
+            "sample_sd": 722.5450270824762,
+            "min": 826,
+            "max": 4441
+          },
+          "reference_xy_m": [
+            2.1,
+            0
+          ],
+          "accuracy": {
+            "median_position_error_m": 0.028000000000000025,
+            "rmse_m": 0.030131194614367383,
+            "p95_position_error_m": 0.04699999999999971
+          },
+          "imposed_coordinates": "y=0"
+        },
+        "filtered": {
+          "report_count": 45,
+          "located_count": 45,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 45
+          },
+          "component_median_xy_m": [
+            2.128,
+            0.0
+          ],
+          "sample_sd_x_m": 0.012526134296104234,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.022799999999999796,
+          "reported_input_age_ms": {
+            "count": 45,
+            "median": 2694,
+            "sample_sd": 390.8074159527124,
+            "min": 2164,
+            "max": 4441
+          },
+          "reference_xy_m": [
+            2.1,
+            0
+          ],
+          "accuracy": {
+            "median_position_error_m": 0.028000000000000025,
+            "rmse_m": 0.02950367208783781,
+            "p95_position_error_m": 0.04639999999999977
+          },
+          "imposed_coordinates": "y=0"
+        },
+        "local_status_changes": {
+          "relative -> relative": 45
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 45,
+          "same_status": 45,
+          "located_reports_compared": 45,
+          "position_within_1mm": 45,
+          "input_age_difference_ms": {
+            "count": 45,
+            "median": -1,
+            "sample_sd": 2.360876399504509,
+            "min": -5,
+            "max": 5
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 20,
+            "median_m": 2.1275,
+            "sample_sd_m": 0.014587215022246774,
+            "median_bias_m": 0.027499999999999858,
+            "min_m": 2.101,
+            "max_m": 2.162
+          },
+          "N1-N3": {
+            "count": 21,
+            "median_m": 2.546,
+            "sample_sd_m": 0.1358699132749165,
+            "median_bias_m": 0.34599999999999964,
+            "min_m": 2.291,
+            "max_m": 2.722
+          },
+          "N2-N3": {
+            "count": 47,
+            "median_m": 1.809,
+            "sample_sd_m": 0.03905674374794212,
+            "median_bias_m": 0.619,
+            "min_m": 1.754,
+            "max_m": 1.917
+          }
+        },
+        "receive_acceptance": {
+          "True": 120
+        }
+      },
+      {
+        "label": "tx-power:A1-original",
+        "file": "node-firmware/.deps/experiments/tx-power/A1-original-N2.json",
+        "actual_USB_observer": "N2",
+        "reference": null,
+        "reference_limit": "No reconfirmed geometry; repeatability only",
+        "duration_ms": 75000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 76,
+          "type:measurement": 150,
+          "type:report": 224,
+          "type:diagnostics": 75,
+          "type:radio-quality": 213
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 147,
+          "maximum_clamp_ms": 2
+        },
+        "raw": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            2.176,
+            0.0
+          ],
+          "sample_sd_x_m": 0.19502815673872317,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.5020499999999998,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 1635.0,
+            "sample_sd": 549.0842430194144,
+            "min": 681,
+            "max": 3931
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": "y=0"
+        },
+        "filtered": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            2.176,
+            0.0
+          ],
+          "sample_sd_x_m": 0.14717935175125926,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.347,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 2703.0,
+            "sample_sd": 338.73695067325093,
+            "min": 1860,
+            "max": 3931
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": "y=0"
+        },
+        "local_status_changes": {
+          "relative -> relative": 60
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 60,
+          "same_status": 60,
+          "located_reports_compared": 60,
+          "position_within_1mm": 60,
+          "input_age_difference_ms": {
+            "count": 60,
+            "median": 0.0,
+            "sample_sd": 1.6536212616062236,
+            "min": -3,
+            "max": 4
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 31,
+            "median_m": 2.155,
+            "sample_sd_m": 0.18635106192230275,
+            "median_bias_m": null,
+            "min_m": 2.043,
+            "max_m": 2.698
+          },
+          "N1-N3": {
+            "count": 31,
+            "median_m": 2.552,
+            "sample_sd_m": 0.01180705092785254,
+            "median_bias_m": null,
+            "min_m": 2.53,
+            "max_m": 2.577
+          },
+          "N2-N3": {
+            "count": 59,
+            "median_m": 1.774,
+            "sample_sd_m": 0.04275167172658731,
+            "median_bias_m": null,
+            "min_m": 1.703,
+            "max_m": 1.915
+          }
+        },
+        "receive_acceptance": {
+          "True": 150
+        }
+      },
+      {
+        "label": "tx-power:A1-original",
+        "file": "node-firmware/.deps/experiments/tx-power/A1-original-N3.json",
+        "actual_USB_observer": "N3",
+        "reference": null,
+        "reference_limit": "No reconfirmed geometry; repeatability only",
+        "duration_ms": 75000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 76,
+          "type:measurement": 151,
+          "type:report": 225,
+          "type:diagnostics": 75,
+          "type:radio-quality": 150
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 67,
+          "maximum_clamp_ms": 2
+        },
+        "raw": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            1.875,
+            1.7269999999999999
+          ],
+          "sample_sd_x_m": 0.049347883027765584,
+          "sample_sd_y_m": 0.055612907496605385,
+          "p95_radius_about_component_median_m": 0.16347558252722855,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 1678.0,
+            "sample_sd": 525.0131222465525,
+            "min": 721,
+            "max": 3932
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": null
+        },
+        "filtered": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            1.875,
+            1.7325
+          ],
+          "sample_sd_x_m": 0.04664365150788152,
+          "sample_sd_y_m": 0.05452043363378376,
+          "p95_radius_about_component_median_m": 0.10611932400181116,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 2756.0,
+            "sample_sd": 314.6179869041435,
+            "min": 1994,
+            "max": 3932
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": null
+        },
+        "local_status_changes": {
+          "relative -> relative": 60
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 60,
+          "same_status": 60,
+          "located_reports_compared": 60,
+          "position_within_1mm": 60,
+          "input_age_difference_ms": {
+            "count": 60,
+            "median": 1.0,
+            "sample_sd": 1.5553806735163012,
+            "min": -3,
+            "max": 4
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 31,
+            "median_m": 2.155,
+            "sample_sd_m": 0.18635106192230275,
+            "median_bias_m": null,
+            "min_m": 2.043,
+            "max_m": 2.698
+          },
+          "N1-N3": {
+            "count": 31,
+            "median_m": 2.552,
+            "sample_sd_m": 0.01180705092785254,
+            "median_bias_m": null,
+            "min_m": 2.53,
+            "max_m": 2.577
+          },
+          "N2-N3": {
+            "count": 59,
+            "median_m": 1.774,
+            "sample_sd_m": 0.04275167172658731,
+            "median_bias_m": null,
+            "min_m": 1.703,
+            "max_m": 1.915
+          }
+        },
+        "receive_acceptance": {
+          "True": 151
+        }
+      },
+      {
+        "label": "tx-power:B-lower",
+        "file": "node-firmware/.deps/experiments/tx-power/B-lower-N2.json",
+        "actual_USB_observer": "N2",
+        "reference": null,
+        "reference_limit": "No reconfirmed geometry; repeatability only",
+        "duration_ms": 75000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 76,
+          "type:measurement": 157,
+          "type:report": 225,
+          "type:diagnostics": 75,
+          "type:radio-quality": 224
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 185,
+          "maximum_clamp_ms": 2
+        },
+        "raw": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            2.1635,
+            0.0
+          ],
+          "sample_sd_x_m": 0.18648392411894993,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.3924499999999996,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 1337.5,
+            "sample_sd": 357.2915535487624,
+            "min": 771,
+            "max": 2226
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": "y=0"
+        },
+        "filtered": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            2.1959999999999997,
+            0.0
+          ],
+          "sample_sd_x_m": 0.16287102796818234,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.40400000000000036,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 2561.5,
+            "sample_sd": 266.0360681336698,
+            "min": 1770,
+            "max": 2993
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": "y=0"
+        },
+        "local_status_changes": {
+          "relative -> relative": 60
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 60,
+          "same_status": 60,
+          "located_reports_compared": 60,
+          "position_within_1mm": 60,
+          "input_age_difference_ms": {
+            "count": 60,
+            "median": 0.0,
+            "sample_sd": 1.4899854016651106,
+            "min": -3,
+            "max": 3
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 32,
+            "median_m": 2.1635,
+            "sample_sd_m": 0.1942170774815744,
+            "median_bias_m": null,
+            "min_m": 2.057,
+            "max_m": 2.689
+          },
+          "N1-N3": {
+            "count": 33,
+            "median_m": 2.552,
+            "sample_sd_m": 0.00786401952123107,
+            "median_bias_m": null,
+            "min_m": 2.533,
+            "max_m": 2.563
+          },
+          "N2-N3": {
+            "count": 59,
+            "median_m": 1.769,
+            "sample_sd_m": 0.0341882231133665,
+            "median_bias_m": null,
+            "min_m": 1.712,
+            "max_m": 1.857
+          }
+        },
+        "receive_acceptance": {
+          "True": 157
+        }
+      },
+      {
+        "label": "tx-power:B-lower",
+        "file": "node-firmware/.deps/experiments/tx-power/B-lower-N3.json",
+        "actual_USB_observer": "N3",
+        "reference": null,
+        "reference_limit": "No reconfirmed geometry; repeatability only",
+        "duration_ms": 75000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 76,
+          "type:report": 225,
+          "type:diagnostics": 75,
+          "type:measurement": 157,
+          "type:radio-quality": 148
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 75,
+          "maximum_clamp_ms": 1
+        },
+        "raw": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            1.8665,
+            1.7435
+          ],
+          "sample_sd_x_m": 0.05077529983610463,
+          "sample_sd_y_m": 0.054967568763946706,
+          "p95_radius_about_component_median_m": 0.15187370312679108,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 1416.5,
+            "sample_sd": 394.29198363849844,
+            "min": 768,
+            "max": 2381
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": null
+        },
+        "filtered": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            1.8635000000000002,
+            1.7435
+          ],
+          "sample_sd_x_m": 0.03681302582044155,
+          "sample_sd_y_m": 0.040349500658494276,
+          "p95_radius_about_component_median_m": 0.11577093325790219,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 2560.0,
+            "sample_sd": 250.03735935544978,
+            "min": 1997,
+            "max": 2996
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": null
+        },
+        "local_status_changes": {
+          "relative -> relative": 60
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 60,
+          "same_status": 60,
+          "located_reports_compared": 60,
+          "position_within_1mm": 60,
+          "input_age_difference_ms": {
+            "count": 60,
+            "median": 0.0,
+            "sample_sd": 1.7056734839641217,
+            "min": -4,
+            "max": 4
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 32,
+            "median_m": 2.1635,
+            "sample_sd_m": 0.1942170774815744,
+            "median_bias_m": null,
+            "min_m": 2.057,
+            "max_m": 2.689
+          },
+          "N1-N3": {
+            "count": 33,
+            "median_m": 2.552,
+            "sample_sd_m": 0.00786401952123107,
+            "median_bias_m": null,
+            "min_m": 2.533,
+            "max_m": 2.563
+          },
+          "N2-N3": {
+            "count": 59,
+            "median_m": 1.769,
+            "sample_sd_m": 0.0341882231133665,
+            "median_bias_m": null,
+            "min_m": 1.712,
+            "max_m": 1.857
+          }
+        },
+        "receive_acceptance": {
+          "True": 157
+        }
+      },
+      {
+        "label": "tx-power:A2-original",
+        "file": "node-firmware/.deps/experiments/tx-power/A2-original-N2.json",
+        "actual_USB_observer": "N2",
+        "reference": null,
+        "reference_limit": "No reconfirmed geometry; repeatability only",
+        "duration_ms": 75000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 76,
+          "type:report": 225,
+          "type:measurement": 150,
+          "type:diagnostics": 75,
+          "type:radio-quality": 225
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 158,
+          "maximum_clamp_ms": 1
+        },
+        "raw": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            2.284,
+            0.0
+          ],
+          "sample_sd_x_m": 0.17464035360518665,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.23900000000000032,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 1563.5,
+            "sample_sd": 473.7789539174796,
+            "min": 841,
+            "max": 3716
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": "y=0"
+        },
+        "filtered": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            2.2960000000000003,
+            0.0
+          ],
+          "sample_sd_x_m": 0.14940377172497926,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.22699999999999987,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 2616.0,
+            "sample_sd": 294.5570547017611,
+            "min": 1908,
+            "max": 3716
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": "y=0"
+        },
+        "local_status_changes": {
+          "relative -> relative": 60
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 60,
+          "same_status": 60,
+          "located_reports_compared": 60,
+          "position_within_1mm": 60,
+          "input_age_difference_ms": {
+            "count": 60,
+            "median": 1.0,
+            "sample_sd": 1.650543481799475,
+            "min": -3,
+            "max": 4
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 29,
+            "median_m": 2.284,
+            "sample_sd_m": 0.17423894329226722,
+            "median_bias_m": null,
+            "min_m": 2.064,
+            "max_m": 2.523
+          },
+          "N1-N3": {
+            "count": 31,
+            "median_m": 2.548,
+            "sample_sd_m": 0.008799071309745053,
+            "median_bias_m": null,
+            "min_m": 2.523,
+            "max_m": 2.567
+          },
+          "N2-N3": {
+            "count": 61,
+            "median_m": 1.785,
+            "sample_sd_m": 0.03530014164277532,
+            "median_bias_m": null,
+            "min_m": 1.725,
+            "max_m": 1.861
+          }
+        },
+        "receive_acceptance": {
+          "True": 150
+        }
+      },
+      {
+        "label": "tx-power:A2-original",
+        "file": "node-firmware/.deps/experiments/tx-power/A2-original-N3.json",
+        "actual_USB_observer": "N3",
+        "reference": null,
+        "reference_limit": "No reconfirmed geometry; repeatability only",
+        "duration_ms": 75000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 76,
+          "type:measurement": 150,
+          "type:report": 224,
+          "type:diagnostics": 75,
+          "type:radio-quality": 150
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 75,
+          "maximum_clamp_ms": 1
+        },
+        "raw": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            1.869,
+            1.729
+          ],
+          "sample_sd_x_m": 0.04695425108459568,
+          "sample_sd_y_m": 0.05172465945253024,
+          "p95_radius_about_component_median_m": 0.11539365462014001,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 1561.5,
+            "sample_sd": 423.1305965005547,
+            "min": 1065,
+            "max": 3697
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": null
+        },
+        "filtered": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            1.8679999999999999,
+            1.7285
+          ],
+          "sample_sd_x_m": 0.043300474286621,
+          "sample_sd_y_m": 0.0460134345402741,
+          "p95_radius_about_component_median_m": 0.1064581567691427,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 2603.5,
+            "sample_sd": 294.3348932398792,
+            "min": 1882,
+            "max": 3697
+          },
+          "reference_xy_m": null,
+          "accuracy": null,
+          "imposed_coordinates": null
+        },
+        "local_status_changes": {
+          "relative -> relative": 60
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 60,
+          "same_status": 60,
+          "located_reports_compared": 60,
+          "position_within_1mm": 60,
+          "input_age_difference_ms": {
+            "count": 60,
+            "median": 0.0,
+            "sample_sd": 1.4709042531837,
+            "min": -3,
+            "max": 3
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 29,
+            "median_m": 2.284,
+            "sample_sd_m": 0.17423894329226722,
+            "median_bias_m": null,
+            "min_m": 2.064,
+            "max_m": 2.523
+          },
+          "N1-N3": {
+            "count": 31,
+            "median_m": 2.548,
+            "sample_sd_m": 0.008799071309745053,
+            "median_bias_m": null,
+            "min_m": 2.523,
+            "max_m": 2.567
+          },
+          "N2-N3": {
+            "count": 61,
+            "median_m": 1.785,
+            "sample_sd_m": 0.03530014164277532,
+            "median_bias_m": null,
+            "min_m": 1.725,
+            "max_m": 1.861
+          }
+        },
+        "receive_acceptance": {
+          "True": 150
+        }
+      },
+      {
+        "label": "n1-receiver",
+        "file": "node-firmware/.deps/experiments/n1-receiver/normal-new-layout-N1.json",
+        "actual_USB_observer": "N1",
+        "reference": {
+          "n1n2M": 1.17,
+          "n1n3M": 1.75,
+          "n2n3M": 1.12
+        },
+        "reference_limit": "Fresh operator tape reference; uncertainty unquantified",
+        "duration_ms": 75000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 76,
+          "type:measurement": 155,
+          "type:report": 224,
+          "type:diagnostics": 75,
+          "type:radio-quality": 75
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 55,
+          "maximum_clamp_ms": 1
+        },
+        "raw": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "reference": 60
+          },
+          "component_median_xy_m": [
+            0.0,
+            0.0
+          ],
+          "sample_sd_x_m": 0.0,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.0,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 1567.5,
+            "sample_sd": 452.8787468208614,
+            "min": 915,
+            "max": 3579
+          },
+          "reference_xy_m": [
+            0,
+            0
+          ],
+          "accuracy": null,
+          "imposed_coordinates": "x=0,y=0"
+        },
+        "filtered": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "reference": 60
+          },
+          "component_median_xy_m": [
+            0.0,
+            0.0
+          ],
+          "sample_sd_x_m": 0.0,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.0,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 2700.0,
+            "sample_sd": 237.08468533964583,
+            "min": 2101,
+            "max": 3579
+          },
+          "reference_xy_m": [
+            0,
+            0
+          ],
+          "accuracy": null,
+          "imposed_coordinates": "x=0,y=0"
+        },
+        "local_status_changes": {
+          "reference -> reference": 60
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 60,
+          "same_status": 60,
+          "located_reports_compared": 60,
+          "position_within_1mm": 60,
+          "input_age_difference_ms": {
+            "count": 60,
+            "median": 0.0,
+            "sample_sd": 1.6579716693891893,
+            "min": -3,
+            "max": 4
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 32,
+            "median_m": 1.262,
+            "sample_sd_m": 0.020317217194195863,
+            "median_bias_m": 0.09200000000000008,
+            "min_m": 1.232,
+            "max_m": 1.299
+          },
+          "N1-N3": {
+            "count": 32,
+            "median_m": 1.625,
+            "sample_sd_m": 0.019866870420944004,
+            "median_bias_m": -0.125,
+            "min_m": 1.592,
+            "max_m": 1.678
+          },
+          "N2-N3": {
+            "count": 60,
+            "median_m": 1.148,
+            "sample_sd_m": 0.012595353820084108,
+            "median_bias_m": 0.027999999999999803,
+            "min_m": 1.114,
+            "max_m": 1.181
+          }
+        },
+        "receive_acceptance": {
+          "True": 155
+        }
+      },
+      {
+        "label": "n1-receiver",
+        "file": "node-firmware/.deps/experiments/n1-receiver/normal-new-layout-N2.json",
+        "actual_USB_observer": "N2",
+        "reference": {
+          "n1n2M": 1.17,
+          "n1n3M": 1.75,
+          "n2n3M": 1.12
+        },
+        "reference_limit": "Fresh operator tape reference; uncertainty unquantified",
+        "duration_ms": 75000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 76,
+          "type:report": 224,
+          "type:diagnostics": 75,
+          "type:radio-quality": 225,
+          "type:measurement": 156
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 174,
+          "maximum_clamp_ms": 2
+        },
+        "raw": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            1.2635,
+            0.0
+          ],
+          "sample_sd_x_m": 0.0202513792513478,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.031500000000000083,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 1366.5,
+            "sample_sd": 419.43657527445805,
+            "min": 847,
+            "max": 2997
+          },
+          "reference_xy_m": [
+            1.17,
+            0
+          ],
+          "accuracy": {
+            "median_position_error_m": 0.09350000000000003,
+            "rmse_m": 0.09496429153459039,
+            "p95_position_error_m": 0.1220500000000001
+          },
+          "imposed_coordinates": "y=0"
+        },
+        "filtered": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            1.2605,
+            0.0
+          ],
+          "sample_sd_x_m": 0.01685574387842064,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.028649999999999967,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 2601.0,
+            "sample_sd": 293.9138503242564,
+            "min": 2021,
+            "max": 2997
+          },
+          "reference_xy_m": [
+            1.17,
+            0
+          ],
+          "accuracy": {
+            "median_position_error_m": 0.09050000000000002,
+            "rmse_m": 0.09306332969184664,
+            "p95_position_error_m": 0.1182000000000001
+          },
+          "imposed_coordinates": "y=0"
+        },
+        "local_status_changes": {
+          "relative -> relative": 60
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 60,
+          "same_status": 60,
+          "located_reports_compared": 60,
+          "position_within_1mm": 60,
+          "input_age_difference_ms": {
+            "count": 60,
+            "median": 0.0,
+            "sample_sd": 1.7833980135057546,
+            "min": -4,
+            "max": 4
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 32,
+            "median_m": 1.262,
+            "sample_sd_m": 0.020317217194195863,
+            "median_bias_m": 0.09200000000000008,
+            "min_m": 1.232,
+            "max_m": 1.299
+          },
+          "N1-N3": {
+            "count": 32,
+            "median_m": 1.6245,
+            "sample_sd_m": 0.019038903295874907,
+            "median_bias_m": -0.12549999999999994,
+            "min_m": 1.592,
+            "max_m": 1.678
+          },
+          "N2-N3": {
+            "count": 61,
+            "median_m": 1.148,
+            "sample_sd_m": 0.012786049433241279,
+            "median_bias_m": 0.027999999999999803,
+            "min_m": 1.114,
+            "max_m": 1.181
+          }
+        },
+        "receive_acceptance": {
+          "True": 156
+        }
+      },
+      {
+        "label": "n1-receiver-position2",
+        "file": "node-firmware/.deps/experiments/n1-receiver-position2/N3-moved-N1.json",
+        "actual_USB_observer": "N1",
+        "reference": {
+          "n1n2M": 1.17,
+          "n1n3M": 1.9,
+          "n2n3M": 1.86
+        },
+        "reference_limit": "Approximate B tape \u00b15cm for13/23; possible people crossing/time-environment confounds; jitter benchmark, nominal accuracy only",
+        "duration_ms": 75000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 76,
+          "type:measurement": 154,
+          "type:report": 224,
+          "type:diagnostics": 75,
+          "type:radio-quality": 75
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 42,
+          "maximum_clamp_ms": 1
+        },
+        "raw": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "reference": 60
+          },
+          "component_median_xy_m": [
+            0.0,
+            0.0
+          ],
+          "sample_sd_x_m": 0.0,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.0,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 1392.0,
+            "sample_sd": 400.946226863601,
+            "min": 691,
+            "max": 2317
+          },
+          "reference_xy_m": [
+            0,
+            0
+          ],
+          "accuracy": null,
+          "imposed_coordinates": "x=0,y=0"
+        },
+        "filtered": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "reference": 60
+          },
+          "component_median_xy_m": [
+            0.0,
+            0.0
+          ],
+          "sample_sd_x_m": 0.0,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.0,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 2766.0,
+            "sample_sd": 247.46724430851393,
+            "min": 1955,
+            "max": 2998
+          },
+          "reference_xy_m": [
+            0,
+            0
+          ],
+          "accuracy": null,
+          "imposed_coordinates": "x=0,y=0"
+        },
+        "local_status_changes": {
+          "reference -> reference": 60
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 60,
+          "same_status": 60,
+          "located_reports_compared": 60,
+          "position_within_1mm": 60,
+          "input_age_difference_ms": {
+            "count": 60,
+            "median": 0.0,
+            "sample_sd": 1.3211662370756758,
+            "min": -3,
+            "max": 3
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 32,
+            "median_m": 1.5705,
+            "sample_sd_m": 0.12546699459965943,
+            "median_bias_m": 0.4005000000000001,
+            "min_m": 1.257,
+            "max_m": 1.907
+          },
+          "N1-N3": {
+            "count": 31,
+            "median_m": 2.023,
+            "sample_sd_m": 0.038457573327454746,
+            "median_bias_m": 0.12300000000000022,
+            "min_m": 1.975,
+            "max_m": 2.109
+          },
+          "N2-N3": {
+            "count": 60,
+            "median_m": 2.302,
+            "sample_sd_m": 0.018238253707663056,
+            "median_bias_m": 0.44199999999999995,
+            "min_m": 2.255,
+            "max_m": 2.338
+          }
+        },
+        "receive_acceptance": {
+          "True": 154
+        }
+      },
+      {
+        "label": "n1-receiver-position2",
+        "file": "node-firmware/.deps/experiments/n1-receiver-position2/N3-moved-N2.json",
+        "actual_USB_observer": "N2",
+        "reference": {
+          "n1n2M": 1.17,
+          "n1n3M": 1.9,
+          "n2n3M": 1.86
+        },
+        "reference_limit": "Approximate B tape \u00b15cm for13/23; possible people crossing/time-environment confounds; jitter benchmark, nominal accuracy only",
+        "duration_ms": 75000,
+        "parse_counts": {
+          "blank_lines": 0,
+          "malformed_json": 0,
+          "non_record_json": 0,
+          "invalid_envelope": 0,
+          "unknown_record_types": 0,
+          "type:identity": 76,
+          "type:report": 225,
+          "type:measurement": 152,
+          "type:diagnostics": 75,
+          "type:radio-quality": 225
+        },
+        "actual_Cpp_meta": {
+          "type": "meta",
+          "host_sizeof_mesh": 512,
+          "host_sizeof_stored": 40,
+          "host_original_field_layout_bytes": 152,
+          "host_additional_fixed_bytes": 360
+        },
+        "emission_time_reconstruction": {
+          "FIFO_order_time_backsteps_clamped": 175,
+          "maximum_clamp_ms": 1
+        },
+        "raw": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            1.5705,
+            0.0
+          ],
+          "sample_sd_x_m": 0.12088083500367808,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.23179999999999978,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 1557.5,
+            "sample_sd": 325.83213374148824,
+            "min": 883,
+            "max": 2502
+          },
+          "reference_xy_m": [
+            1.17,
+            0
+          ],
+          "accuracy": {
+            "median_position_error_m": 0.4005000000000001,
+            "rmse_m": 0.42294207641236176,
+            "p95_position_error_m": 0.6060000000000001
+          },
+          "imposed_coordinates": "y=0"
+        },
+        "filtered": {
+          "report_count": 60,
+          "located_count": 60,
+          "local_report_availability_fraction": 1.0,
+          "status_counts": {
+            "relative": 60
+          },
+          "component_median_xy_m": [
+            1.5695000000000001,
+            0.0
+          ],
+          "sample_sd_x_m": 0.097937964626871,
+          "sample_sd_y_m": 0.0,
+          "p95_radius_about_component_median_m": 0.21795,
+          "reported_input_age_ms": {
+            "count": 60,
+            "median": 2724.0,
+            "sample_sd": 198.2423123522818,
+            "min": 1900,
+            "max": 2984
+          },
+          "reference_xy_m": [
+            1.17,
+            0
+          ],
+          "accuracy": {
+            "median_position_error_m": 0.3995000000000001,
+            "rmse_m": 0.412155654253746,
+            "p95_position_error_m": 0.6041000000000001
+          },
+          "imposed_coordinates": "y=0"
+        },
+        "local_status_changes": {
+          "relative -> relative": 60
+        },
+        "raw_replay_validation": {
+          "scheduled_own_reports": 60,
+          "same_status": 60,
+          "located_reports_compared": 60,
+          "position_within_1mm": 60,
+          "input_age_difference_ms": {
+            "count": 60,
+            "median": 0.0,
+            "sample_sd": 1.6239729479253096,
+            "min": -3,
+            "max": 3
+          },
+          "position_mismatch_examples": []
+        },
+        "raw_measurement_statistics_unchanged_by_design": {
+          "N1-N2": {
+            "count": 32,
+            "median_m": 1.5705,
+            "sample_sd_m": 0.12546699459965943,
+            "median_bias_m": 0.4005000000000001,
+            "min_m": 1.257,
+            "max_m": 1.907
+          },
+          "N1-N3": {
+            "count": 31,
+            "median_m": 2.023,
+            "sample_sd_m": 0.038457573327454746,
+            "median_bias_m": 0.12300000000000022,
+            "min_m": 1.975,
+            "max_m": 2.109
+          },
+          "N2-N3": {
+            "count": 59,
+            "median_m": 2.302,
+            "sample_sd_m": 0.018355060359335713,
+            "median_bias_m": 0.44199999999999995,
+            "min_m": 2.255,
+            "max_m": 2.338
+          }
+        },
+        "receive_acceptance": {
+          "True": 152
+        }
+      }
+    ],
+    "synthetic_checks": {
+      "distance_step_edge12_every_1000ms": {
+        "step_at_ms": 6000,
+        "full_step_delay_ms": 1000,
+        "first_step_report": {
+          "type": "solve",
+          "key": 45,
+          "now_ms": 1006000,
+          "raw": {
+            "status": "relative",
+            "x_m": 1.5,
+            "y_m": 0,
+            "age_ms": 0
+          },
+          "filtered": {
+            "status": "relative",
+            "x_m": 1,
+            "y_m": 0,
+            "age_ms": 2000
+          },
+          "raw_records": [
+            {
+              "value_mm": 1500,
+              "age_ms": 0,
+              "boot": 1,
+              "seq": 13
+            },
+            {
+              "value_mm": 1000,
+              "age_ms": 0,
+              "boot": 1,
+              "seq": 14
+            },
+            {
+              "value_mm": 1000,
+              "age_ms": 0,
+              "boot": 1,
+              "seq": 7
+            }
+          ],
+          "label": "6000"
+        },
+        "reports": [
+          {
+            "type": "solve",
+            "key": 45,
+            "now_ms": 1006000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 14
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 7
+              }
+            ],
+            "label": "6000"
+          },
+          {
+            "type": "solve",
+            "key": 46,
+            "now_ms": 1006250,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 250
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 2250
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 14
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 7
+              }
+            ],
+            "label": "6250"
+          },
+          {
+            "type": "solve",
+            "key": 47,
+            "now_ms": 1006500,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 500
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 2500
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 14
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 7
+              }
+            ],
+            "label": "6500"
+          },
+          {
+            "type": "solve",
+            "key": 48,
+            "now_ms": 1006750,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 750
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 2750
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 14
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 7
+              }
+            ],
+            "label": "6750"
+          },
+          {
+            "type": "solve",
+            "key": 52,
+            "now_ms": 1007000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 15
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 16
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 8
+              }
+            ],
+            "label": "7000"
+          },
+          {
+            "type": "solve",
+            "key": 53,
+            "now_ms": 1007250,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 250
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2250
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 15
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 16
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 8
+              }
+            ],
+            "label": "7250"
+          },
+          {
+            "type": "solve",
+            "key": 54,
+            "now_ms": 1007500,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 500
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2500
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 15
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 16
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 8
+              }
+            ],
+            "label": "7500"
+          },
+          {
+            "type": "solve",
+            "key": 55,
+            "now_ms": 1007750,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 750
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2750
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 15
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 16
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 8
+              }
+            ],
+            "label": "7750"
+          },
+          {
+            "type": "solve",
+            "key": 59,
+            "now_ms": 1008000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 17
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 18
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 9
+              }
+            ],
+            "label": "8000"
+          },
+          {
+            "type": "solve",
+            "key": 60,
+            "now_ms": 1008250,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 250
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2250
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 17
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 18
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 9
+              }
+            ],
+            "label": "8250"
+          },
+          {
+            "type": "solve",
+            "key": 61,
+            "now_ms": 1008500,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 500
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2500
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 17
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 18
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 9
+              }
+            ],
+            "label": "8500"
+          },
+          {
+            "type": "solve",
+            "key": 62,
+            "now_ms": 1008750,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 750
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2750
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 17
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 18
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 9
+              }
+            ],
+            "label": "8750"
+          },
+          {
+            "type": "solve",
+            "key": 66,
+            "now_ms": 1009000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 19
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 20
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 10
+              }
+            ],
+            "label": "9000"
+          },
+          {
+            "type": "solve",
+            "key": 67,
+            "now_ms": 1009250,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 250
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2250
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 19
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 20
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 10
+              }
+            ],
+            "label": "9250"
+          },
+          {
+            "type": "solve",
+            "key": 68,
+            "now_ms": 1009500,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 500
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2500
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 19
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 20
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 10
+              }
+            ],
+            "label": "9500"
+          },
+          {
+            "type": "solve",
+            "key": 69,
+            "now_ms": 1009750,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 750
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2750
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 19
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 20
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 10
+              }
+            ],
+            "label": "9750"
+          },
+          {
+            "type": "solve",
+            "key": 73,
+            "now_ms": 1010000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 21
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 22
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 11
+              }
+            ],
+            "label": "10000"
+          }
+        ]
+      },
+      "distance_step_edge12_every_2000ms": {
+        "step_at_ms": 6000,
+        "full_step_delay_ms": 1000,
+        "first_step_report": {
+          "type": "solve",
+          "key": 42,
+          "now_ms": 1006000,
+          "raw": {
+            "status": "relative",
+            "x_m": 1.5,
+            "y_m": 0,
+            "age_ms": 0
+          },
+          "filtered": {
+            "status": "relative",
+            "x_m": 1.25,
+            "y_m": 0,
+            "age_ms": 2000
+          },
+          "raw_records": [
+            {
+              "value_mm": 1500,
+              "age_ms": 0,
+              "boot": 1,
+              "seq": 10
+            },
+            {
+              "value_mm": 1000,
+              "age_ms": 0,
+              "boot": 1,
+              "seq": 11
+            },
+            {
+              "value_mm": 1000,
+              "age_ms": 0,
+              "boot": 1,
+              "seq": 7
+            }
+          ],
+          "label": "6000"
+        },
+        "reports": [
+          {
+            "type": "solve",
+            "key": 42,
+            "now_ms": 1006000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.25,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 10
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 11
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 7
+              }
+            ],
+            "label": "6000"
+          },
+          {
+            "type": "solve",
+            "key": 43,
+            "now_ms": 1006250,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 250
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.25,
+              "y_m": 0,
+              "age_ms": 2250
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 10
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 11
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 7
+              }
+            ],
+            "label": "6250"
+          },
+          {
+            "type": "solve",
+            "key": 44,
+            "now_ms": 1006500,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 500
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.25,
+              "y_m": 0,
+              "age_ms": 2500
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 10
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 11
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 7
+              }
+            ],
+            "label": "6500"
+          },
+          {
+            "type": "solve",
+            "key": 45,
+            "now_ms": 1006750,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 750
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.25,
+              "y_m": 0,
+              "age_ms": 2750
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 10
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 11
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 7
+              }
+            ],
+            "label": "6750"
+          },
+          {
+            "type": "solve",
+            "key": 48,
+            "now_ms": 1007000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 1000
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 1000,
+                "boot": 1,
+                "seq": 10
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 12
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 8
+              }
+            ],
+            "label": "7000"
+          },
+          {
+            "type": "solve",
+            "key": 49,
+            "now_ms": 1007250,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 1250
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2250
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 1250,
+                "boot": 1,
+                "seq": 10
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 12
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 8
+              }
+            ],
+            "label": "7250"
+          },
+          {
+            "type": "solve",
+            "key": 50,
+            "now_ms": 1007500,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 1500
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2500
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 1500,
+                "boot": 1,
+                "seq": 10
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 12
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 8
+              }
+            ],
+            "label": "7500"
+          },
+          {
+            "type": "solve",
+            "key": 51,
+            "now_ms": 1007750,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 1750
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2750
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 1750,
+                "boot": 1,
+                "seq": 10
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 12
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 8
+              }
+            ],
+            "label": "7750"
+          },
+          {
+            "type": "solve",
+            "key": 55,
+            "now_ms": 1008000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 14
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 9
+              }
+            ],
+            "label": "8000"
+          },
+          {
+            "type": "solve",
+            "key": 56,
+            "now_ms": 1008250,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 250
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2250
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 14
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 9
+              }
+            ],
+            "label": "8250"
+          },
+          {
+            "type": "solve",
+            "key": 57,
+            "now_ms": 1008500,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 500
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2500
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 14
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 9
+              }
+            ],
+            "label": "8500"
+          },
+          {
+            "type": "solve",
+            "key": 58,
+            "now_ms": 1008750,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 750
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2750
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 14
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 9
+              }
+            ],
+            "label": "8750"
+          },
+          {
+            "type": "solve",
+            "key": 61,
+            "now_ms": 1009000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 1000
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 1000,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 15
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 10
+              }
+            ],
+            "label": "9000"
+          },
+          {
+            "type": "solve",
+            "key": 62,
+            "now_ms": 1009250,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 1250
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2250
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 1250,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 15
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 250,
+                "boot": 1,
+                "seq": 10
+              }
+            ],
+            "label": "9250"
+          },
+          {
+            "type": "solve",
+            "key": 63,
+            "now_ms": 1009500,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 1500
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2500
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 1500,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 15
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 500,
+                "boot": 1,
+                "seq": 10
+              }
+            ],
+            "label": "9500"
+          },
+          {
+            "type": "solve",
+            "key": 64,
+            "now_ms": 1009750,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 1750
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2750
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 1750,
+                "boot": 1,
+                "seq": 13
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 15
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 750,
+                "boot": 1,
+                "seq": 10
+              }
+            ],
+            "label": "9750"
+          },
+          {
+            "type": "solve",
+            "key": 68,
+            "now_ms": 1010000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 16
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 17
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 11
+              }
+            ],
+            "label": "10000"
+          }
+        ]
+      },
+      "step_then_measurement_pause": {
+        "full_step_delay_ms": 2900,
+        "reports": [
+          {
+            "type": "solve",
+            "key": 10,
+            "now_ms": 1002100,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 100
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 2100
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 7
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 100,
+                "boot": 1,
+                "seq": 6
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 100,
+                "boot": 1,
+                "seq": 3
+              }
+            ],
+            "label": "2100"
+          },
+          {
+            "type": "solve",
+            "key": 11,
+            "now_ms": 1003999,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 1999
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 2999
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 1899,
+                "boot": 1,
+                "seq": 7
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 1999,
+                "boot": 1,
+                "seq": 6
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 1999,
+                "boot": 1,
+                "seq": 3
+              }
+            ],
+            "label": "3999"
+          },
+          {
+            "type": "solve",
+            "key": 12,
+            "now_ms": 1004000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.25,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 1900,
+                "boot": 1,
+                "seq": 7
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 2000,
+                "boot": 1,
+                "seq": 6
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 2000,
+                "boot": 1,
+                "seq": 3
+              }
+            ],
+            "label": "4000"
+          },
+          {
+            "type": "solve",
+            "key": 13,
+            "now_ms": 1004999,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2999
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.25,
+              "y_m": 0,
+              "age_ms": 2999
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 2899,
+                "boot": 1,
+                "seq": 7
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 2999,
+                "boot": 1,
+                "seq": 6
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 2999,
+                "boot": 1,
+                "seq": 3
+              }
+            ],
+            "label": "4999"
+          },
+          {
+            "type": "solve",
+            "key": 14,
+            "now_ms": 1005000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 3000
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 3000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 2900,
+                "boot": 1,
+                "seq": 7
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 3000,
+                "boot": 1,
+                "seq": 6
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 3000,
+                "boot": 1,
+                "seq": 3
+              }
+            ],
+            "label": "5000"
+          },
+          {
+            "type": "solve",
+            "key": 15,
+            "now_ms": 1005100,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 3100
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 3100
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 3000,
+                "boot": 1,
+                "seq": 7
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 3100,
+                "boot": 1,
+                "seq": 6
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 3100,
+                "boot": 1,
+                "seq": 3
+              }
+            ],
+            "label": "5100"
+          },
+          {
+            "type": "solve",
+            "key": 16,
+            "now_ms": 1007999,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 5999
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 5999
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 5899,
+                "boot": 1,
+                "seq": 7
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 5999,
+                "boot": 1,
+                "seq": 6
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 5999,
+                "boot": 1,
+                "seq": 3
+              }
+            ],
+            "label": "7999"
+          },
+          {
+            "type": "solve",
+            "key": 17,
+            "now_ms": 1008000,
+            "raw": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 5900,
+                "boot": 1,
+                "seq": 7
+              },
+              null,
+              null
+            ],
+            "label": "8000"
+          }
+        ]
+      },
+      "asymmetric_history_geometry_availability": {
+        "located_report_loss_observed": 0,
+        "raw_geometry_fallback_preserves_position_and_age": true,
+        "original_pre_fallback_candidate_lost_one_report_in_this_case": true,
+        "reports": [
+          {
+            "type": "solve",
+            "key": 10,
+            "now_ms": 1003000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "raw_records": [
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 7
+              },
+              {
+                "value_mm": 3000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 8
+              },
+              {
+                "value_mm": 2500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 2
+              }
+            ],
+            "label": "raw-valid_filtered-geometry-falls-back-to-raw"
+          },
+          {
+            "type": "solve",
+            "key": 14,
+            "now_ms": 1004000,
+            "raw": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 2000
+            },
+            "raw_records": [
+              {
+                "value_mm": 1000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 9
+              },
+              {
+                "value_mm": 3000,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 10
+              },
+              {
+                "value_mm": 2500,
+                "age_ms": 0,
+                "boot": 1,
+                "seq": 3
+              }
+            ],
+            "label": "recovers"
+          }
+        ]
+      },
+      "expiry_and_sequence_highwater": {
+        "expired_duplicate_rejected": true,
+        "reports": [
+          {
+            "type": "solve",
+            "key": 3,
+            "now_ms": 1005999,
+            "raw": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 5999
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1,
+              "y_m": 0,
+              "age_ms": 5999
+            },
+            "raw_records": [
+              {
+                "value_mm": 1000,
+                "age_ms": 5999,
+                "boot": 1,
+                "seq": 1
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 5999,
+                "boot": 1,
+                "seq": 2
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 5999,
+                "boot": 1,
+                "seq": 1
+              }
+            ],
+            "label": "last-valid-raw-and-fallback"
+          },
+          {
+            "type": "solve",
+            "key": 4,
+            "now_ms": 1006000,
+            "raw": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "raw_records": [
+              null,
+              null,
+              null
+            ],
+            "label": "exact-expiry"
+          },
+          {
+            "type": "solve",
+            "key": 6,
+            "now_ms": 1006001,
+            "raw": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "raw_records": [
+              null,
+              null,
+              null
+            ],
+            "label": "duplicate-does-not-revive"
+          },
+          {
+            "type": "solve",
+            "key": 7,
+            "now_ms": 4295967306,
+            "raw": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "raw_records": [
+              null,
+              null,
+              null
+            ],
+            "label": "no-millis-wrap-revival"
+          }
+        ]
+      },
+      "origin_boot_clears_both_edges": {
+        "old_boot_rejected": true,
+        "reports": [
+          {
+            "type": "solve",
+            "key": 7,
+            "now_ms": 1002000,
+            "raw": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 2,
+                "seq": 1
+              },
+              null,
+              {
+                "value_mm": 1000,
+                "age_ms": 1000,
+                "boot": 1,
+                "seq": 2
+              }
+            ],
+            "label": "new-boot-clears-other-origin-edge"
+          },
+          {
+            "type": "solve",
+            "key": 9,
+            "now_ms": 1002050,
+            "raw": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "filtered": {
+              "status": "missing-measurements",
+              "x_m": 0,
+              "y_m": 0,
+              "age_ms": 0
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 50,
+                "boot": 2,
+                "seq": 1
+              },
+              null,
+              {
+                "value_mm": 1000,
+                "age_ms": 1050,
+                "boot": 1,
+                "seq": 2
+              }
+            ],
+            "label": "old-boot-cannot-fill-cleared-edge"
+          },
+          {
+            "type": "solve",
+            "key": 11,
+            "now_ms": 1002100,
+            "raw": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 1100
+            },
+            "filtered": {
+              "status": "relative",
+              "x_m": 1.5,
+              "y_m": 0,
+              "age_ms": 2100
+            },
+            "raw_records": [
+              {
+                "value_mm": 1500,
+                "age_ms": 100,
+                "boot": 2,
+                "seq": 1
+              },
+              {
+                "value_mm": 1500,
+                "age_ms": 0,
+                "boot": 2,
+                "seq": 2
+              },
+              {
+                "value_mm": 1000,
+                "age_ms": 1100,
+                "boot": 1,
+                "seq": 2
+              }
+            ],
+            "label": "new-boot-restores-without-old-history"
+          }
+        ]
+      }
+    },
+    "limitations": [
+      "Replays use actual accepted measurement USB emission streams and the actual observer's own report emission times; they do not reconstruct unseen radio arrivals or changed radio scheduling.",
+      "USB queue delay is removed from host time; rounding backsteps are clamped to preserve serial FIFO order. Capture startup cache is unknown; the first15s are excluded. Millisecond timing remains approximate.",
+      "Actual C++ Mesh(raw=false/filter=true) is compiled with ASan/UBSan. Public record() stays raw; C++ driver verifies identical receive acceptance and raw record contents.",
+      "Only actual USB observer solvers are scored. N3 scores use N3 USB captures; a replay at N1/N2 is not hardware N3 performance.",
+      "Local availability is the fraction of scheduled own reports with a located solution, not whole-network monitor/gossip availability.",
+      "Inconsistent or poor filtered geometry falls back only to a positioned latest-raw solution with its raw age/TTL. This avoids the demonstrated synthetic report loss; it is not an accuracy estimate.",
+      "Reported input age includes the oldest selected sample. Lower scatter does not establish accuracy; no thresholds are tuned to these captures. Host sizeof comparison is ABI-specific, not a measured target link-map footprint.",
+      "Known sleep-affected timestamp baseline is excluded. The approximate/movement-confounded latest placement is labeled and supports nominal error/jitter comparisons only."
+    ]
+  },
+  "verification": [
+    "six host suites with address/undefined sanitizers",
+    "Release ARM GCC14.2 / Pico SDK2.2.0 build",
+    "UF2 settings region exclusion and exact baseline erratum block match",
+    "demo TypeScript and Vite build",
+    "mock USB browser Locate freshness, expiry, replay and stationary measurement tests"
+  ],
+  "next_test": "Compare baseline and candidate while physical geometry, RF settings and surroundings are fixed; raw telemetry stays unchanged. No calibration fitted.",
+  "offline_stage_used_hardware": false,
+  "subsequent_hardware_test": "filter-hardware-2026-11-08.json"
+}

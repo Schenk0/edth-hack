@@ -1,0 +1,580 @@
+{
+  "date": "2026-11-08",
+  "status": "Two measured placements show nonconstant range error; calibration unchanged; N1 rejoined at boot39; full normal-firmware triangle verified after bounded CRC/SPI controls",
+  "reference": {
+    "n1n2M": 1.07,
+    "n1n3M": 1.72,
+    "n2n3M": 1.19
+  },
+  "reference_points": {
+    "N1": {
+      "xM": 0,
+      "yM": 0
+    },
+    "N2": {
+      "xM": 1.07,
+      "yM": 0
+    },
+    "N3": {
+      "xM": 1.255700934579439,
+      "yM": 1.175421270394714
+    }
+  },
+  "reference_source": "Noah supplied tape measurements in centimetres after the physical ID check",
+  "physical_node_ids": "N1 power-bank unit; N2 remained connected during ID check; N3 unplugged then reconnected",
+  "conditions": "Noah confirmed area clear and assemblies fixed at the measured antenna-to-antenna distances",
+  "firmware_and_calibration_unchanged": true,
+  "first_capture": {
+    "raw_capture": "node-firmware/.deps/device-backups/room-deployment/accuracy-107-172-119-capture.json",
+    "readiness": {
+      "passed": false,
+      "issues": [
+        "N1-N2 range is missing or stale",
+        "N1-N3 range is missing or stale",
+        "N1 report is missing or stale",
+        "N2 reports missing-measurements",
+        "N3 reports missing-measurements"
+      ],
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "ranges": {
+        "N2-N3": {
+          "distance_m": 1.878,
+          "age_ms": 100
+        }
+      },
+      "node_reports": {},
+      "accuracy_validated": false
+    },
+    "analysis": {
+      "durationMs": 60000,
+      "settleMs": 5000,
+      "observer": "N2",
+      "reference": {
+        "n1n2M": 1.07,
+        "n1n3M": 1.72,
+        "n2n3M": 1.19
+      },
+      "availability": {
+        "fraction": 0,
+        "readyMs": 0,
+        "totalMs": 55000
+      },
+      "ranges": [
+        {
+          "edge": "N1-N2",
+          "count": 0,
+          "medianM": null,
+          "stdDevM": null,
+          "p95RadiusM": null,
+          "accuracy": null
+        },
+        {
+          "edge": "N1-N3",
+          "count": 0,
+          "medianM": null,
+          "stdDevM": null,
+          "p95RadiusM": null,
+          "accuracy": null
+        },
+        {
+          "edge": "N2-N3",
+          "count": 57,
+          "medianM": 1.909,
+          "stdDevM": 0.03544386468572028,
+          "p95RadiusM": 0.06379999999999993,
+          "accuracy": {
+            "biasM": 0.7190000000000001,
+            "rmseM": 0.7162130306432283,
+            "p95ErrorM": 0.7610000000000001
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "id": "N1",
+          "count": 0,
+          "median": null,
+          "stdXM": null,
+          "stdYM": null,
+          "p95RadiusM": null,
+          "firstLastShiftM": null,
+          "constrained": true,
+          "accuracy": null
+        },
+        {
+          "id": "N2",
+          "count": 0,
+          "median": null,
+          "stdXM": null,
+          "stdYM": null,
+          "p95RadiusM": null,
+          "firstLastShiftM": null,
+          "constrained": false,
+          "accuracy": null
+        },
+        {
+          "id": "N3",
+          "count": 0,
+          "median": null,
+          "stdXM": null,
+          "stdYM": null,
+          "p95RadiusM": null,
+          "firstLastShiftM": null,
+          "constrained": false,
+          "accuracy": null
+        }
+      ],
+      "warnings": [
+        "N1 is the defined origin; its zero movement is not an independent accuracy measurement. N2 y=0 is also imposed by the coordinate convention.",
+        "First-to-last shift describes this window only; it does not prove long-term drift or its cause.",
+        "N1-N2 has fewer than 20 unique fresh ranges; treat its statistics as preliminary.",
+        "N1-N3 has fewer than 20 unique fresh ranges; treat its statistics as preliminary.",
+        "N1 has fewer than 20 unique fresh positions; treat its statistics as preliminary.",
+        "N2 has fewer than 20 unique fresh positions; treat its statistics as preliminary.",
+        "N3 has fewer than 20 unique fresh positions; treat its statistics as preliminary."
+      ]
+    }
+  },
+  "accuracy_scope": "Two tape-measured stationary triangles in the N1-origin/N2-axis frame; no fitted correction, smoothing or room-wall alignment",
+  "n1_recovery": {
+    "wake_button_restored_communication": false,
+    "power_cycle_restored_communication": true,
+    "boot_after_restart": 38,
+    "cause": "Not established: power state and firmware/radio state were not independently observed"
+  },
+  "complete_capture": {
+    "raw_capture": "node-firmware/.deps/device-backups/room-deployment/accuracy-107-172-119-complete-capture.json",
+    "exported_measurement": "node-firmware/.deps/device-backups/room-deployment/mesh-accuracy-107-172-119.json",
+    "analysis": {
+      "durationMs": 60000,
+      "settleMs": 5000,
+      "observer": "N2",
+      "reference": {
+        "n1n2M": 1.07,
+        "n1n3M": 1.72,
+        "n2n3M": 1.19
+      },
+      "availability": {
+        "fraction": 1,
+        "readyMs": 55000,
+        "totalMs": 55000
+      },
+      "ranges": [
+        {
+          "edge": "N1-N2",
+          "count": 30,
+          "medianM": 1.5995,
+          "stdDevM": 0.02475138449628139,
+          "p95RadiusM": 0.04424999999999992,
+          "accuracy": {
+            "biasM": 0.5295,
+            "rmseM": 0.5312576587683231,
+            "p95ErrorM": 0.5723999999999998
+          }
+        },
+        {
+          "edge": "N1-N3",
+          "count": 28,
+          "medianM": 1.772,
+          "stdDevM": 0.01564567151122115,
+          "p95RadiusM": 0.02994999999999995,
+          "accuracy": {
+            "biasM": 0.052000000000000046,
+            "rmseM": 0.05350333767959849,
+            "p95ErrorM": 0.07794999999999999
+          }
+        },
+        {
+          "edge": "N2-N3",
+          "count": 57,
+          "medianM": 1.917,
+          "stdDevM": 0.03224723376063492,
+          "p95RadiusM": 0.050400000000000035,
+          "accuracy": {
+            "biasM": 0.7270000000000001,
+            "rmseM": 0.7234257560810256,
+            "p95ErrorM": 0.7674000000000001
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "id": "N1",
+          "count": 54,
+          "median": {
+            "xM": 0,
+            "yM": 0
+          },
+          "stdXM": 0,
+          "stdYM": 0,
+          "p95RadiusM": 0,
+          "firstLastShiftM": 0,
+          "constrained": true,
+          "accuracy": null
+        },
+        {
+          "id": "N2",
+          "count": 54,
+          "median": {
+            "xM": 1.5965,
+            "yM": 0
+          },
+          "stdXM": 0.024836382827410384,
+          "stdYM": 0,
+          "p95RadiusM": 0.04949999999999988,
+          "firstLastShiftM": 0.014999999999999902,
+          "constrained": false,
+          "accuracy": {
+            "meanErrorM": 0.5296111111111108,
+            "rmseM": 0.5301823760290904,
+            "p95ErrorM": 0.5759999999999998
+          }
+        },
+        {
+          "id": "N3",
+          "count": 54,
+          "median": {
+            "xM": 0.631,
+            "yM": 1.652
+          },
+          "stdXM": 0.04300311610115603,
+          "stdYM": 0.01938844887260286,
+          "p95RadiusM": 0.08292925887265934,
+          "firstLastShiftM": 0.02915475947422657,
+          "constrained": false,
+          "accuracy": {
+            "meanErrorM": 0.7788304727408278,
+            "rmseM": 0.7799348804625635,
+            "p95ErrorM": 0.8412191035627746
+          }
+        }
+      ],
+      "warnings": [
+        "N1 is the defined origin; its zero movement is not an independent accuracy measurement. N2 y=0 is also imposed by the coordinate convention.",
+        "First-to-last shift describes this window only; it does not prove long-term drift or its cause."
+      ]
+    },
+    "readiness": {
+      "passed": true,
+      "issues": [],
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "ranges": {
+        "N1-N2": {
+          "distance_m": 1.61,
+          "age_ms": 177
+        },
+        "N1-N3": {
+          "distance_m": 1.773,
+          "age_ms": 1272
+        },
+        "N2-N3": {
+          "distance_m": 1.957,
+          "age_ms": 748
+        }
+      },
+      "node_reports": {
+        "N1": {
+          "status": "reference",
+          "x_m": 0,
+          "y_m": 0,
+          "boot": 38,
+          "seq": 2553,
+          "age_ms": 2310
+        },
+        "N2": {
+          "status": "relative",
+          "x_m": 1.61,
+          "y_m": 0,
+          "boot": 16,
+          "seq": 90716,
+          "age_ms": 1274
+        },
+        "N3": {
+          "status": "relative",
+          "x_m": 0.625,
+          "y_m": 1.659,
+          "boot": 20,
+          "seq": 10642,
+          "age_ms": 2316
+        }
+      },
+      "accuracy_validated": false
+    }
+  },
+  "next_test": "Second measured placement with identical firmware/RF settings to test whether errors transfer",
+  "second_placement": {
+    "reference": {
+      "n1n2M": 2.1,
+      "n1n3M": 2.2,
+      "n2n3M": 1.19
+    },
+    "analysis": {
+      "durationMs": 60000,
+      "settleMs": 5000,
+      "observer": "N2",
+      "reference": {
+        "n1n2M": 2.1,
+        "n1n3M": 2.2,
+        "n2n3M": 1.19
+      },
+      "availability": {
+        "fraction": 1,
+        "readyMs": 55000,
+        "totalMs": 55000
+      },
+      "ranges": [
+        {
+          "edge": "N1-N2",
+          "count": 26,
+          "medianM": 2.1275,
+          "stdDevM": 0.015597485004369693,
+          "p95RadiusM": 0.031750000000000056,
+          "accuracy": {
+            "biasM": 0.027499999999999858,
+            "rmseM": 0.030863844917263905,
+            "p95ErrorM": 0.057499999999999885
+          }
+        },
+        {
+          "edge": "N1-N3",
+          "count": 26,
+          "medianM": 2.5439999999999996,
+          "stdDevM": 0.13479819674666957,
+          "p95RadiusM": 0.2202499999999996,
+          "accuracy": {
+            "biasM": 0.34399999999999964,
+            "rmseM": 0.3657938679723236,
+            "p95ErrorM": 0.5092499999999998
+          }
+        },
+        {
+          "edge": "N2-N3",
+          "count": 57,
+          "medianM": 1.81,
+          "stdDevM": 0.0392596507299619,
+          "p95RadiusM": 0.0733999999999998,
+          "accuracy": {
+            "biasM": 0.6200000000000001,
+            "rmseM": 0.6221830130712234,
+            "p95ErrorM": 0.6933999999999999
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "id": "N1",
+          "count": 53,
+          "median": {
+            "xM": 0,
+            "yM": 0
+          },
+          "stdXM": 0,
+          "stdYM": 0,
+          "p95RadiusM": 0,
+          "firstLastShiftM": 0,
+          "constrained": true,
+          "accuracy": null
+        },
+        {
+          "id": "N2",
+          "count": 53,
+          "median": {
+            "xM": 2.128,
+            "yM": 0
+          },
+          "stdXM": 0.014897643027653368,
+          "stdYM": 0,
+          "p95RadiusM": 0.03299999999999992,
+          "firstLastShiftM": 0.005499999999999616,
+          "constrained": false,
+          "accuracy": {
+            "meanErrorM": 0.027584905660377263,
+            "rmseM": 0.03128384959181034,
+            "p95ErrorM": 0.06099999999999994
+          }
+        },
+        {
+          "id": "N3",
+          "count": 53,
+          "median": {
+            "xM": 1.807,
+            "yM": 1.777
+          },
+          "stdXM": 0.15713762422252345,
+          "stdYM": 0.05031399231756297,
+          "p95RadiusM": 0.28125091780666717,
+          "firstLastShiftM": 0.090918919923193,
+          "constrained": false,
+          "accuracy": {
+            "meanErrorM": 0.634540669990167,
+            "rmseM": 0.6358003378232863,
+            "p95ErrorM": 0.7072203634251634
+          }
+        }
+      ],
+      "warnings": [
+        "N1 is the defined origin; its zero movement is not an independent accuracy measurement. N2 y=0 is also imposed by the coordinate convention.",
+        "First-to-last shift describes this window only; it does not prove long-term drift or its cause."
+      ]
+    },
+    "raw_capture": "node-firmware/.deps/device-backups/room-deployment/accuracy-210-220-119-capture.json",
+    "exported_measurement": "node-firmware/.deps/device-backups/room-deployment/mesh-accuracy-210-220-119.json"
+  },
+  "bias_transfer_comparison": [
+    {
+      "edge": "N1-N2",
+      "biasA_M": 0.5295,
+      "biasB_M": 0.027499999999999858,
+      "changeM": -0.5020000000000001,
+      "bestConstantCorrectionM": 0.2784999999999999,
+      "minPossibleWorstMedianResidualM": 0.25100000000000006
+    },
+    {
+      "edge": "N1-N3",
+      "biasA_M": 0.052000000000000046,
+      "biasB_M": 0.34399999999999964,
+      "changeM": 0.2919999999999996,
+      "bestConstantCorrectionM": 0.19799999999999984,
+      "minPossibleWorstMedianResidualM": 0.1459999999999998
+    },
+    {
+      "edge": "N2-N3",
+      "biasA_M": 0.7270000000000001,
+      "biasB_M": 0.6200000000000001,
+      "changeM": -0.10699999999999998,
+      "bestConstantCorrectionM": 0.6735000000000001,
+      "minPossibleWorstMedianResidualM": 0.05349999999999999
+    }
+  ],
+  "interpretation": "A single constant per-pair correction cannot put N1-N2 within10cm median error in both recordings; no antenna-delay correction was fitted or applied.",
+  "dual_usb_diagnostics": {
+    "same_computed_range_delivery": {
+      "common_exchanges": 115,
+      "value_mismatches": 0,
+      "independent_distance_truth": false
+    },
+    "quality_groups": [
+      {
+        "observer": "N2",
+        "peer": "N1",
+        "edge": "N1-N2",
+        "frame": "poll",
+        "matched_exchanges": 28,
+        "median_range_m": 2.13,
+        "range_sample_sd_m": 0.01767830554019489,
+        "median_gap_db": 16.83,
+        "gap_range_pearson": -0.4030128936970903,
+        "max_read_us": 191,
+        "dgc_values": [
+          0
+        ]
+      },
+      {
+        "observer": "N2",
+        "peer": "N1",
+        "edge": "N1-N2",
+        "frame": "final",
+        "matched_exchanges": 28,
+        "median_range_m": 2.13,
+        "range_sample_sd_m": 0.01767830554019489,
+        "median_gap_db": 17.15,
+        "gap_range_pearson": 0.0887349125862997,
+        "max_read_us": 158,
+        "dgc_values": [
+          0
+        ]
+      },
+      {
+        "observer": "N2",
+        "peer": "N3",
+        "edge": "N2-N3",
+        "frame": "response",
+        "matched_exchanges": 51,
+        "median_range_m": 1.82,
+        "range_sample_sd_m": 0.03447916108346619,
+        "median_gap_db": 13.340000000000003,
+        "gap_range_pearson": 0.0450687383838216,
+        "max_read_us": 191,
+        "dgc_values": [
+          0,
+          1
+        ]
+      },
+      {
+        "observer": "N3",
+        "peer": "N1",
+        "edge": "N1-N3",
+        "frame": "poll",
+        "matched_exchanges": 19,
+        "median_range_m": 2.574,
+        "range_sample_sd_m": 0.12227332530798102,
+        "median_gap_db": 6.980000000000004,
+        "gap_range_pearson": -0.544169673198345,
+        "max_read_us": 189,
+        "dgc_values": [
+          0
+        ]
+      },
+      {
+        "observer": "N3",
+        "peer": "N1",
+        "edge": "N1-N3",
+        "frame": "final",
+        "matched_exchanges": 19,
+        "median_range_m": 2.574,
+        "range_sample_sd_m": 0.12227332530798102,
+        "median_gap_db": 6.969999999999999,
+        "gap_range_pearson": -0.2719850668904733,
+        "max_read_us": 156,
+        "dgc_values": [
+          0
+        ]
+      },
+      {
+        "observer": "N3",
+        "peer": "N2",
+        "edge": "N2-N3",
+        "frame": "poll",
+        "matched_exchanges": 36,
+        "median_range_m": 1.819,
+        "range_sample_sd_m": 0.03549093333805622,
+        "median_gap_db": 13.29,
+        "gap_range_pearson": -0.08607235517685075,
+        "max_read_us": 192,
+        "dgc_values": [
+          0,
+          1
+        ]
+      },
+      {
+        "observer": "N3",
+        "peer": "N2",
+        "edge": "N2-N3",
+        "frame": "final",
+        "matched_exchanges": 36,
+        "median_range_m": 1.819,
+        "range_sample_sd_m": 0.03549093333805622,
+        "median_gap_db": 13.240000000000002,
+        "gap_range_pearson": 0.07726601948424144,
+        "max_read_us": 157,
+        "dgc_values": [
+          0,
+          1
+        ]
+      }
+    ],
+    "interpretation": "Same-exchange delivery and quality correlations only; no monotonic NLOS classifier or physical timestamp validation established."
+  },
+  "later_spi_timestamp_investigation": "spi-timestamp-2026-11-08.json",
+  "current_hardware_status": {
+    "scope": "Verified at the end of TX-power test, before the requested cable/layout change",
+    "N1": "Boot39, full layout received",
+    "N2": "Boot29, originalfdfdfdfd power and all saved fields restored",
+    "N3": "Boot31, originalfdfdfdfd power and all saved fields preserved",
+    "complete_triangle_available_at_verification": true,
+    "awaiting_user": "New measured N1/N2-USB triangle; N3 power bank"
+  },
+  "latest_investigation": "tx-power-2026-11-08.json"
+}

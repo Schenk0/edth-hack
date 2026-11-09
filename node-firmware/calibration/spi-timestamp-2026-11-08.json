@@ -1,0 +1,527 @@
+{
+  "date": "2026-11-08",
+  "status": "Normal firmware restored on both USB nodes; N2-N3 communicating; N1 unresponsive; live tests stopped",
+  "reference_m": {
+    "n1n2M": 2.1,
+    "n1n3M": 2.2,
+    "n2n3M": 1.19
+  },
+  "geometry_source": "Last operator-confirmed fixed placement: N1-N2 210 cm, N1-N3 220 cm, N2-N3 119 cm; no movement requested or observed by the agent",
+  "normal_firmware_sha256": "51bf39df31294a6929eba6ce6e454f40ecf891a3bd1562c3b6c54ef938a8c405",
+  "diagnostic_firmware_sha256": "43a8f7b3ed0ccc2dd9bc4d1ef9166e0226857c608d84b2b977289f8f43dc52f0",
+  "persistent_settings_unchanged": true,
+  "restored_identities": {
+    "88E80DCAE67A7A54": {
+      "v": 1,
+      "type": "identity",
+      "source": "N2",
+      "node_id": 2,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "88E80DCAE67A7A54",
+      "boot": 18,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16354,
+      "rx_ant_delay": 16354,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 1
+    },
+    "0ACD77FCB0F57A4B": {
+      "v": 1,
+      "type": "identity",
+      "source": "N3",
+      "node_id": 3,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "0ACD77FCB0F57A4B",
+      "boot": 22,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16387,
+      "rx_ant_delay": 16387,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 1
+    }
+  },
+  "raw_evidence_directory": "node-firmware/.deps/experiments/timestamp-spi/",
+  "raw_manifest": "node-firmware/.deps/experiments/timestamp-spi/manifest.json",
+  "replay_analysis": "node-firmware/.deps/experiments/timestamp-spi/analysis.json",
+  "conditions": {
+    "settle_ms": 15000,
+    "capture_after_settling_ms": 35000,
+    "both_usb_readers_active": true,
+    "diagnostic_instrumentation": "SPI CRC reads/writes, high status reads, duplicate RX timestamp reads, full40 exchange traces, clearing all good-RX flags, expanded USB queue, watchdog recovery",
+    "rate_changes_without_restart": true,
+    "actual_spi_hz": [
+      15000000,
+      7500000,
+      15000000
+    ],
+    "N1_firmware_unchanged": true,
+    "offsets_and_RF_power_unchanged": true
+  },
+  "validity": {
+    "SPI_accuracy_effect": "Not established: diagnostic build produced no valid ranges at either rate",
+    "before_after_comparison": "Not an uninterrupted comparison: verified host sleep in first baseline and N1 lost before A2",
+    "host_sleep": {
+      "baseline-before": "pmset confirms Idle Sleep at 2026-11-08 07:43:43 +0100 and wake 07:45:29 +0100; 106 s. Host monotonic capture timestamps exclude sleep."
+    },
+    "sleep_evidence": "node-firmware/.deps/experiments/timestamp-spi/host-sleep-evidence.txt",
+    "earlier_measured_capture_clock_checks_ms": {
+      "placement_A_device_minus_host": 3,
+      "placement_B_device_minus_host": -4,
+      "dual_N2_device_minus_host": 0,
+      "dual_N3_device_minus_host": -1
+    }
+  },
+  "phases": {
+    "baseline-before": {
+      "timing_valid": false,
+      "unique_range_union": {
+        "N1-N2": {
+          "count": 18,
+          "median_m": 2.134,
+          "sample_sd_m": 0.028408780746969932,
+          "median_bias_m": 0.03399999999999981,
+          "min_m": 2.079,
+          "max_m": 2.172
+        },
+        "N1-N3": {
+          "count": 19,
+          "median_m": 2.617,
+          "sample_sd_m": 0.11572719484084544,
+          "median_bias_m": 0.4169999999999998,
+          "min_m": 2.352,
+          "max_m": 2.74
+        },
+        "N2-N3": {
+          "count": 35,
+          "median_m": 1.839,
+          "sample_sd_m": 0.09269732076662694,
+          "median_bias_m": 0.649,
+          "min_m": 1.613,
+          "max_m": 2.136
+        }
+      },
+      "observed_trace_outcomes": {},
+      "counters": {
+        "N2": {
+          "probe_deltas": null,
+          "diagnostic_deltas": {
+            "ranges_ok": 208,
+            "ranges_failed": 5,
+            "accepted": 282,
+            "rejected": 748,
+            "rx_errors": 2739,
+            "tx_errors": 0,
+            "decode_errors": 2738,
+            "usb_dropped": 1045
+          },
+          "firmware_minus_host_elapsed_ms": 103781
+        },
+        "N3": {
+          "probe_deltas": null,
+          "diagnostic_deltas": {
+            "ranges_ok": 212,
+            "ranges_failed": 2,
+            "accepted": 283,
+            "rejected": 1155,
+            "rx_errors": 2755,
+            "tx_errors": 0,
+            "decode_errors": 2755,
+            "usb_dropped": 939
+          },
+          "firmware_minus_host_elapsed_ms": 103779
+        }
+      }
+    },
+    "A1-16MHz": {
+      "timing_valid": true,
+      "unique_range_union": {
+        "N1-N2": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N1-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N2-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        }
+      },
+      "observed_trace_outcomes": {
+        "N2:responder:peer=N1": {
+          "attempts_observed": 18,
+          "completed": 0,
+          "failed": 18,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "final-timeout": 18
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N2:initiator:peer=N3": {
+          "attempts_observed": 38,
+          "completed": 0,
+          "failed": 38,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "response-timeout": 38
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N1": {
+          "attempts_observed": 19,
+          "completed": 0,
+          "failed": 19,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "final-timeout": 19
+          },
+          "attempts_with_fault_counter_change": 0
+        }
+      },
+      "counters": {
+        "N2": {
+          "probe_deltas": {
+            "crc_read_errors": 0,
+            "crc_write_errors": 0,
+            "status_faults": 0,
+            "duplicate_reads": 136,
+            "timestamp_mismatches": 0
+          },
+          "diagnostic_deltas": {
+            "ranges_ok": 0,
+            "ranges_failed": 54,
+            "accepted": 0,
+            "rejected": 0,
+            "rx_errors": 288,
+            "tx_errors": 0,
+            "decode_errors": 69,
+            "usb_dropped": 0
+          },
+          "firmware_minus_host_elapsed_ms": 0
+        },
+        "N3": {
+          "probe_deltas": {
+            "crc_read_errors": 0,
+            "crc_write_errors": 0,
+            "status_faults": 0,
+            "duplicate_reads": 139,
+            "timestamp_mismatches": 0
+          },
+          "diagnostic_deltas": {
+            "ranges_ok": 0,
+            "ranges_failed": 19,
+            "accepted": 0,
+            "rejected": 0,
+            "rx_errors": 327,
+            "tx_errors": 0,
+            "decode_errors": 69,
+            "usb_dropped": 0
+          },
+          "firmware_minus_host_elapsed_ms": 1
+        }
+      }
+    },
+    "B-8MHz": {
+      "timing_valid": true,
+      "unique_range_union": {
+        "N1-N2": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N1-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N2-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        }
+      },
+      "observed_trace_outcomes": {
+        "N2:initiator:peer=N3": {
+          "attempts_observed": 36,
+          "completed": 0,
+          "failed": 36,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "response-timeout": 36
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N2:responder:peer=N1": {
+          "attempts_observed": 17,
+          "completed": 0,
+          "failed": 17,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "final-timeout": 17
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N1": {
+          "attempts_observed": 17,
+          "completed": 0,
+          "failed": 17,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "final-timeout": 17
+          },
+          "attempts_with_fault_counter_change": 0
+        }
+      },
+      "counters": {
+        "N2": {
+          "probe_deltas": {
+            "crc_read_errors": 0,
+            "crc_write_errors": 0,
+            "status_faults": 0,
+            "duplicate_reads": 135,
+            "timestamp_mismatches": 0
+          },
+          "diagnostic_deltas": {
+            "ranges_ok": 0,
+            "ranges_failed": 52,
+            "accepted": 0,
+            "rejected": 0,
+            "rx_errors": 283,
+            "tx_errors": 0,
+            "decode_errors": 67,
+            "usb_dropped": 0
+          },
+          "firmware_minus_host_elapsed_ms": -2
+        },
+        "N3": {
+          "probe_deltas": {
+            "crc_read_errors": 0,
+            "crc_write_errors": 0,
+            "status_faults": 0,
+            "duplicate_reads": 134,
+            "timestamp_mismatches": 0
+          },
+          "diagnostic_deltas": {
+            "ranges_ok": 0,
+            "ranges_failed": 17,
+            "accepted": 0,
+            "rejected": 0,
+            "rx_errors": 319,
+            "tx_errors": 0,
+            "decode_errors": 67,
+            "usb_dropped": 0
+          },
+          "firmware_minus_host_elapsed_ms": 0
+        }
+      }
+    },
+    "A2-16MHz": {
+      "timing_valid": true,
+      "unique_range_union": {
+        "N1-N2": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N1-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N2-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        }
+      },
+      "observed_trace_outcomes": {
+        "N2:initiator:peer=N3": {
+          "attempts_observed": 37,
+          "completed": 0,
+          "failed": 37,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "response-timeout": 37
+          },
+          "attempts_with_fault_counter_change": 0
+        }
+      },
+      "counters": {
+        "N2": {
+          "probe_deltas": {
+            "crc_read_errors": 0,
+            "crc_write_errors": 0,
+            "status_faults": 0,
+            "duplicate_reads": 0,
+            "timestamp_mismatches": 0
+          },
+          "diagnostic_deltas": {
+            "ranges_ok": 0,
+            "ranges_failed": 36,
+            "accepted": 0,
+            "rejected": 0,
+            "rx_errors": 103,
+            "tx_errors": 0,
+            "decode_errors": 0,
+            "usb_dropped": 0
+          },
+          "firmware_minus_host_elapsed_ms": 0
+        },
+        "N3": {
+          "probe_deltas": {
+            "crc_read_errors": 0,
+            "crc_write_errors": 0,
+            "status_faults": 0,
+            "duplicate_reads": 0,
+            "timestamp_mismatches": 0
+          },
+          "diagnostic_deltas": {
+            "ranges_ok": 0,
+            "ranges_failed": 0,
+            "accepted": 0,
+            "rejected": 0,
+            "rx_errors": 138,
+            "tx_errors": 0,
+            "decode_errors": 0,
+            "usb_dropped": 0
+          },
+          "firmware_minus_host_elapsed_ms": 0
+        }
+      }
+    },
+    "baseline-after": {
+      "timing_valid": true,
+      "unique_range_union": {
+        "N1-N2": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N1-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "median_bias_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N2-N3": {
+          "count": 39,
+          "median_m": 1.805,
+          "sample_sd_m": 0.02816631730452752,
+          "median_bias_m": 0.615,
+          "min_m": 1.758,
+          "max_m": 1.873
+        }
+      },
+      "observed_trace_outcomes": {},
+      "counters": {
+        "N2": {
+          "probe_deltas": null,
+          "diagnostic_deltas": {
+            "ranges_ok": 36,
+            "ranges_failed": 0,
+            "accepted": 36,
+            "rejected": 0,
+            "rx_errors": 154,
+            "tx_errors": 0,
+            "decode_errors": 154,
+            "usb_dropped": 0
+          },
+          "firmware_minus_host_elapsed_ms": 0
+        },
+        "N3": {
+          "probe_deltas": null,
+          "diagnostic_deltas": {
+            "ranges_ok": 37,
+            "ranges_failed": 0,
+            "accepted": 37,
+            "rejected": 51,
+            "rx_errors": 155,
+            "tx_errors": 0,
+            "decode_errors": 155,
+            "usb_dropped": 0
+          },
+          "firmware_minus_host_elapsed_ms": 0
+        }
+      }
+    }
+  },
+  "findings": [
+    "Private instrumentation regressed N2-N3 communication. Normal firmware restored that pair; no production firmware changes were adopted.",
+    "During A1 and B, both USB nodes accepted N1 polls but no completed ranges. N3 accepted no N2 poll. Successful TX completion does not establish valid transmitted RF content.",
+    "Observed last RX status 0000af70 includes RF FCS failure, not a reported SPI CRC error. It is sticky and is not an error count for every later attempt.",
+    "No observed SPI CRC/status or duplicate-timestamp mismatches during the settled probe counter intervals. This does not exclude deterministic timestamp, transfer or first-path errors.",
+    "No successful six-timestamp hardware trace was captured; physical timestamp correctness remains untested. Offline replay self-tests only establish arithmetic consistency.",
+    "N1 traffic ceased before A2 and remained absent after restore and a later passive8s check. Power loss, MCU stall and radio stall cannot be distinguished remotely.",
+    "The new wall-duration guard rejects sleep/clock-interrupted browser and CLI recordings while preserving raw data. Earlier recordings without wall time require separate timing evidence."
+  ],
+  "next_controlled_step": "When all three nodes are available again, isolate the private CRC path while retaining the other instrumentation, verify a baseline without host sleep, and preserve settings. A CRC-off variant must ignore SPICRCE and change CRC init validation. No new offset fitting.",
+  "software_verification": {
+    "demo_accuracy_tests": "8 passed",
+    "room_verifier_tests": "5 passed",
+    "demo_build": "passed",
+    "mocked_browser_suite": "passed, including sleep/clock interruption, raw export and reimport",
+    "firmware_source_unchanged": true,
+    "usb_ports_released": true
+  },
+  "final_passive_capture": "node-firmware/.deps/experiments/timestamp-spi/final-passive-status-N2.json"
+}

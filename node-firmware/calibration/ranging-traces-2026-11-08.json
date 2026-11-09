@@ -1,0 +1,641 @@
+{
+  "summary": {
+    "responder_traces": 27,
+    "initiator_traces": 27,
+    "paired_full40_traces": 27,
+    "distance_replay_matches": 27,
+    "wire_timestamp_mismatches": 0,
+    "measurement_mismatches": 0,
+    "replay_function": "actual node-firmware/src/mesh.cpp::twr_distance compiled for host with floating-point contraction disabled",
+    "no_additional_radio_spi_reads": true,
+    "median_mm": 1575,
+    "limitations": [
+      "Matching reports are the same responder-computed value, not independent distance measurements.",
+      "Replay verifies arithmetic and timestamp serialization, not physical correctness or SPI integrity of the timestamp reads.",
+      "Trace output is an additional post-exchange condition, separate from the sealed ABA comparison."
+    ]
+  },
+  "exchanges": [
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 96,
+      "initiator40": [
+        1033466317827,
+        1033597406947,
+        1033728495107
+      ],
+      "responder40": [
+        1032240261624,
+        1032371349474,
+        1032502437715
+      ],
+      "initiator_wire32": [
+        2674166787,
+        2805255907,
+        2936344067
+      ],
+      "valid": true,
+      "firmware_mm": 1584,
+      "replayed_mm": 1584,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 102,
+      "initiator40": [
+        13571833859,
+        13702923109,
+        13834011139
+      ],
+      "responder40": [
+        12345416059,
+        12476504034,
+        12607592140
+      ],
+      "initiator_wire32": [
+        686931971,
+        818021221,
+        949109251
+      ],
+      "valid": true,
+      "firmware_mm": 1584,
+      "replayed_mm": 1584,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 108,
+      "initiator40": [
+        63666988547,
+        63798078123,
+        63929166339
+      ],
+      "responder40": [
+        62440343093,
+        62571431394,
+        62702519679
+      ],
+      "initiator_wire32": [
+        3537446403,
+        3668535979,
+        3799624195
+      ],
+      "valid": true,
+      "firmware_mm": 1576,
+      "replayed_mm": 1576,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 112,
+      "initiator40": [
+        112484597251,
+        112615686563,
+        112746774531
+      ],
+      "responder40": [
+        111257729851,
+        111388817890,
+        111519905936
+      ],
+      "initiator_wire32": [
+        815447555,
+        946536867,
+        1077624835
+      ],
+      "valid": true,
+      "firmware_mm": 1584,
+      "replayed_mm": 1584,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 118,
+      "initiator40": [
+        177787646467,
+        177918735793,
+        178049823747
+      ],
+      "responder40": [
+        176560482068,
+        176691570146,
+        176822658155
+      ],
+      "initiator_wire32": [
+        1693987331,
+        1825076657,
+        1956164611
+      ],
+      "valid": true,
+      "firmware_mm": 1528,
+      "replayed_mm": 1528,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 126,
+      "initiator40": [
+        255359622147,
+        255490711640,
+        255621799939
+      ],
+      "responder40": [
+        254132104837,
+        254263193058,
+        254394281428
+      ],
+      "initiator_wire32": [
+        1956551683,
+        2087641176,
+        2218729475
+      ],
+      "valid": true,
+      "firmware_mm": 1575,
+      "replayed_mm": 1575,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 129,
+      "initiator40": [
+        306670389251,
+        306801478820,
+        306932567043
+      ],
+      "responder40": [
+        305442638379,
+        305573726690,
+        305704814982
+      ],
+      "initiator_wire32": [
+        1727711235,
+        1858800804,
+        1989889027
+      ],
+      "valid": true,
+      "firmware_mm": 1556,
+      "replayed_mm": 1556,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 135,
+      "initiator40": [
+        370439088643,
+        370570177781,
+        370701265923
+      ],
+      "responder40": [
+        369211047374,
+        369342135266,
+        369473223480
+      ],
+      "initiator_wire32": [
+        1071901187,
+        1202990325,
+        1334078467
+      ],
+      "valid": true,
+      "firmware_mm": 1545,
+      "replayed_mm": 1545,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 141,
+      "initiator40": [
+        428521819651,
+        428652909189,
+        428783997443
+      ],
+      "responder40": [
+        427293513802,
+        427424602082,
+        427555690417
+      ],
+      "initiator_wire32": [
+        3320057347,
+        3451146885,
+        3582235139
+      ],
+      "valid": true,
+      "firmware_mm": 1570,
+      "replayed_mm": 1570,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 147,
+      "initiator40": [
+        489865187843,
+        489996277343,
+        490127365635
+      ],
+      "responder40": [
+        488636602491,
+        488767690722,
+        488898779086
+      ],
+      "initiator_wire32": [
+        238916099,
+        370005599,
+        501093891
+      ],
+      "valid": true,
+      "firmware_mm": 1572,
+      "replayed_mm": 1572,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 152,
+      "initiator40": [
+        532356649475,
+        532487738591,
+        532618826755
+      ],
+      "responder40": [
+        531127870461,
+        531258958306,
+        531390046541
+      ],
+      "initiator_wire32": [
+        4075672067,
+        4206761183,
+        42882051
+      ],
+      "valid": true,
+      "firmware_mm": 1574,
+      "replayed_mm": 1574,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 157,
+      "initiator40": [
+        599960233475,
+        600091323098,
+        600222411267
+      ],
+      "responder40": [
+        598731146254,
+        598862234594,
+        598993322836
+      ],
+      "initiator_wire32": [
+        2959779331,
+        3090868954,
+        3221957123
+      ],
+      "valid": true,
+      "firmware_mm": 1590,
+      "replayed_mm": 1590,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 163,
+      "initiator40": [
+        664047780355,
+        664178869925,
+        664309958147
+      ],
+      "responder40": [
+        662818400835,
+        662949489122,
+        663080577408
+      ],
+      "initiator_wire32": [
+        2622816771,
+        2753906341,
+        2884994563
+      ],
+      "valid": true,
+      "firmware_mm": 1579,
+      "replayed_mm": 1579,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 170,
+      "initiator40": [
+        743090475011,
+        743221564364,
+        743352652291
+      ],
+      "responder40": [
+        741860734734,
+        741991822818,
+        742122910812
+      ],
+      "initiator_wire32": [
+        61132803,
+        192222156,
+        323310083
+      ],
+      "valid": true,
+      "firmware_mm": 1567,
+      "replayed_mm": 1567,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 175,
+      "initiator40": [
+        797722791427,
+        797853880885,
+        797984969219
+      ],
+      "responder40": [
+        796492801708,
+        796623889890,
+        796754978297
+      ],
+      "initiator_wire32": [
+        3153841667,
+        3284931125,
+        3416019459
+      ],
+      "valid": true,
+      "firmware_mm": 1582,
+      "replayed_mm": 1582,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 182,
+      "initiator40": [
+        875804448771,
+        875935538089,
+        876066626051
+      ],
+      "responder40": [
+        874574102325,
+        874705190370,
+        874836278405
+      ],
+      "initiator_wire32": [
+        3926087683,
+        4057177001,
+        4188264963
+      ],
+      "valid": true,
+      "firmware_mm": 1578,
+      "replayed_mm": 1578,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 188,
+      "initiator40": [
+        931395142659,
+        931526231979,
+        931657319939
+      ],
+      "responder40": [
+        930164542245,
+        930295630306,
+        930426718338
+      ],
+      "initiator_wire32": [
+        3682206723,
+        3813296043,
+        3944384003
+      ],
+      "valid": true,
+      "firmware_mm": 1561,
+      "replayed_mm": 1561,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 193,
+      "initiator40": [
+        980340647427,
+        980471736664,
+        980602824707
+      ],
+      "responder40": [
+        979109823368,
+        979240911330,
+        979371999441
+      ],
+      "initiator_wire32": [
+        1088103939,
+        1219193176,
+        1350281219
+      ],
+      "valid": true,
+      "firmware_mm": 1575,
+      "replayed_mm": 1575,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 198,
+      "initiator40": [
+        1042195272195,
+        1042326361569,
+        1042457449475
+      ],
+      "responder40": [
+        1040964165379,
+        1041095253474,
+        1041226341450
+      ],
+      "initiator_wire32": [
+        2813186563,
+        2944275937,
+        3075363843
+      ],
+      "valid": true,
+      "firmware_mm": 1582,
+      "replayed_mm": 1582,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 203,
+      "initiator40": [
+        1099255047171,
+        1099386136413,
+        5596675
+      ],
+      "responder40": [
+        1098023679364,
+        1098154767330,
+        1098285855433
+      ],
+      "initiator_wire32": [
+        4038386691,
+        4169475933,
+        5596675
+      ],
+      "valid": true,
+      "firmware_mm": 1572,
+      "replayed_mm": 1572,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 209,
+      "initiator40": [
+        56995099651,
+        57126188773,
+        57257276931
+      ],
+      "responder40": [
+        55763469808,
+        55894557666,
+        56025645885
+      ],
+      "initiator_wire32": [
+        1160524803,
+        1291613925,
+        1422702083
+      ],
+      "valid": true,
+      "firmware_mm": 1554,
+      "replayed_mm": 1554,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 214,
+      "initiator40": [
+        110924355075,
+        111055444311,
+        111186532355
+      ],
+      "responder40": [
+        109692478340,
+        109823566306,
+        109954654418
+      ],
+      "initiator_wire32": [
+        3550172675,
+        3681261911,
+        3812349955
+      ],
+      "valid": true,
+      "firmware_mm": 1569,
+      "replayed_mm": 1569,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 218,
+      "initiator40": [
+        163000768003,
+        163131857630,
+        163262945795
+      ],
+      "responder40": [
+        161768652802,
+        161899741154,
+        162030829389
+      ],
+      "initiator_wire32": [
+        4086978051,
+        4218067678,
+        54188547
+      ],
+      "valid": true,
+      "firmware_mm": 1577,
+      "replayed_mm": 1577,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 223,
+      "initiator40": [
+        213032494595,
+        213163584049,
+        213294672387
+      ],
+      "responder40": [
+        211800150179,
+        211931238370,
+        212062326788
+      ],
+      "initiator_wire32": [
+        2579097091,
+        2710186545,
+        2841274883
+      ],
+      "valid": true,
+      "firmware_mm": 1575,
+      "replayed_mm": 1575,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 228,
+      "initiator40": [
+        262617155075,
+        262748244449,
+        262879332355
+      ],
+      "responder40": [
+        261384583414,
+        261515671522,
+        261646759497
+      ],
+      "initiator_wire32": [
+        624150019,
+        755239393,
+        886327299
+      ],
+      "valid": true,
+      "firmware_mm": 1565,
+      "replayed_mm": 1565,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 235,
+      "initiator40": [
+        324789459459,
+        324920548607,
+        325051636739
+      ],
+      "responder40": [
+        323556602845,
+        323687690722,
+        323818778920
+      ],
+      "initiator_wire32": [
+        2666912259,
+        2798001407,
+        2929089539
+      ],
+      "valid": true,
+      "firmware_mm": 1568,
+      "replayed_mm": 1568,
+      "wire_timestamps_match": true
+    },
+    {
+      "exchange_boot": 34,
+      "exchange_seq": 240,
+      "initiator40": [
+        388879707651,
+        389010796806,
+        389141884931
+      ],
+      "responder40": [
+        387646557155,
+        387777645026,
+        387908733216
+      ],
+      "initiator_wire32": [
+        2332651011,
+        2463740166,
+        2594828291
+      ],
+      "valid": true,
+      "firmware_mm": 1582,
+      "replayed_mm": 1582,
+      "wire_timestamps_match": true
+    }
+  ]
+}

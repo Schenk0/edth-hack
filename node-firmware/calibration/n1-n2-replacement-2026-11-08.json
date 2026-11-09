@@ -1,0 +1,182 @@
+{
+  "date": "2026-11-08",
+  "status": "one-metre correction provisional; controlled firmware ABA did not reproduce prior large change; distance bias remains unresolved",
+  "network_id": 60785,
+  "baseline_mm": 0,
+  "channel": 5,
+  "tx_power": "fdfdfdfd",
+  "firmware_sha256": "55caa6cb48577209ef49f46657b28b01a4eb493dafe07b4a1b843d782c2fbb25",
+  "nodes": [
+    {
+      "id": 1,
+      "board_id": "1598712C6E2499A8",
+      "tx_ant_delay": 16387,
+      "rx_ant_delay": 16387,
+      "verified_boot": 24,
+      "last_observed_boot": 35
+    },
+    {
+      "id": 2,
+      "board_id": "88E80DCAE67A7A54",
+      "tx_ant_delay": 16354,
+      "rx_ant_delay": 16354,
+      "verified_boot": 5,
+      "last_observed_boot": 15
+    }
+  ],
+  "replacement_self_tests_passed": 3,
+  "factory_backup_verified": true,
+  "initial_link_check": {
+    "duration_s": 15,
+    "matching_exchanges": 16,
+    "median_mm": 1103.5,
+    "min_mm": 1055,
+    "max_mm": 1134,
+    "remote_reports": {
+      "N2": 14,
+      "N1": 15
+    },
+    "accuracy_validated": false
+  },
+  "limitations": [
+    "The one-metre result applies to the photo-confirmed placement and operator-provided reference distance.",
+    "Accuracy at other distances and orientations remains unverified for this replacement pair.",
+    "Independent per-module calibration, third-node localization and obstruction behavior remain unverified.",
+    "The previous pair radio-dropout cause remains unresolved; this check does not establish long-term reliability.",
+    "Firmware calibrated flag remains false pending broader validation.",
+    "A 1.42 m holdout check with unchanged calibration had median 1.751 m, failing the same acceptance criteria. The correction has not been adjusted to fit this failed check.",
+    "Quality logging changes CIA diagnostic mode and adds SPI reads; the diagnostic recheck is not identical to the original holdout firmware."
+  ],
+  "known_distance_mm": 1000,
+  "calibration_conditions": {
+    "placement": "operator-supplied photos, modules taped at table edge, facing each other",
+    "reference": "operator confirmed 100 cm antenna-to-antenna separation",
+    "early_sample_excluded": "Predates photo-confirmed placement and had a strongly drifting median; no correction was based on it."
+  },
+  "calibration_method": "Combined N1-N2 offset assigned to replacement N2 TX/RX delays; N1 held fixed. This does not identify independent per-module delays.",
+  "calibration_adjustment": {
+    "replacement_n2_tx_rx_before": 16385,
+    "replacement_n2_tx_rx_after": 16354,
+    "delta_dtu": -31,
+    "n1_tx_rx_held_fixed": 16387
+  },
+  "calibration_checks": [
+    {
+      "capture": "calibration-1000mm-positioned-before",
+      "duration_s": 35,
+      "known_distance_mm": 1000,
+      "matching_exchanges": 38,
+      "median_mm": 853.0,
+      "mean_mm": 851.7631578947369,
+      "sample_stdev_mm": 28.170747920614886,
+      "min_mm": 789,
+      "max_mm": 908,
+      "first_half_median_mm": 843,
+      "second_half_median_mm": 858,
+      "samples_within_100mm": 1,
+      "pass": false
+    },
+    {
+      "capture": "calibration-1000mm-validation",
+      "duration_s": 40,
+      "known_distance_mm": 1000,
+      "matching_exchanges": 40,
+      "median_mm": 996.5,
+      "mean_mm": 1000.6,
+      "sample_stdev_mm": 30.35837230865267,
+      "min_mm": 931,
+      "max_mm": 1061,
+      "first_half_median_mm": 996.5,
+      "second_half_median_mm": 996.5,
+      "samples_within_100mm": 40,
+      "pass": true
+    }
+  ],
+  "acceptance_criteria": {
+    "min_shared_exchanges": 25,
+    "max_absolute_median_error_mm": 25,
+    "min_fraction_within_100mm": 0.8,
+    "max_half_median_difference_mm": 50
+  },
+  "distance_checks": [
+    {
+      "capture": "validation-1420mm",
+      "duration_s": 40,
+      "known_distance_mm": 1420,
+      "matching_exchanges": 39,
+      "median_mm": 1751,
+      "mean_mm": 1797.051282051282,
+      "sample_stdev_mm": 178.38072068323692,
+      "min_mm": 1508,
+      "max_mm": 2267,
+      "first_half_median_mm": 1786,
+      "second_half_median_mm": 1749.5,
+      "samples_within_100mm": 2,
+      "conditions": "Operator confirmed 142 cm antenna separation after being asked to preserve orientation; calibration settings unchanged.",
+      "pass": false
+    }
+  ],
+  "diagnostic_firmware_sha256": "a7bcf1150aaef58c1f842a9b57a1fc7b4bdad706f51d5b28498aa886a5d7ab31",
+  "radio_quality_investigation": {
+    "capture": "quality-1420mm-16mhz",
+    "known_distance_mm": 1420,
+    "duration_s": 25,
+    "quality": [
+      {
+        "board_id": "1598712C6E2499A8",
+        "frame": "response",
+        "unique_valid_samples": 21,
+        "median_rssi_dbm": -80.67,
+        "median_first_path_dbm": -91.78,
+        "median_power_gap_db": 11.14,
+        "max_read_us": 176,
+        "cia_done_missing": 0
+      },
+      {
+        "board_id": "88E80DCAE67A7A54",
+        "frame": "poll",
+        "unique_valid_samples": 22,
+        "median_rssi_dbm": -80.24000000000001,
+        "median_first_path_dbm": -89.685,
+        "median_power_gap_db": 9.394999999999996,
+        "max_read_us": 201,
+        "cia_done_missing": 0
+      },
+      {
+        "board_id": "88E80DCAE67A7A54",
+        "frame": "final",
+        "unique_valid_samples": 22,
+        "median_rssi_dbm": -80.2,
+        "median_first_path_dbm": -90.03999999999999,
+        "median_power_gap_db": 9.93,
+        "max_read_us": 162,
+        "cia_done_missing": 0
+      }
+    ],
+    "matching_exchanges": 25,
+    "median_mm": 1537,
+    "sample_stdev_mm": 18.493061762005052,
+    "min_mm": 1500,
+    "max_mm": 1575,
+    "median_error_mm": 117,
+    "interpretation": "Power gaps support investigating reflections and a weak direct signal, but do not establish the cause.",
+    "spi_health": {
+      "device_id_reads_per_rate_per_board": 256,
+      "rates_hz": [
+        16000000,
+        2000000
+      ],
+      "errors_both_boards": 0
+    }
+  },
+  "mounting_check": {
+    "status": "deferred",
+    "reason": "Operator cannot raise the assemblies right now.",
+    "proposed_condition": "Both assemblies raised 5\u201310 cm above the tabletop, antenna ends clear of supports, same 142 cm separation and orientation."
+  },
+  "controlled_firmware_comparison": "firmware-aba-2026-11-08.json",
+  "timestamp_trace_replay": "ranging-traces-2026-11-08.json",
+  "active_firmware_sha256": "51bf39df31294a6929eba6ce6e454f40ecf891a3bd1562c3b6c54ef938a8c405",
+  "active_firmware_configuration": "relative-triangle wire version 2; N1 and replacement N2 updated, N3 pending; historical pair measurements above predate this image",
+  "active_settings_unchanged": true
+}

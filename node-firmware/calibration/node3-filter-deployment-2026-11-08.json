@@ -1,0 +1,230 @@
+{
+  "status": "complete-N3-updated-all-three-network-ready",
+  "target": "0ACD77FCB0F57A4B",
+  "before": {
+    "88E80DCAE67A7A54": {
+      "v": 1,
+      "type": "identity",
+      "source": "N2",
+      "node_id": 2,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "88E80DCAE67A7A54",
+      "boot": 33,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16354,
+      "rx_ant_delay": 16354,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "position_filter": "median3-3s",
+      "usb_delay_ms": 0
+    },
+    "0ACD77FCB0F57A4B": {
+      "v": 1,
+      "type": "identity",
+      "source": "N3",
+      "node_id": 3,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "0ACD77FCB0F57A4B",
+      "boot": 33,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16387,
+      "rx_ant_delay": 16387,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 1
+    }
+  },
+  "operator_confirmed_connection_utc": "2026-11-08T09:14:42.968671+00:00",
+  "geometry": "May have changed during USB swap; no old tape distances assigned",
+  "accuracy_assessed": false,
+  "calibration_change_allowed": false,
+  "settings_backup_sha256": "26787c4a0427e2a5fdaf581446cb298925306e121d27dc1d37a511dcfa7f2cac",
+  "after": {
+    "88E80DCAE67A7A54": {
+      "v": 1,
+      "type": "identity",
+      "source": "N2",
+      "node_id": 2,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "88E80DCAE67A7A54",
+      "boot": 33,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16354,
+      "rx_ant_delay": 16354,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "position_filter": "median3-3s",
+      "usb_delay_ms": 1
+    },
+    "0ACD77FCB0F57A4B": {
+      "v": 1,
+      "type": "identity",
+      "source": "N3",
+      "node_id": 3,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "0ACD77FCB0F57A4B",
+      "boot": 35,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16387,
+      "rx_ant_delay": 16387,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "position_filter": "median3-3s",
+      "usb_delay_ms": 1
+    }
+  },
+  "ports": {
+    "88E80DCAE67A7A54": "/dev/cu.usbmodem1101",
+    "0ACD77FCB0F57A4B": "/dev/cu.usbmodem101"
+  },
+  "image_sha256": "380483e218507964c66cc0831b6b920279afc9ba1819f0014fd64c9d7358e189",
+  "verification": {
+    "N2": {
+      "file": "node-firmware/.deps/experiments/node3-filter-deployment/verified-N2.json",
+      "sha256": "773221bddccabbf50ff599ebbf28c78f05618a71af5c1349fe276d18f9f21926",
+      "duration_ms": 25000,
+      "wall_duration_ms": 25006,
+      "summary": {
+        "passed": true,
+        "issues": [],
+        "coordinate_frame": "relative-n1-n2-positive-y",
+        "reflection_ambiguous": true,
+        "ranges": {
+          "N1-N2": {
+            "distance_m": 1.395,
+            "age_ms": 1437
+          },
+          "N1-N3": {
+            "distance_m": 1.671,
+            "age_ms": 750
+          },
+          "N2-N3": {
+            "distance_m": 1.435,
+            "age_ms": 584
+          }
+        },
+        "node_reports": {
+          "N1": {
+            "status": "reference",
+            "x_m": 0.0,
+            "y_m": 0.0,
+            "boot": 44,
+            "seq": 3663,
+            "age_ms": 3719
+          },
+          "N2": {
+            "status": "relative",
+            "x_m": 1.395,
+            "y_m": 0.0,
+            "boot": 33,
+            "seq": 3116,
+            "age_ms": 2497
+          },
+          "N3": {
+            "status": "relative",
+            "x_m": 1.019,
+            "y_m": 1.319,
+            "boot": 35,
+            "seq": 1118,
+            "age_ms": 3721
+          }
+        },
+        "accuracy_validated": false
+      },
+      "own_filtered_reports": 25,
+      "identities": 26
+    },
+    "N3": {
+      "file": "node-firmware/.deps/experiments/node3-filter-deployment/verified-N3.json",
+      "sha256": "af31bc8b56ca0255133a93e19259e5da54568489c3e2245ae3bd4e382d0eae0a",
+      "duration_ms": 25000,
+      "wall_duration_ms": 25003,
+      "summary": {
+        "passed": true,
+        "issues": [],
+        "coordinate_frame": "relative-n1-n2-positive-y",
+        "reflection_ambiguous": true,
+        "ranges": {
+          "N1-N2": {
+            "distance_m": 1.395,
+            "age_ms": 1437
+          },
+          "N1-N3": {
+            "distance_m": 1.671,
+            "age_ms": 743
+          },
+          "N2-N3": {
+            "distance_m": 1.435,
+            "age_ms": 586
+          }
+        },
+        "node_reports": {
+          "N1": {
+            "status": "reference",
+            "x_m": 0.0,
+            "y_m": 0.0,
+            "boot": 44,
+            "seq": 3663,
+            "age_ms": 3718
+          },
+          "N2": {
+            "status": "relative",
+            "x_m": 1.366,
+            "y_m": 0.0,
+            "boot": 33,
+            "seq": 3095,
+            "age_ms": 3712
+          },
+          "N3": {
+            "status": "relative",
+            "x_m": 0.949,
+            "y_m": 1.373,
+            "boot": 35,
+            "seq": 1137,
+            "age_ms": 3187
+          }
+        },
+        "accuracy_validated": false
+      },
+      "own_filtered_reports": 25,
+      "identities": 26
+    }
+  },
+  "date": "2026-11-08",
+  "settings_backup_file": "node-firmware/.deps/experiments/node3-filter-deployment/N3-settings-before.bin",
+  "N1_firmware_provenance": "N1 was flashed and verified with the same UF2 in firmware-filter-aba deployment; now powered from bank, observed origin boot44",
+  "limitations": [
+    "25-second network readiness captures are not a stationary accuracy trial.",
+    "USB/power swap may have changed geometry. No older tape distances are assigned.",
+    "Fresh positioned reports establish data flow, not absolute accuracy or independent ranging verification."
+  ],
+  "next_step": "Obtain current antenna-to-antenna tape distances and area-clear confirmation, then record accuracy with fixed firmware and RF settings."
+}

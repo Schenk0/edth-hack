@@ -1,0 +1,3736 @@
+{
+  "date": "2026-11-08",
+  "status": "Power A/B/A complete; original settings restored; full triangle verified before requesting a new USB layout",
+  "purpose": "Test whether changing only N2 transmit power reversibly changes original range variation",
+  "firmware_sha256": "51bf39df31294a6929eba6ce6e454f40ecf891a3bd1562c3b6c54ef938a8c405",
+  "firmware_and_antenna_delays_unchanged": true,
+  "controls": {
+    "N2_power": [
+      "fdfdfdfd",
+      "7d7d7d7d",
+      "fdfdfdfd"
+    ],
+    "nominal_driver_LUT_reduction_db": 4.0,
+    "radiated_power_measured": false,
+    "N1_power_unchanged": true,
+    "N3_power_unchanged": true,
+    "physical_reboots": "One per USB board per condition; journal boot generation can advance twice after SET",
+    "settle_ms": 15000,
+    "measurement_window_ms": 60000,
+    "predeclared_temporal_splits_ms": [
+      [
+        15000,
+        45000
+      ],
+      [
+        45000,
+        75000
+      ]
+    ],
+    "fresh_tape_reference": null
+  },
+  "phases": {
+    "A1-original": {
+      "n2_power": "fdfdfdfd",
+      "ranges": {
+        "N1-N2": {
+          "count": 31,
+          "median_m": 2.155,
+          "sample_sd_m": 0.18635106192230275,
+          "min_m": 2.043,
+          "max_m": 2.698
+        },
+        "N1-N3": {
+          "count": 31,
+          "median_m": 2.552,
+          "sample_sd_m": 0.01180705092785254,
+          "min_m": 2.53,
+          "max_m": 2.577
+        },
+        "N2-N3": {
+          "count": 59,
+          "median_m": 1.774,
+          "sample_sd_m": 0.04275167172658731,
+          "min_m": 1.703,
+          "max_m": 1.915
+        }
+      },
+      "temporal_range_splits": {
+        "whole_60s": {
+          "ranges": {
+            "N1-N2": {
+              "count": 31,
+              "median_m": 2.155,
+              "sample_sd_m": 0.18635106192230275,
+              "min_m": 2.043,
+              "max_m": 2.698
+            },
+            "N1-N3": {
+              "count": 31,
+              "median_m": 2.552,
+              "sample_sd_m": 0.01180705092785254,
+              "min_m": 2.53,
+              "max_m": 2.577
+            },
+            "N2-N3": {
+              "count": 59,
+              "median_m": 1.774,
+              "sample_sd_m": 0.04275167172658731,
+              "min_m": 1.703,
+              "max_m": 1.915
+            }
+          },
+          "unique_report_statuses": {
+            "N1": {
+              "reference": 58
+            },
+            "N2": {
+              "relative": 58
+            },
+            "N3": {
+              "relative": 58
+            }
+          },
+          "duplicate_cross_observer_payloads": 0,
+          "conflicting_cross_observer_payloads": []
+        },
+        "first_30s": {
+          "ranges": {
+            "N1-N2": {
+              "count": 15,
+              "median_m": 2.176,
+              "sample_sd_m": 0.1923841642824759,
+              "min_m": 2.073,
+              "max_m": 2.677
+            },
+            "N1-N3": {
+              "count": 16,
+              "median_m": 2.551,
+              "sample_sd_m": 0.012041594578792315,
+              "min_m": 2.53,
+              "max_m": 2.566
+            },
+            "N2-N3": {
+              "count": 30,
+              "median_m": 1.7814999999999999,
+              "sample_sd_m": 0.046920879845941114,
+              "min_m": 1.703,
+              "max_m": 1.915
+            }
+          },
+          "unique_report_statuses": {
+            "N1": {
+              "reference": 29
+            },
+            "N2": {
+              "relative": 29
+            },
+            "N3": {
+              "relative": 29
+            }
+          },
+          "duplicate_cross_observer_payloads": 0,
+          "conflicting_cross_observer_payloads": []
+        },
+        "last_30s": {
+          "ranges": {
+            "N1-N2": {
+              "count": 16,
+              "median_m": 2.151,
+              "sample_sd_m": 0.1864276334130754,
+              "min_m": 2.043,
+              "max_m": 2.698
+            },
+            "N1-N3": {
+              "count": 15,
+              "median_m": 2.559,
+              "sample_sd_m": 0.010992638229201195,
+              "min_m": 2.541,
+              "max_m": 2.577
+            },
+            "N2-N3": {
+              "count": 29,
+              "median_m": 1.774,
+              "sample_sd_m": 0.03713054456780128,
+              "min_m": 1.725,
+              "max_m": 1.861
+            }
+          },
+          "unique_report_statuses": {
+            "N1": {
+              "reference": 29
+            },
+            "N2": {
+              "relative": 29
+            },
+            "N3": {
+              "relative": 29
+            }
+          },
+          "duplicate_cross_observer_payloads": 0,
+          "conflicting_cross_observer_payloads": []
+        }
+      },
+      "timing_valid": true,
+      "receiver_quality": {
+        "N3:peer=N2:poll": {
+          "edge": "N2-N3",
+          "unique_quality_records_in_source_window": 39,
+          "transmitting_node": "N2",
+          "transmitter_is_power_test_node": true,
+          "all_quality": {
+            "valid_count": 39,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 39,
+                "median": -79.32,
+                "sample_sd": 1.7571701962290167,
+                "min": -80.3,
+                "max": -75.91
+              },
+              "first_path_dbm": {
+                "count": 39,
+                "median": -93.32,
+                "sample_sd": 2.1502029844863313,
+                "min": -95.3,
+                "max": -87.4
+              },
+              "power_gap_db": {
+                "count": 39,
+                "median": 14.099999999999994,
+                "sample_sd": 0.6878145090941137,
+                "min": 11.490000000000009,
+                "max": 15.61999999999999
+              },
+              "cir_power": {
+                "count": 39,
+                "median": 60,
+                "sample_sd": 26.71997034269892,
+                "min": 9,
+                "max": 111
+              },
+              "accum_count": {
+                "count": 39,
+                "median": 115,
+                "sample_sd": 16.296344688378102,
+                "min": 37,
+                "max": 118
+              },
+              "fp_index_q6": {
+                "count": 39,
+                "median": 47168,
+                "sample_sd": 273.47752524680106,
+                "min": 46472,
+                "max": 47558
+              },
+              "read_us": {
+                "count": 39,
+                "median": 185,
+                "sample_sd": 5.376261111196375,
+                "min": 169,
+                "max": 189
+              }
+            },
+            "dgc_counts": {
+              "1": 18,
+              "0": 21
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 21,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 21,
+                    "median": -79.68,
+                    "sample_sd": 0.282858706104386,
+                    "min": -80.3,
+                    "max": -79.29
+                  },
+                  "first_path_dbm": {
+                    "count": 21,
+                    "median": -94.22,
+                    "sample_sd": 0.6070824059541263,
+                    "min": -95.3,
+                    "max": -92.99
+                  },
+                  "power_gap_db": {
+                    "count": 21,
+                    "median": 14.370000000000005,
+                    "sample_sd": 0.5656677470034872,
+                    "min": 13.63000000000001,
+                    "max": 15.61999999999999
+                  },
+                  "cir_power": {
+                    "count": 21,
+                    "median": 97,
+                    "sample_sd": 26.999029964937982,
+                    "min": 9,
+                    "max": 111
+                  }
+                }
+              },
+              "1": {
+                "count": 18,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 18,
+                    "median": -76.175,
+                    "sample_sd": 0.23184187196184183,
+                    "min": -76.8,
+                    "max": -75.91
+                  },
+                  "first_path_dbm": {
+                    "count": 18,
+                    "median": -90.195,
+                    "sample_sd": 0.7106043179801431,
+                    "min": -90.78,
+                    "max": -87.4
+                  },
+                  "power_gap_db": {
+                    "count": 18,
+                    "median": 13.979999999999997,
+                    "sample_sd": 0.68077426124321,
+                    "min": 11.490000000000009,
+                    "max": 14.64
+                  },
+                  "cir_power": {
+                    "count": 18,
+                    "median": 55.5,
+                    "sample_sd": 3.2338083338177728,
+                    "min": 49,
+                    "max": 60
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 38,
+          "edge_unique_range_count": 59,
+          "matched_quality": {
+            "valid_count": 38,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 38,
+                "median": -79.305,
+                "sample_sd": 1.7667281362039333,
+                "min": -80.3,
+                "max": -75.91
+              },
+              "first_path_dbm": {
+                "count": 38,
+                "median": -93.155,
+                "sample_sd": 2.168206120491969,
+                "min": -95.3,
+                "max": -87.4
+              },
+              "power_gap_db": {
+                "count": 38,
+                "median": 14.074999999999996,
+                "sample_sd": 0.6970231357552579,
+                "min": 11.490000000000009,
+                "max": 15.61999999999999
+              },
+              "cir_power": {
+                "count": 38,
+                "median": 60.0,
+                "sample_sd": 26.411356344468203,
+                "min": 9,
+                "max": 111
+              },
+              "accum_count": {
+                "count": 38,
+                "median": 115.0,
+                "sample_sd": 16.479156195166492,
+                "min": 37,
+                "max": 118
+              },
+              "fp_index_q6": {
+                "count": 38,
+                "median": 47169.0,
+                "sample_sd": 253.46213815189273,
+                "min": 46472,
+                "max": 47558
+              },
+              "read_us": {
+                "count": 38,
+                "median": 185.0,
+                "sample_sd": 5.362267412815533,
+                "min": 169,
+                "max": 189
+              }
+            },
+            "dgc_counts": {
+              "1": 18,
+              "0": 20
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 20,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 20,
+                    "median": -79.725,
+                    "sample_sd": 0.28423998385352545,
+                    "min": -80.3,
+                    "max": -79.29
+                  },
+                  "first_path_dbm": {
+                    "count": 20,
+                    "median": -94.235,
+                    "sample_sd": 0.608318432886491,
+                    "min": -95.3,
+                    "max": -92.99
+                  },
+                  "power_gap_db": {
+                    "count": 20,
+                    "median": 14.460000000000008,
+                    "sample_sd": 0.5754668585271953,
+                    "min": 13.63000000000001,
+                    "max": 15.61999999999999
+                  },
+                  "cir_power": {
+                    "count": 20,
+                    "median": 96.5,
+                    "sample_sd": 27.323163491036222,
+                    "min": 9,
+                    "max": 111
+                  }
+                }
+              },
+              "1": {
+                "count": 18,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 18,
+                    "median": -76.175,
+                    "sample_sd": 0.23184187196184183,
+                    "min": -76.8,
+                    "max": -75.91
+                  },
+                  "first_path_dbm": {
+                    "count": 18,
+                    "median": -90.195,
+                    "sample_sd": 0.7106043179801431,
+                    "min": -90.78,
+                    "max": -87.4
+                  },
+                  "power_gap_db": {
+                    "count": 18,
+                    "median": 13.979999999999997,
+                    "sample_sd": 0.68077426124321,
+                    "min": 11.490000000000009,
+                    "max": 14.64
+                  },
+                  "cir_power": {
+                    "count": 18,
+                    "median": 55.5,
+                    "sample_sd": 3.2338083338177728,
+                    "min": 49,
+                    "max": 60
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 38,
+            "median": 1.7730000000000001,
+            "sample_sd": 0.04319057803843858,
+            "min": 1.712,
+            "max": 1.915
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 38,
+              "pearson_r": 0.19731158600172116
+            },
+            "first_path_dbm": {
+              "count": 38,
+              "pearson_r": 0.3070176249549266
+            },
+            "power_gap_db": {
+              "count": 38,
+              "pearson_r": -0.4549082328441563
+            }
+          }
+        },
+        "N3:peer=N2:final": {
+          "edge": "N2-N3",
+          "unique_quality_records_in_source_window": 39,
+          "transmitting_node": "N2",
+          "transmitter_is_power_test_node": true,
+          "all_quality": {
+            "valid_count": 39,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 39,
+                "median": -79.48,
+                "sample_sd": 1.7467876048828026,
+                "min": -80.06,
+                "max": -75.91
+              },
+              "first_path_dbm": {
+                "count": 39,
+                "median": -93.71,
+                "sample_sd": 2.205087266198768,
+                "min": -95.66,
+                "max": -88.41
+              },
+              "power_gap_db": {
+                "count": 39,
+                "median": 14.33999999999999,
+                "sample_sd": 0.613011525914631,
+                "min": 12.349999999999994,
+                "max": 15.599999999999994
+              },
+              "cir_power": {
+                "count": 39,
+                "median": 95,
+                "sample_sd": 22.13950981247873,
+                "min": 49,
+                "max": 107
+              },
+              "accum_count": {
+                "count": 39,
+                "median": 115,
+                "sample_sd": 0.8006407690254357,
+                "min": 111,
+                "max": 115
+              },
+              "fp_index_q6": {
+                "count": 39,
+                "median": 47343,
+                "sample_sd": 146.4740837826713,
+                "min": 47048,
+                "max": 47564
+              },
+              "read_us": {
+                "count": 39,
+                "median": 154,
+                "sample_sd": 1.477222473027612,
+                "min": 151,
+                "max": 157
+              }
+            },
+            "dgc_counts": {
+              "1": 16,
+              "0": 23
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 23,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 23,
+                    "median": -79.7,
+                    "sample_sd": 0.19109730981408882,
+                    "min": -80.06,
+                    "max": -79.4
+                  },
+                  "first_path_dbm": {
+                    "count": 23,
+                    "median": -94.46,
+                    "sample_sd": 0.5273507506671891,
+                    "min": -95.66,
+                    "max": -93.61
+                  },
+                  "power_gap_db": {
+                    "count": 23,
+                    "median": 14.670000000000002,
+                    "sample_sd": 0.41692455787170984,
+                    "min": 13.969999999999999,
+                    "max": 15.599999999999994
+                  },
+                  "cir_power": {
+                    "count": 23,
+                    "median": 100,
+                    "sample_sd": 4.747372895309007,
+                    "min": 90,
+                    "max": 107
+                  }
+                }
+              },
+              "1": {
+                "count": 16,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 16,
+                    "median": -76.1,
+                    "sample_sd": 0.24675139310650382,
+                    "min": -76.8,
+                    "max": -75.91
+                  },
+                  "first_path_dbm": {
+                    "count": 16,
+                    "median": -90.0,
+                    "sample_sd": 0.4962375103382116,
+                    "min": -90.55,
+                    "max": -88.41
+                  },
+                  "power_gap_db": {
+                    "count": 16,
+                    "median": 13.839999999999996,
+                    "sample_sd": 0.5168780481570758,
+                    "min": 12.349999999999994,
+                    "max": 14.450000000000003
+                  },
+                  "cir_power": {
+                    "count": 16,
+                    "median": 57.5,
+                    "sample_sd": 3.0659419433511785,
+                    "min": 49,
+                    "max": 60
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 38,
+          "edge_unique_range_count": 59,
+          "matched_quality": {
+            "valid_count": 38,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 38,
+                "median": -79.465,
+                "sample_sd": 1.758197787354841,
+                "min": -80.06,
+                "max": -75.91
+              },
+              "first_path_dbm": {
+                "count": 38,
+                "median": -93.695,
+                "sample_sd": 2.2229772559592442,
+                "min": -95.66,
+                "max": -88.41
+              },
+              "power_gap_db": {
+                "count": 38,
+                "median": 14.29999999999999,
+                "sample_sd": 0.6208370891972407,
+                "min": 12.349999999999994,
+                "max": 15.599999999999994
+              },
+              "cir_power": {
+                "count": 38,
+                "median": 94.0,
+                "sample_sd": 22.162419333760976,
+                "min": 49,
+                "max": 107
+              },
+              "accum_count": {
+                "count": 38,
+                "median": 115.0,
+                "sample_sd": 0.8005154811506631,
+                "min": 111,
+                "max": 115
+              },
+              "fp_index_q6": {
+                "count": 38,
+                "median": 47324.5,
+                "sample_sd": 148.3562976027874,
+                "min": 47048,
+                "max": 47564
+              },
+              "read_us": {
+                "count": 38,
+                "median": 154.0,
+                "sample_sd": 1.491559944104269,
+                "min": 151,
+                "max": 157
+              }
+            },
+            "dgc_counts": {
+              "1": 16,
+              "0": 22
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 22,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 22,
+                    "median": -79.7,
+                    "sample_sd": 0.19094490490703503,
+                    "min": -80.06,
+                    "max": -79.4
+                  },
+                  "first_path_dbm": {
+                    "count": 22,
+                    "median": -94.47999999999999,
+                    "sample_sd": 0.5325248200625796,
+                    "min": -95.66,
+                    "max": -93.61
+                  },
+                  "power_gap_db": {
+                    "count": 22,
+                    "median": 14.695,
+                    "sample_sd": 0.42428268980221195,
+                    "min": 13.969999999999999,
+                    "max": 15.599999999999994
+                  },
+                  "cir_power": {
+                    "count": 22,
+                    "median": 99.5,
+                    "sample_sd": 4.810027404949335,
+                    "min": 90,
+                    "max": 107
+                  }
+                }
+              },
+              "1": {
+                "count": 16,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 16,
+                    "median": -76.1,
+                    "sample_sd": 0.24675139310650382,
+                    "min": -76.8,
+                    "max": -75.91
+                  },
+                  "first_path_dbm": {
+                    "count": 16,
+                    "median": -90.0,
+                    "sample_sd": 0.4962375103382116,
+                    "min": -90.55,
+                    "max": -88.41
+                  },
+                  "power_gap_db": {
+                    "count": 16,
+                    "median": 13.839999999999996,
+                    "sample_sd": 0.5168780481570758,
+                    "min": 12.349999999999994,
+                    "max": 14.450000000000003
+                  },
+                  "cir_power": {
+                    "count": 16,
+                    "median": 57.5,
+                    "sample_sd": 3.0659419433511785,
+                    "min": 49,
+                    "max": 60
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 38,
+            "median": 1.7730000000000001,
+            "sample_sd": 0.04319057803843858,
+            "min": 1.712,
+            "max": 1.915
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 38,
+              "pearson_r": 0.18709178686894967
+            },
+            "first_path_dbm": {
+              "count": 38,
+              "pearson_r": 0.23127359231408037
+            },
+            "power_gap_db": {
+              "count": 38,
+              "pearson_r": -0.2982611270089751
+            }
+          }
+        },
+        "N2:peer=N3:response": {
+          "edge": "N2-N3",
+          "unique_quality_records_in_source_window": 54,
+          "transmitting_node": "N3",
+          "transmitter_is_power_test_node": false,
+          "all_quality": {
+            "valid_count": 54,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 54,
+                "median": -79.7,
+                "sample_sd": 1.616192143287783,
+                "min": -81.5,
+                "max": -76.21
+              },
+              "first_path_dbm": {
+                "count": 54,
+                "median": -94.24000000000001,
+                "sample_sd": 2.451463574028148,
+                "min": -106.22,
+                "max": -90.12
+              },
+              "power_gap_db": {
+                "count": 54,
+                "median": 14.469999999999999,
+                "sample_sd": 1.491643166487408,
+                "min": 11.769999999999996,
+                "max": 24.72
+              },
+              "cir_power": {
+                "count": 54,
+                "median": 92.5,
+                "sample_sd": 20.52736749348145,
+                "min": 48,
+                "max": 106
+              },
+              "accum_count": {
+                "count": 54,
+                "median": 115.0,
+                "sample_sd": 0.3812517541859725,
+                "min": 113,
+                "max": 115
+              },
+              "fp_index_q6": {
+                "count": 54,
+                "median": 47271.5,
+                "sample_sd": 1732.938545591057,
+                "min": 34632,
+                "max": 47556
+              },
+              "read_us": {
+                "count": 54,
+                "median": 187.0,
+                "sample_sd": 6.245641387257598,
+                "min": 169,
+                "max": 194
+              }
+            },
+            "dgc_counts": {
+              "0": 38,
+              "1": 16
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 38,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 38,
+                    "median": -79.79,
+                    "sample_sd": 0.3505241959534197,
+                    "min": -81.5,
+                    "max": -79.45
+                  },
+                  "first_path_dbm": {
+                    "count": 38,
+                    "median": -94.425,
+                    "sample_sd": 2.0160242306171017,
+                    "min": -106.22,
+                    "max": -91.78
+                  },
+                  "power_gap_db": {
+                    "count": 38,
+                    "median": 14.560000000000002,
+                    "sample_sd": 1.7578960656207445,
+                    "min": 11.769999999999996,
+                    "max": 24.72
+                  },
+                  "cir_power": {
+                    "count": 38,
+                    "median": 98.0,
+                    "sample_sd": 6.969145574794248,
+                    "min": 66,
+                    "max": 106
+                  }
+                }
+              },
+              "1": {
+                "count": 16,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 16,
+                    "median": -76.38,
+                    "sample_sd": 0.15396428157206024,
+                    "min": -76.89,
+                    "max": -76.21
+                  },
+                  "first_path_dbm": {
+                    "count": 16,
+                    "median": -90.825,
+                    "sample_sd": 0.3611365162003588,
+                    "min": -91.46,
+                    "max": -90.12
+                  },
+                  "power_gap_db": {
+                    "count": 16,
+                    "median": 14.410000000000004,
+                    "sample_sd": 0.34692398302797994,
+                    "min": 13.740000000000009,
+                    "max": 15.090000000000003
+                  },
+                  "cir_power": {
+                    "count": 16,
+                    "median": 54.0,
+                    "sample_sd": 1.8337120820892248,
+                    "min": 48,
+                    "max": 56
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 53,
+          "edge_unique_range_count": 59,
+          "matched_quality": {
+            "valid_count": 53,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 53,
+                "median": -79.7,
+                "sample_sd": 1.589495451708325,
+                "min": -80.25,
+                "max": -76.21
+              },
+              "first_path_dbm": {
+                "count": 53,
+                "median": -94.22,
+                "sample_sd": 1.7253869383656315,
+                "min": -95.77,
+                "max": -90.12
+              },
+              "power_gap_db": {
+                "count": 53,
+                "median": 14.459999999999994,
+                "sample_sd": 0.5398901275095638,
+                "min": 11.769999999999996,
+                "max": 15.519999999999996
+              },
+              "cir_power": {
+                "count": 53,
+                "median": 93,
+                "sample_sd": 20.583417311389383,
+                "min": 48,
+                "max": 106
+              },
+              "accum_count": {
+                "count": 53,
+                "median": 115,
+                "sample_sd": 0.3847604951221946,
+                "min": 113,
+                "max": 115
+              },
+              "fp_index_q6": {
+                "count": 53,
+                "median": 47276,
+                "sample_sd": 161.60731133498595,
+                "min": 47046,
+                "max": 47556
+              },
+              "read_us": {
+                "count": 53,
+                "median": 187,
+                "sample_sd": 6.29540113667891,
+                "min": 169,
+                "max": 194
+              }
+            },
+            "dgc_counts": {
+              "0": 37,
+              "1": 16
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 37,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 37,
+                    "median": -79.79,
+                    "sample_sd": 0.22828417304680615,
+                    "min": -80.25,
+                    "max": -79.45
+                  },
+                  "first_path_dbm": {
+                    "count": 37,
+                    "median": -94.39,
+                    "sample_sd": 0.616134662165603,
+                    "min": -95.77,
+                    "max": -91.78
+                  },
+                  "power_gap_db": {
+                    "count": 37,
+                    "median": 14.560000000000002,
+                    "sample_sd": 0.6047047774475314,
+                    "min": 11.769999999999996,
+                    "max": 15.519999999999996
+                  },
+                  "cir_power": {
+                    "count": 37,
+                    "median": 98,
+                    "sample_sd": 4.9509607160643085,
+                    "min": 88,
+                    "max": 106
+                  }
+                }
+              },
+              "1": {
+                "count": 16,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 16,
+                    "median": -76.38,
+                    "sample_sd": 0.15396428157206024,
+                    "min": -76.89,
+                    "max": -76.21
+                  },
+                  "first_path_dbm": {
+                    "count": 16,
+                    "median": -90.825,
+                    "sample_sd": 0.3611365162003588,
+                    "min": -91.46,
+                    "max": -90.12
+                  },
+                  "power_gap_db": {
+                    "count": 16,
+                    "median": 14.410000000000004,
+                    "sample_sd": 0.34692398302797994,
+                    "min": 13.740000000000009,
+                    "max": 15.090000000000003
+                  },
+                  "cir_power": {
+                    "count": 16,
+                    "median": 54.0,
+                    "sample_sd": 1.8337120820892248,
+                    "min": 48,
+                    "max": 56
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 53,
+            "median": 1.772,
+            "sample_sd": 0.043131629294211625,
+            "min": 1.703,
+            "max": 1.915
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 53,
+              "pearson_r": -0.11053274695635373
+            },
+            "first_path_dbm": {
+              "count": 53,
+              "pearson_r": -0.04777368107624854
+            },
+            "power_gap_db": {
+              "count": 53,
+              "pearson_r": -0.17274480208696683
+            }
+          }
+        },
+        "N3:peer=N1:poll": {
+          "edge": "N1-N3",
+          "unique_quality_records_in_source_window": 18,
+          "transmitting_node": "N1",
+          "transmitter_is_power_test_node": false,
+          "all_quality": {
+            "valid_count": 18,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 18,
+                "median": -81.4,
+                "sample_sd": 0.2477559414745636,
+                "min": -82.07,
+                "max": -81.23
+              },
+              "first_path_dbm": {
+                "count": 18,
+                "median": -83.94,
+                "sample_sd": 0.46172169984155603,
+                "min": -85.12,
+                "max": -83.44
+              },
+              "power_gap_db": {
+                "count": 18,
+                "median": 2.490000000000002,
+                "sample_sd": 0.37197406614218864,
+                "min": 1.6300000000000097,
+                "max": 3.2900000000000063
+              },
+              "cir_power": {
+                "count": 18,
+                "median": 69.0,
+                "sample_sd": 14.864639798524191,
+                "min": 7,
+                "max": 72
+              },
+              "accum_count": {
+                "count": 18,
+                "median": 115.0,
+                "sample_sd": 17.89338432534156,
+                "min": 40,
+                "max": 118
+              },
+              "fp_index_q6": {
+                "count": 18,
+                "median": 47235.0,
+                "sample_sd": 174.22485658939362,
+                "min": 47028,
+                "max": 47627
+              },
+              "read_us": {
+                "count": 18,
+                "median": 180.0,
+                "sample_sd": 6.124257991602935,
+                "min": 166,
+                "max": 187
+              }
+            },
+            "dgc_counts": {
+              "0": 18
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 18,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 18,
+                    "median": -81.4,
+                    "sample_sd": 0.2477559414745636,
+                    "min": -82.07,
+                    "max": -81.23
+                  },
+                  "first_path_dbm": {
+                    "count": 18,
+                    "median": -83.94,
+                    "sample_sd": 0.46172169984155603,
+                    "min": -85.12,
+                    "max": -83.44
+                  },
+                  "power_gap_db": {
+                    "count": 18,
+                    "median": 2.490000000000002,
+                    "sample_sd": 0.37197406614218864,
+                    "min": 1.6300000000000097,
+                    "max": 3.2900000000000063
+                  },
+                  "cir_power": {
+                    "count": 18,
+                    "median": 69.0,
+                    "sample_sd": 14.864639798524191,
+                    "min": 7,
+                    "max": 72
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 18,
+          "edge_unique_range_count": 31,
+          "matched_quality": {
+            "valid_count": 18,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 18,
+                "median": -81.4,
+                "sample_sd": 0.2477559414745636,
+                "min": -82.07,
+                "max": -81.23
+              },
+              "first_path_dbm": {
+                "count": 18,
+                "median": -83.94,
+                "sample_sd": 0.46172169984155603,
+                "min": -85.12,
+                "max": -83.44
+              },
+              "power_gap_db": {
+                "count": 18,
+                "median": 2.490000000000002,
+                "sample_sd": 0.37197406614218864,
+                "min": 1.6300000000000097,
+                "max": 3.2900000000000063
+              },
+              "cir_power": {
+                "count": 18,
+                "median": 69.0,
+                "sample_sd": 14.864639798524191,
+                "min": 7,
+                "max": 72
+              },
+              "accum_count": {
+                "count": 18,
+                "median": 115.0,
+                "sample_sd": 17.89338432534156,
+                "min": 40,
+                "max": 118
+              },
+              "fp_index_q6": {
+                "count": 18,
+                "median": 47235.0,
+                "sample_sd": 174.22485658939362,
+                "min": 47028,
+                "max": 47627
+              },
+              "read_us": {
+                "count": 18,
+                "median": 180.0,
+                "sample_sd": 6.124257991602935,
+                "min": 166,
+                "max": 187
+              }
+            },
+            "dgc_counts": {
+              "0": 18
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 18,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 18,
+                    "median": -81.4,
+                    "sample_sd": 0.2477559414745636,
+                    "min": -82.07,
+                    "max": -81.23
+                  },
+                  "first_path_dbm": {
+                    "count": 18,
+                    "median": -83.94,
+                    "sample_sd": 0.46172169984155603,
+                    "min": -85.12,
+                    "max": -83.44
+                  },
+                  "power_gap_db": {
+                    "count": 18,
+                    "median": 2.490000000000002,
+                    "sample_sd": 0.37197406614218864,
+                    "min": 1.6300000000000097,
+                    "max": 3.2900000000000063
+                  },
+                  "cir_power": {
+                    "count": 18,
+                    "median": 69.0,
+                    "sample_sd": 14.864639798524191,
+                    "min": 7,
+                    "max": 72
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 18,
+            "median": 2.5595,
+            "sample_sd": 0.011382390940809029,
+            "min": 2.532,
+            "max": 2.568
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 18,
+              "pearson_r": 0.04248283180932448
+            },
+            "first_path_dbm": {
+              "count": 18,
+              "pearson_r": 0.4455465724599094
+            },
+            "power_gap_db": {
+              "count": 18,
+              "pearson_r": -0.5247493429521247
+            }
+          }
+        }
+      },
+      "N1_traffic": {
+        "fresh_traffic_observed": true,
+        "boots": [
+          39
+        ],
+        "unique_fresh_poll_identities": 49,
+        "unique_fresh_origin_payloads": 120,
+        "responder_attempts_to_N1_observed": 0,
+        "expected_boot": 39,
+        "matches_expected_boot": true
+      }
+    },
+    "B-lower": {
+      "n2_power": "7d7d7d7d",
+      "ranges": {
+        "N1-N2": {
+          "count": 32,
+          "median_m": 2.1635,
+          "sample_sd_m": 0.1942170774815744,
+          "min_m": 2.057,
+          "max_m": 2.689
+        },
+        "N1-N3": {
+          "count": 33,
+          "median_m": 2.552,
+          "sample_sd_m": 0.00786401952123107,
+          "min_m": 2.533,
+          "max_m": 2.563
+        },
+        "N2-N3": {
+          "count": 59,
+          "median_m": 1.769,
+          "sample_sd_m": 0.0341882231133665,
+          "min_m": 1.712,
+          "max_m": 1.857
+        }
+      },
+      "temporal_range_splits": {
+        "whole_60s": {
+          "ranges": {
+            "N1-N2": {
+              "count": 32,
+              "median_m": 2.1635,
+              "sample_sd_m": 0.1942170774815744,
+              "min_m": 2.057,
+              "max_m": 2.689
+            },
+            "N1-N3": {
+              "count": 33,
+              "median_m": 2.552,
+              "sample_sd_m": 0.00786401952123107,
+              "min_m": 2.533,
+              "max_m": 2.563
+            },
+            "N2-N3": {
+              "count": 59,
+              "median_m": 1.769,
+              "sample_sd_m": 0.0341882231133665,
+              "min_m": 1.712,
+              "max_m": 1.857
+            }
+          },
+          "unique_report_statuses": {
+            "N1": {
+              "reference": 58
+            },
+            "N2": {
+              "relative": 58
+            },
+            "N3": {
+              "relative": 57
+            }
+          },
+          "duplicate_cross_observer_payloads": 0,
+          "conflicting_cross_observer_payloads": []
+        },
+        "first_30s": {
+          "ranges": {
+            "N1-N2": {
+              "count": 16,
+              "median_m": 2.2329999999999997,
+              "sample_sd_m": 0.15051111531489406,
+              "min_m": 2.066,
+              "max_m": 2.513
+            },
+            "N1-N3": {
+              "count": 16,
+              "median_m": 2.55,
+              "sample_sd_m": 0.007990619500389247,
+              "min_m": 2.533,
+              "max_m": 2.563
+            },
+            "N2-N3": {
+              "count": 27,
+              "median_m": 1.775,
+              "sample_sd_m": 0.030143011455412663,
+              "min_m": 1.728,
+              "max_m": 1.853
+            }
+          },
+          "unique_report_statuses": {
+            "N1": {
+              "reference": 29
+            },
+            "N2": {
+              "relative": 29
+            },
+            "N3": {
+              "relative": 28
+            }
+          },
+          "duplicate_cross_observer_payloads": 0,
+          "conflicting_cross_observer_payloads": []
+        },
+        "last_30s": {
+          "ranges": {
+            "N1-N2": {
+              "count": 16,
+              "median_m": 2.1085000000000003,
+              "sample_sd_m": 0.23411873768097535,
+              "min_m": 2.057,
+              "max_m": 2.689
+            },
+            "N1-N3": {
+              "count": 17,
+              "median_m": 2.552,
+              "sample_sd_m": 0.00788893491655539,
+              "min_m": 2.533,
+              "max_m": 2.559
+            },
+            "N2-N3": {
+              "count": 32,
+              "median_m": 1.7675,
+              "sample_sd_m": 0.03774616782514314,
+              "min_m": 1.712,
+              "max_m": 1.857
+            }
+          },
+          "unique_report_statuses": {
+            "N1": {
+              "reference": 29
+            },
+            "N2": {
+              "relative": 29
+            },
+            "N3": {
+              "relative": 29
+            }
+          },
+          "duplicate_cross_observer_payloads": 0,
+          "conflicting_cross_observer_payloads": []
+        }
+      },
+      "timing_valid": true,
+      "receiver_quality": {
+        "N3:peer=N2:poll": {
+          "edge": "N2-N3",
+          "unique_quality_records_in_source_window": 34,
+          "transmitting_node": "N2",
+          "transmitter_is_power_test_node": true,
+          "all_quality": {
+            "valid_count": 34,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 34,
+                "median": -81.11500000000001,
+                "sample_sd": 0.23338247509002133,
+                "min": -81.77,
+                "max": -80.95
+              },
+              "first_path_dbm": {
+                "count": 34,
+                "median": -95.29,
+                "sample_sd": 0.36816304610932704,
+                "min": -96.27,
+                "max": -94.85
+              },
+              "power_gap_db": {
+                "count": 34,
+                "median": 14.165000000000006,
+                "sample_sd": 0.40968228200950213,
+                "min": 13.469999999999999,
+                "max": 15.049999999999997
+              },
+              "cir_power": {
+                "count": 34,
+                "median": 70.5,
+                "sample_sd": 4.8242738871590225,
+                "min": 62,
+                "max": 78
+              },
+              "accum_count": {
+                "count": 34,
+                "median": 115.0,
+                "sample_sd": 2.3402621849857237,
+                "min": 111,
+                "max": 119
+              },
+              "fp_index_q6": {
+                "count": 34,
+                "median": 47155.0,
+                "sample_sd": 270.115478374998,
+                "min": 46501,
+                "max": 47557
+              },
+              "read_us": {
+                "count": 34,
+                "median": 185.0,
+                "sample_sd": 6.38521297542478,
+                "min": 170,
+                "max": 191
+              }
+            },
+            "dgc_counts": {
+              "0": 34
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 34,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 34,
+                    "median": -81.11500000000001,
+                    "sample_sd": 0.23338247509002133,
+                    "min": -81.77,
+                    "max": -80.95
+                  },
+                  "first_path_dbm": {
+                    "count": 34,
+                    "median": -95.29,
+                    "sample_sd": 0.36816304610932704,
+                    "min": -96.27,
+                    "max": -94.85
+                  },
+                  "power_gap_db": {
+                    "count": 34,
+                    "median": 14.165000000000006,
+                    "sample_sd": 0.40968228200950213,
+                    "min": 13.469999999999999,
+                    "max": 15.049999999999997
+                  },
+                  "cir_power": {
+                    "count": 34,
+                    "median": 70.5,
+                    "sample_sd": 4.8242738871590225,
+                    "min": 62,
+                    "max": 78
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 34,
+          "edge_unique_range_count": 59,
+          "matched_quality": {
+            "valid_count": 34,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 34,
+                "median": -81.11500000000001,
+                "sample_sd": 0.23338247509002133,
+                "min": -81.77,
+                "max": -80.95
+              },
+              "first_path_dbm": {
+                "count": 34,
+                "median": -95.29,
+                "sample_sd": 0.36816304610932704,
+                "min": -96.27,
+                "max": -94.85
+              },
+              "power_gap_db": {
+                "count": 34,
+                "median": 14.165000000000006,
+                "sample_sd": 0.40968228200950213,
+                "min": 13.469999999999999,
+                "max": 15.049999999999997
+              },
+              "cir_power": {
+                "count": 34,
+                "median": 70.5,
+                "sample_sd": 4.8242738871590225,
+                "min": 62,
+                "max": 78
+              },
+              "accum_count": {
+                "count": 34,
+                "median": 115.0,
+                "sample_sd": 2.3402621849857237,
+                "min": 111,
+                "max": 119
+              },
+              "fp_index_q6": {
+                "count": 34,
+                "median": 47155.0,
+                "sample_sd": 270.115478374998,
+                "min": 46501,
+                "max": 47557
+              },
+              "read_us": {
+                "count": 34,
+                "median": 185.0,
+                "sample_sd": 6.38521297542478,
+                "min": 170,
+                "max": 191
+              }
+            },
+            "dgc_counts": {
+              "0": 34
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 34,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 34,
+                    "median": -81.11500000000001,
+                    "sample_sd": 0.23338247509002133,
+                    "min": -81.77,
+                    "max": -80.95
+                  },
+                  "first_path_dbm": {
+                    "count": 34,
+                    "median": -95.29,
+                    "sample_sd": 0.36816304610932704,
+                    "min": -96.27,
+                    "max": -94.85
+                  },
+                  "power_gap_db": {
+                    "count": 34,
+                    "median": 14.165000000000006,
+                    "sample_sd": 0.40968228200950213,
+                    "min": 13.469999999999999,
+                    "max": 15.049999999999997
+                  },
+                  "cir_power": {
+                    "count": 34,
+                    "median": 70.5,
+                    "sample_sd": 4.8242738871590225,
+                    "min": 62,
+                    "max": 78
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 34,
+            "median": 1.7675,
+            "sample_sd": 0.03355567114443776,
+            "min": 1.713,
+            "max": 1.857
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 34,
+              "pearson_r": -0.19190768183203108
+            },
+            "first_path_dbm": {
+              "count": 34,
+              "pearson_r": 0.2671872396593989
+            },
+            "power_gap_db": {
+              "count": 34,
+              "pearson_r": -0.3494326313237399
+            }
+          }
+        },
+        "N3:peer=N2:final": {
+          "edge": "N2-N3",
+          "unique_quality_records_in_source_window": 34,
+          "transmitting_node": "N2",
+          "transmitter_is_power_test_node": true,
+          "all_quality": {
+            "valid_count": 34,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 34,
+                "median": -81.12,
+                "sample_sd": 0.23899391768750586,
+                "min": -81.7,
+                "max": -81.0
+              },
+              "first_path_dbm": {
+                "count": 34,
+                "median": -95.36,
+                "sample_sd": 0.27675304151771246,
+                "min": -96.0,
+                "max": -94.79
+              },
+              "power_gap_db": {
+                "count": 34,
+                "median": 14.264999999999993,
+                "sample_sd": 0.320538206042551,
+                "min": 13.36999999999999,
+                "max": 14.709999999999994
+              },
+              "cir_power": {
+                "count": 34,
+                "median": 72.0,
+                "sample_sd": 4.154438384278921,
+                "min": 61,
+                "max": 78
+              },
+              "accum_count": {
+                "count": 34,
+                "median": 115.0,
+                "sample_sd": 0.7385489458759964,
+                "min": 112,
+                "max": 118
+              },
+              "fp_index_q6": {
+                "count": 34,
+                "median": 47326.5,
+                "sample_sd": 160.08147713785672,
+                "min": 46853,
+                "max": 47516
+              },
+              "read_us": {
+                "count": 34,
+                "median": 153.0,
+                "sample_sd": 2.4742884607113353,
+                "min": 149,
+                "max": 159
+              }
+            },
+            "dgc_counts": {
+              "0": 34
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 34,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 34,
+                    "median": -81.12,
+                    "sample_sd": 0.23899391768750586,
+                    "min": -81.7,
+                    "max": -81.0
+                  },
+                  "first_path_dbm": {
+                    "count": 34,
+                    "median": -95.36,
+                    "sample_sd": 0.27675304151771246,
+                    "min": -96.0,
+                    "max": -94.79
+                  },
+                  "power_gap_db": {
+                    "count": 34,
+                    "median": 14.264999999999993,
+                    "sample_sd": 0.320538206042551,
+                    "min": 13.36999999999999,
+                    "max": 14.709999999999994
+                  },
+                  "cir_power": {
+                    "count": 34,
+                    "median": 72.0,
+                    "sample_sd": 4.154438384278921,
+                    "min": 61,
+                    "max": 78
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 34,
+          "edge_unique_range_count": 59,
+          "matched_quality": {
+            "valid_count": 34,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 34,
+                "median": -81.12,
+                "sample_sd": 0.23899391768750586,
+                "min": -81.7,
+                "max": -81.0
+              },
+              "first_path_dbm": {
+                "count": 34,
+                "median": -95.36,
+                "sample_sd": 0.27675304151771246,
+                "min": -96.0,
+                "max": -94.79
+              },
+              "power_gap_db": {
+                "count": 34,
+                "median": 14.264999999999993,
+                "sample_sd": 0.320538206042551,
+                "min": 13.36999999999999,
+                "max": 14.709999999999994
+              },
+              "cir_power": {
+                "count": 34,
+                "median": 72.0,
+                "sample_sd": 4.154438384278921,
+                "min": 61,
+                "max": 78
+              },
+              "accum_count": {
+                "count": 34,
+                "median": 115.0,
+                "sample_sd": 0.7385489458759964,
+                "min": 112,
+                "max": 118
+              },
+              "fp_index_q6": {
+                "count": 34,
+                "median": 47326.5,
+                "sample_sd": 160.08147713785672,
+                "min": 46853,
+                "max": 47516
+              },
+              "read_us": {
+                "count": 34,
+                "median": 153.0,
+                "sample_sd": 2.4742884607113353,
+                "min": 149,
+                "max": 159
+              }
+            },
+            "dgc_counts": {
+              "0": 34
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 34,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 34,
+                    "median": -81.12,
+                    "sample_sd": 0.23899391768750586,
+                    "min": -81.7,
+                    "max": -81.0
+                  },
+                  "first_path_dbm": {
+                    "count": 34,
+                    "median": -95.36,
+                    "sample_sd": 0.27675304151771246,
+                    "min": -96.0,
+                    "max": -94.79
+                  },
+                  "power_gap_db": {
+                    "count": 34,
+                    "median": 14.264999999999993,
+                    "sample_sd": 0.320538206042551,
+                    "min": 13.36999999999999,
+                    "max": 14.709999999999994
+                  },
+                  "cir_power": {
+                    "count": 34,
+                    "median": 72.0,
+                    "sample_sd": 4.154438384278921,
+                    "min": 61,
+                    "max": 78
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 34,
+            "median": 1.7675,
+            "sample_sd": 0.03355567114443776,
+            "min": 1.713,
+            "max": 1.857
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 34,
+              "pearson_r": -0.33294648160846774
+            },
+            "first_path_dbm": {
+              "count": 34,
+              "pearson_r": -0.24654009375803193
+            },
+            "power_gap_db": {
+              "count": 34,
+              "pearson_r": -0.035382562834883835
+            }
+          }
+        },
+        "N2:peer=N3:response": {
+          "edge": "N2-N3",
+          "unique_quality_records_in_source_window": 54,
+          "transmitting_node": "N3",
+          "transmitter_is_power_test_node": false,
+          "all_quality": {
+            "valid_count": 54,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 54,
+                "median": -79.695,
+                "sample_sd": 1.6393218949711899,
+                "min": -80.25,
+                "max": -76.3
+              },
+              "first_path_dbm": {
+                "count": 54,
+                "median": -94.16,
+                "sample_sd": 1.7642254008061875,
+                "min": -95.77,
+                "max": -90.49
+              },
+              "power_gap_db": {
+                "count": 54,
+                "median": 14.530000000000001,
+                "sample_sd": 0.3326927282532106,
+                "min": 13.939999999999998,
+                "max": 15.61
+              },
+              "cir_power": {
+                "count": 54,
+                "median": 90.0,
+                "sample_sd": 20.741899987569596,
+                "min": 48,
+                "max": 105
+              },
+              "accum_count": {
+                "count": 54,
+                "median": 115.0,
+                "sample_sd": 0.9197347170165616,
+                "min": 111,
+                "max": 115
+              },
+              "fp_index_q6": {
+                "count": 54,
+                "median": 47331.5,
+                "sample_sd": 137.884673146616,
+                "min": 47046,
+                "max": 47552
+              },
+              "read_us": {
+                "count": 54,
+                "median": 187.5,
+                "sample_sd": 5.6441159382111605,
+                "min": 170,
+                "max": 191
+              }
+            },
+            "dgc_counts": {
+              "0": 36,
+              "1": 18
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 36,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 36,
+                    "median": -79.9,
+                    "sample_sd": 0.22962633552851464,
+                    "min": -80.25,
+                    "max": -79.48
+                  },
+                  "first_path_dbm": {
+                    "count": 36,
+                    "median": -94.445,
+                    "sample_sd": 0.4817988778838724,
+                    "min": -95.77,
+                    "max": -93.8
+                  },
+                  "power_gap_db": {
+                    "count": 36,
+                    "median": 14.560000000000002,
+                    "sample_sd": 0.3555759914762041,
+                    "min": 13.939999999999998,
+                    "max": 15.61
+                  },
+                  "cir_power": {
+                    "count": 36,
+                    "median": 95.0,
+                    "sample_sd": 5.5523482805540425,
+                    "min": 85,
+                    "max": 105
+                  }
+                }
+              },
+              "1": {
+                "count": 18,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 18,
+                    "median": -76.45,
+                    "sample_sd": 0.12701319986984325,
+                    "min": -76.8,
+                    "max": -76.3
+                  },
+                  "first_path_dbm": {
+                    "count": 18,
+                    "median": -90.965,
+                    "sample_sd": 0.31634348833883164,
+                    "min": -91.65,
+                    "max": -90.49
+                  },
+                  "power_gap_db": {
+                    "count": 18,
+                    "median": 14.405000000000001,
+                    "sample_sd": 0.2507511591017076,
+                    "min": 14.11,
+                    "max": 15.060000000000002
+                  },
+                  "cir_power": {
+                    "count": 18,
+                    "median": 53.0,
+                    "sample_sd": 1.6803361008336117,
+                    "min": 48,
+                    "max": 54
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 54,
+          "edge_unique_range_count": 59,
+          "matched_quality": {
+            "valid_count": 54,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 54,
+                "median": -79.695,
+                "sample_sd": 1.6393218949711899,
+                "min": -80.25,
+                "max": -76.3
+              },
+              "first_path_dbm": {
+                "count": 54,
+                "median": -94.16,
+                "sample_sd": 1.7642254008061875,
+                "min": -95.77,
+                "max": -90.49
+              },
+              "power_gap_db": {
+                "count": 54,
+                "median": 14.530000000000001,
+                "sample_sd": 0.3326927282532106,
+                "min": 13.939999999999998,
+                "max": 15.61
+              },
+              "cir_power": {
+                "count": 54,
+                "median": 90.0,
+                "sample_sd": 20.741899987569596,
+                "min": 48,
+                "max": 105
+              },
+              "accum_count": {
+                "count": 54,
+                "median": 115.0,
+                "sample_sd": 0.9197347170165616,
+                "min": 111,
+                "max": 115
+              },
+              "fp_index_q6": {
+                "count": 54,
+                "median": 47331.5,
+                "sample_sd": 137.884673146616,
+                "min": 47046,
+                "max": 47552
+              },
+              "read_us": {
+                "count": 54,
+                "median": 187.5,
+                "sample_sd": 5.6441159382111605,
+                "min": 170,
+                "max": 191
+              }
+            },
+            "dgc_counts": {
+              "0": 36,
+              "1": 18
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 36,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 36,
+                    "median": -79.9,
+                    "sample_sd": 0.22962633552851464,
+                    "min": -80.25,
+                    "max": -79.48
+                  },
+                  "first_path_dbm": {
+                    "count": 36,
+                    "median": -94.445,
+                    "sample_sd": 0.4817988778838724,
+                    "min": -95.77,
+                    "max": -93.8
+                  },
+                  "power_gap_db": {
+                    "count": 36,
+                    "median": 14.560000000000002,
+                    "sample_sd": 0.3555759914762041,
+                    "min": 13.939999999999998,
+                    "max": 15.61
+                  },
+                  "cir_power": {
+                    "count": 36,
+                    "median": 95.0,
+                    "sample_sd": 5.5523482805540425,
+                    "min": 85,
+                    "max": 105
+                  }
+                }
+              },
+              "1": {
+                "count": 18,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 18,
+                    "median": -76.45,
+                    "sample_sd": 0.12701319986984325,
+                    "min": -76.8,
+                    "max": -76.3
+                  },
+                  "first_path_dbm": {
+                    "count": 18,
+                    "median": -90.965,
+                    "sample_sd": 0.31634348833883164,
+                    "min": -91.65,
+                    "max": -90.49
+                  },
+                  "power_gap_db": {
+                    "count": 18,
+                    "median": 14.405000000000001,
+                    "sample_sd": 0.2507511591017076,
+                    "min": 14.11,
+                    "max": 15.060000000000002
+                  },
+                  "cir_power": {
+                    "count": 18,
+                    "median": 53.0,
+                    "sample_sd": 1.6803361008336117,
+                    "min": 48,
+                    "max": 54
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 54,
+            "median": 1.7705,
+            "sample_sd": 0.03438563316262199,
+            "min": 1.713,
+            "max": 1.857
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 54,
+              "pearson_r": -0.45091210620212063
+            },
+            "first_path_dbm": {
+              "count": 54,
+              "pearson_r": -0.5114656196159406
+            },
+            "power_gap_db": {
+              "count": 54,
+              "pearson_r": 0.49039409492784003
+            }
+          }
+        },
+        "N3:peer=N1:poll": {
+          "edge": "N1-N3",
+          "unique_quality_records_in_source_window": 21,
+          "transmitting_node": "N1",
+          "transmitter_is_power_test_node": false,
+          "all_quality": {
+            "valid_count": 21,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 21,
+                "median": -81.46,
+                "sample_sd": 0.15634211570417295,
+                "min": -81.91,
+                "max": -81.31
+              },
+              "first_path_dbm": {
+                "count": 21,
+                "median": -84.14,
+                "sample_sd": 0.3777319533365294,
+                "min": -85.15,
+                "max": -83.77
+              },
+              "power_gap_db": {
+                "count": 21,
+                "median": 2.6599999999999966,
+                "sample_sd": 0.2833296918533526,
+                "min": 2.4299999999999926,
+                "max": 3.5500000000000114
+              },
+              "cir_power": {
+                "count": 21,
+                "median": 66,
+                "sample_sd": 4.365994132142731,
+                "min": 57,
+                "max": 71
+              },
+              "accum_count": {
+                "count": 21,
+                "median": 114,
+                "sample_sd": 2.5523098781859765,
+                "min": 110,
+                "max": 118
+              },
+              "fp_index_q6": {
+                "count": 21,
+                "median": 47306,
+                "sample_sd": 111.21112482892296,
+                "min": 47118,
+                "max": 47578
+              },
+              "read_us": {
+                "count": 21,
+                "median": 178,
+                "sample_sd": 5.388258840602717,
+                "min": 169,
+                "max": 190
+              }
+            },
+            "dgc_counts": {
+              "0": 21
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 21,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 21,
+                    "median": -81.46,
+                    "sample_sd": 0.15634211570417295,
+                    "min": -81.91,
+                    "max": -81.31
+                  },
+                  "first_path_dbm": {
+                    "count": 21,
+                    "median": -84.14,
+                    "sample_sd": 0.3777319533365294,
+                    "min": -85.15,
+                    "max": -83.77
+                  },
+                  "power_gap_db": {
+                    "count": 21,
+                    "median": 2.6599999999999966,
+                    "sample_sd": 0.2833296918533526,
+                    "min": 2.4299999999999926,
+                    "max": 3.5500000000000114
+                  },
+                  "cir_power": {
+                    "count": 21,
+                    "median": 66,
+                    "sample_sd": 4.365994132142731,
+                    "min": 57,
+                    "max": 71
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 21,
+          "edge_unique_range_count": 33,
+          "matched_quality": {
+            "valid_count": 21,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 21,
+                "median": -81.46,
+                "sample_sd": 0.15634211570417295,
+                "min": -81.91,
+                "max": -81.31
+              },
+              "first_path_dbm": {
+                "count": 21,
+                "median": -84.14,
+                "sample_sd": 0.3777319533365294,
+                "min": -85.15,
+                "max": -83.77
+              },
+              "power_gap_db": {
+                "count": 21,
+                "median": 2.6599999999999966,
+                "sample_sd": 0.2833296918533526,
+                "min": 2.4299999999999926,
+                "max": 3.5500000000000114
+              },
+              "cir_power": {
+                "count": 21,
+                "median": 66,
+                "sample_sd": 4.365994132142731,
+                "min": 57,
+                "max": 71
+              },
+              "accum_count": {
+                "count": 21,
+                "median": 114,
+                "sample_sd": 2.5523098781859765,
+                "min": 110,
+                "max": 118
+              },
+              "fp_index_q6": {
+                "count": 21,
+                "median": 47306,
+                "sample_sd": 111.21112482892296,
+                "min": 47118,
+                "max": 47578
+              },
+              "read_us": {
+                "count": 21,
+                "median": 178,
+                "sample_sd": 5.388258840602717,
+                "min": 169,
+                "max": 190
+              }
+            },
+            "dgc_counts": {
+              "0": 21
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 21,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 21,
+                    "median": -81.46,
+                    "sample_sd": 0.15634211570417295,
+                    "min": -81.91,
+                    "max": -81.31
+                  },
+                  "first_path_dbm": {
+                    "count": 21,
+                    "median": -84.14,
+                    "sample_sd": 0.3777319533365294,
+                    "min": -85.15,
+                    "max": -83.77
+                  },
+                  "power_gap_db": {
+                    "count": 21,
+                    "median": 2.6599999999999966,
+                    "sample_sd": 0.2833296918533526,
+                    "min": 2.4299999999999926,
+                    "max": 3.5500000000000114
+                  },
+                  "cir_power": {
+                    "count": 21,
+                    "median": 66,
+                    "sample_sd": 4.365994132142731,
+                    "min": 57,
+                    "max": 71
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 21,
+            "median": 2.552,
+            "sample_sd": 0.006637914187597254,
+            "min": 2.535,
+            "max": 2.563
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 21,
+              "pearson_r": -0.06765779871657543
+            },
+            "first_path_dbm": {
+              "count": 21,
+              "pearson_r": 0.023103483148206743
+            },
+            "power_gap_db": {
+              "count": 21,
+              "pearson_r": -0.06813506585705122
+            }
+          }
+        }
+      },
+      "N1_traffic": {
+        "fresh_traffic_observed": true,
+        "boots": [
+          39
+        ],
+        "unique_fresh_poll_identities": 53,
+        "unique_fresh_origin_payloads": 123,
+        "responder_attempts_to_N1_observed": 0,
+        "expected_boot": 39,
+        "matches_expected_boot": true
+      }
+    },
+    "A2-original": {
+      "n2_power": "fdfdfdfd",
+      "ranges": {
+        "N1-N2": {
+          "count": 29,
+          "median_m": 2.284,
+          "sample_sd_m": 0.17423894329226722,
+          "min_m": 2.064,
+          "max_m": 2.523
+        },
+        "N1-N3": {
+          "count": 31,
+          "median_m": 2.548,
+          "sample_sd_m": 0.008799071309745053,
+          "min_m": 2.523,
+          "max_m": 2.567
+        },
+        "N2-N3": {
+          "count": 61,
+          "median_m": 1.785,
+          "sample_sd_m": 0.03530014164277532,
+          "min_m": 1.725,
+          "max_m": 1.861
+        }
+      },
+      "temporal_range_splits": {
+        "whole_60s": {
+          "ranges": {
+            "N1-N2": {
+              "count": 29,
+              "median_m": 2.284,
+              "sample_sd_m": 0.17423894329226722,
+              "min_m": 2.064,
+              "max_m": 2.523
+            },
+            "N1-N3": {
+              "count": 31,
+              "median_m": 2.548,
+              "sample_sd_m": 0.008799071309745053,
+              "min_m": 2.523,
+              "max_m": 2.567
+            },
+            "N2-N3": {
+              "count": 61,
+              "median_m": 1.785,
+              "sample_sd_m": 0.03530014164277532,
+              "min_m": 1.725,
+              "max_m": 1.861
+            }
+          },
+          "unique_report_statuses": {
+            "N1": {
+              "reference": 58
+            },
+            "N2": {
+              "relative": 59
+            },
+            "N3": {
+              "relative": 58
+            }
+          },
+          "duplicate_cross_observer_payloads": 0,
+          "conflicting_cross_observer_payloads": []
+        },
+        "first_30s": {
+          "ranges": {
+            "N1-N2": {
+              "count": 15,
+              "median_m": 2.303,
+              "sample_sd_m": 0.1675912544598571,
+              "min_m": 2.064,
+              "max_m": 2.503
+            },
+            "N1-N3": {
+              "count": 16,
+              "median_m": 2.5475000000000003,
+              "sample_sd_m": 0.009424922634518888,
+              "min_m": 2.523,
+              "max_m": 2.562
+            },
+            "N2-N3": {
+              "count": 31,
+              "median_m": 1.771,
+              "sample_sd_m": 0.030612738932448303,
+              "min_m": 1.73,
+              "max_m": 1.833
+            }
+          },
+          "unique_report_statuses": {
+            "N1": {
+              "reference": 31
+            },
+            "N2": {
+              "relative": 32
+            },
+            "N3": {
+              "relative": 30
+            }
+          },
+          "duplicate_cross_observer_payloads": 0,
+          "conflicting_cross_observer_payloads": []
+        },
+        "last_30s": {
+          "ranges": {
+            "N1-N2": {
+              "count": 14,
+              "median_m": 2.1475,
+              "sample_sd_m": 0.17660281692276297,
+              "min_m": 2.084,
+              "max_m": 2.523
+            },
+            "N1-N3": {
+              "count": 15,
+              "median_m": 2.55,
+              "sample_sd_m": 0.008293428264653444,
+              "min_m": 2.537,
+              "max_m": 2.567
+            },
+            "N2-N3": {
+              "count": 30,
+              "median_m": 1.8014999999999999,
+              "sample_sd_m": 0.03611159268762293,
+              "min_m": 1.725,
+              "max_m": 1.861
+            }
+          },
+          "unique_report_statuses": {
+            "N1": {
+              "reference": 27
+            },
+            "N2": {
+              "relative": 27
+            },
+            "N3": {
+              "relative": 28
+            }
+          },
+          "duplicate_cross_observer_payloads": 0,
+          "conflicting_cross_observer_payloads": []
+        }
+      },
+      "timing_valid": true,
+      "receiver_quality": {
+        "N3:peer=N2:poll": {
+          "edge": "N2-N3",
+          "unique_quality_records_in_source_window": 39,
+          "transmitting_node": "N2",
+          "transmitter_is_power_test_node": true,
+          "all_quality": {
+            "valid_count": 39,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 39,
+                "median": -79.48,
+                "sample_sd": 1.8024266518662078,
+                "min": -80.0,
+                "max": -74.08
+              },
+              "first_path_dbm": {
+                "count": 39,
+                "median": -93.31,
+                "sample_sd": 1.9790014044220514,
+                "min": -95.73,
+                "max": -88.12
+              },
+              "power_gap_db": {
+                "count": 39,
+                "median": 14.460000000000008,
+                "sample_sd": 0.7727084007596853,
+                "min": 12.179999999999993,
+                "max": 16.230000000000004
+              },
+              "cir_power": {
+                "count": 39,
+                "median": 96,
+                "sample_sd": 24.590684300888515,
+                "min": 23,
+                "max": 114
+              },
+              "accum_count": {
+                "count": 39,
+                "median": 114,
+                "sample_sd": 2.3338152577314197,
+                "min": 111,
+                "max": 119
+              },
+              "fp_index_q6": {
+                "count": 39,
+                "median": 47291,
+                "sample_sd": 242.15098010537125,
+                "min": 46508,
+                "max": 47595
+              },
+              "read_us": {
+                "count": 39,
+                "median": 183,
+                "sample_sd": 5.458838738950597,
+                "min": 168,
+                "max": 189
+              }
+            },
+            "dgc_counts": {
+              "0": 23,
+              "1": 15,
+              "2": 1
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 23,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 23,
+                    "median": -79.57,
+                    "sample_sd": 0.15484532637058843,
+                    "min": -80.0,
+                    "max": -79.43
+                  },
+                  "first_path_dbm": {
+                    "count": 23,
+                    "median": -94.07,
+                    "sample_sd": 0.6790760404952493,
+                    "min": -95.73,
+                    "max": -92.72
+                  },
+                  "power_gap_db": {
+                    "count": 23,
+                    "median": 14.480000000000004,
+                    "sample_sd": 0.7076328629838387,
+                    "min": 13.260000000000005,
+                    "max": 16.230000000000004
+                  },
+                  "cir_power": {
+                    "count": 23,
+                    "median": 101,
+                    "sample_sd": 5.5914955185877915,
+                    "min": 93,
+                    "max": 114
+                  }
+                }
+              },
+              "1": {
+                "count": 15,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 15,
+                    "median": -76.22,
+                    "sample_sd": 0.2547510456074649,
+                    "min": -76.93,
+                    "max": -75.91
+                  },
+                  "first_path_dbm": {
+                    "count": 15,
+                    "median": -90.68,
+                    "sample_sd": 0.7119109093539339,
+                    "min": -91.68,
+                    "max": -89.11
+                  },
+                  "power_gap_db": {
+                    "count": 15,
+                    "median": 14.460000000000008,
+                    "sample_sd": 0.9044056190722883,
+                    "min": 12.179999999999993,
+                    "max": 15.680000000000007
+                  },
+                  "cir_power": {
+                    "count": 15,
+                    "median": 55,
+                    "sample_sd": 3.1441555759399513,
+                    "min": 50,
+                    "max": 63
+                  }
+                }
+              },
+              "2": {
+                "count": 1,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 1,
+                    "median": -74.08,
+                    "sample_sd": null,
+                    "min": -74.08,
+                    "max": -74.08
+                  },
+                  "first_path_dbm": {
+                    "count": 1,
+                    "median": -88.12,
+                    "sample_sd": null,
+                    "min": -88.12,
+                    "max": -88.12
+                  },
+                  "power_gap_db": {
+                    "count": 1,
+                    "median": 14.040000000000006,
+                    "sample_sd": null,
+                    "min": 14.040000000000006,
+                    "max": 14.040000000000006
+                  },
+                  "cir_power": {
+                    "count": 1,
+                    "median": 23,
+                    "sample_sd": null,
+                    "min": 23,
+                    "max": 23
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 39,
+          "edge_unique_range_count": 61,
+          "matched_quality": {
+            "valid_count": 39,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 39,
+                "median": -79.48,
+                "sample_sd": 1.8024266518662078,
+                "min": -80.0,
+                "max": -74.08
+              },
+              "first_path_dbm": {
+                "count": 39,
+                "median": -93.31,
+                "sample_sd": 1.9790014044220514,
+                "min": -95.73,
+                "max": -88.12
+              },
+              "power_gap_db": {
+                "count": 39,
+                "median": 14.460000000000008,
+                "sample_sd": 0.7727084007596853,
+                "min": 12.179999999999993,
+                "max": 16.230000000000004
+              },
+              "cir_power": {
+                "count": 39,
+                "median": 96,
+                "sample_sd": 24.590684300888515,
+                "min": 23,
+                "max": 114
+              },
+              "accum_count": {
+                "count": 39,
+                "median": 114,
+                "sample_sd": 2.3338152577314197,
+                "min": 111,
+                "max": 119
+              },
+              "fp_index_q6": {
+                "count": 39,
+                "median": 47291,
+                "sample_sd": 242.15098010537125,
+                "min": 46508,
+                "max": 47595
+              },
+              "read_us": {
+                "count": 39,
+                "median": 183,
+                "sample_sd": 5.458838738950597,
+                "min": 168,
+                "max": 189
+              }
+            },
+            "dgc_counts": {
+              "0": 23,
+              "1": 15,
+              "2": 1
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 23,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 23,
+                    "median": -79.57,
+                    "sample_sd": 0.15484532637058843,
+                    "min": -80.0,
+                    "max": -79.43
+                  },
+                  "first_path_dbm": {
+                    "count": 23,
+                    "median": -94.07,
+                    "sample_sd": 0.6790760404952493,
+                    "min": -95.73,
+                    "max": -92.72
+                  },
+                  "power_gap_db": {
+                    "count": 23,
+                    "median": 14.480000000000004,
+                    "sample_sd": 0.7076328629838387,
+                    "min": 13.260000000000005,
+                    "max": 16.230000000000004
+                  },
+                  "cir_power": {
+                    "count": 23,
+                    "median": 101,
+                    "sample_sd": 5.5914955185877915,
+                    "min": 93,
+                    "max": 114
+                  }
+                }
+              },
+              "1": {
+                "count": 15,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 15,
+                    "median": -76.22,
+                    "sample_sd": 0.2547510456074649,
+                    "min": -76.93,
+                    "max": -75.91
+                  },
+                  "first_path_dbm": {
+                    "count": 15,
+                    "median": -90.68,
+                    "sample_sd": 0.7119109093539339,
+                    "min": -91.68,
+                    "max": -89.11
+                  },
+                  "power_gap_db": {
+                    "count": 15,
+                    "median": 14.460000000000008,
+                    "sample_sd": 0.9044056190722883,
+                    "min": 12.179999999999993,
+                    "max": 15.680000000000007
+                  },
+                  "cir_power": {
+                    "count": 15,
+                    "median": 55,
+                    "sample_sd": 3.1441555759399513,
+                    "min": 50,
+                    "max": 63
+                  }
+                }
+              },
+              "2": {
+                "count": 1,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 1,
+                    "median": -74.08,
+                    "sample_sd": null,
+                    "min": -74.08,
+                    "max": -74.08
+                  },
+                  "first_path_dbm": {
+                    "count": 1,
+                    "median": -88.12,
+                    "sample_sd": null,
+                    "min": -88.12,
+                    "max": -88.12
+                  },
+                  "power_gap_db": {
+                    "count": 1,
+                    "median": 14.040000000000006,
+                    "sample_sd": null,
+                    "min": 14.040000000000006,
+                    "max": 14.040000000000006
+                  },
+                  "cir_power": {
+                    "count": 1,
+                    "median": 23,
+                    "sample_sd": null,
+                    "min": 23,
+                    "max": 23
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 39,
+            "median": 1.781,
+            "sample_sd": 0.038745580044818616,
+            "min": 1.725,
+            "max": 1.861
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 39,
+              "pearson_r": -0.11977394526839759
+            },
+            "first_path_dbm": {
+              "count": 39,
+              "pearson_r": 0.05537991701012652
+            },
+            "power_gap_db": {
+              "count": 39,
+              "pearson_r": -0.42122058511431504
+            }
+          }
+        },
+        "N3:peer=N2:final": {
+          "edge": "N2-N3",
+          "unique_quality_records_in_source_window": 39,
+          "transmitting_node": "N2",
+          "transmitter_is_power_test_node": true,
+          "all_quality": {
+            "valid_count": 39,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 39,
+                "median": -76.45,
+                "sample_sd": 1.750336578390518,
+                "min": -80.06,
+                "max": -75.99
+              },
+              "first_path_dbm": {
+                "count": 39,
+                "median": -91.15,
+                "sample_sd": 2.0169354835837634,
+                "min": -95.4,
+                "max": -89.16
+              },
+              "power_gap_db": {
+                "count": 39,
+                "median": 14.58999999999999,
+                "sample_sd": 0.7268948433991845,
+                "min": 12.870000000000005,
+                "max": 15.66000000000001
+              },
+              "cir_power": {
+                "count": 39,
+                "median": 59,
+                "sample_sd": 22.14444666770031,
+                "min": 50,
+                "max": 107
+              },
+              "accum_count": {
+                "count": 39,
+                "median": 115,
+                "sample_sd": 0.4803844614152614,
+                "min": 112,
+                "max": 115
+              },
+              "fp_index_q6": {
+                "count": 39,
+                "median": 47361,
+                "sample_sd": 160.5598546853235,
+                "min": 47045,
+                "max": 47570
+              },
+              "read_us": {
+                "count": 39,
+                "median": 154,
+                "sample_sd": 2.162744295562747,
+                "min": 149,
+                "max": 158
+              }
+            },
+            "dgc_counts": {
+              "0": 16,
+              "1": 23
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 16,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 16,
+                    "median": -79.765,
+                    "sample_sd": 0.20285360074036782,
+                    "min": -80.06,
+                    "max": -79.4
+                  },
+                  "first_path_dbm": {
+                    "count": 16,
+                    "median": -94.46000000000001,
+                    "sample_sd": 0.7233368855519534,
+                    "min": -95.4,
+                    "max": -92.99
+                  },
+                  "power_gap_db": {
+                    "count": 16,
+                    "median": 14.774999999999999,
+                    "sample_sd": 0.7240890829172907,
+                    "min": 13.170000000000002,
+                    "max": 15.66000000000001
+                  },
+                  "cir_power": {
+                    "count": 16,
+                    "median": 98.5,
+                    "sample_sd": 4.647131731867877,
+                    "min": 92,
+                    "max": 107
+                  }
+                }
+              },
+              "1": {
+                "count": 23,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 23,
+                    "median": -76.21,
+                    "sample_sd": 0.21083402984881924,
+                    "min": -76.71,
+                    "max": -75.99
+                  },
+                  "first_path_dbm": {
+                    "count": 23,
+                    "median": -90.62,
+                    "sample_sd": 0.6280520735692424,
+                    "min": -91.23,
+                    "max": -89.16
+                  },
+                  "power_gap_db": {
+                    "count": 23,
+                    "median": 14.41000000000001,
+                    "sample_sd": 0.7117231219874358,
+                    "min": 12.870000000000005,
+                    "max": 15.240000000000009
+                  },
+                  "cir_power": {
+                    "count": 23,
+                    "median": 56,
+                    "sample_sd": 2.6360228756197306,
+                    "min": 50,
+                    "max": 59
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 39,
+          "edge_unique_range_count": 61,
+          "matched_quality": {
+            "valid_count": 39,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 39,
+                "median": -76.45,
+                "sample_sd": 1.750336578390518,
+                "min": -80.06,
+                "max": -75.99
+              },
+              "first_path_dbm": {
+                "count": 39,
+                "median": -91.15,
+                "sample_sd": 2.0169354835837634,
+                "min": -95.4,
+                "max": -89.16
+              },
+              "power_gap_db": {
+                "count": 39,
+                "median": 14.58999999999999,
+                "sample_sd": 0.7268948433991845,
+                "min": 12.870000000000005,
+                "max": 15.66000000000001
+              },
+              "cir_power": {
+                "count": 39,
+                "median": 59,
+                "sample_sd": 22.14444666770031,
+                "min": 50,
+                "max": 107
+              },
+              "accum_count": {
+                "count": 39,
+                "median": 115,
+                "sample_sd": 0.4803844614152614,
+                "min": 112,
+                "max": 115
+              },
+              "fp_index_q6": {
+                "count": 39,
+                "median": 47361,
+                "sample_sd": 160.5598546853235,
+                "min": 47045,
+                "max": 47570
+              },
+              "read_us": {
+                "count": 39,
+                "median": 154,
+                "sample_sd": 2.162744295562747,
+                "min": 149,
+                "max": 158
+              }
+            },
+            "dgc_counts": {
+              "0": 16,
+              "1": 23
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 16,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 16,
+                    "median": -79.765,
+                    "sample_sd": 0.20285360074036782,
+                    "min": -80.06,
+                    "max": -79.4
+                  },
+                  "first_path_dbm": {
+                    "count": 16,
+                    "median": -94.46000000000001,
+                    "sample_sd": 0.7233368855519534,
+                    "min": -95.4,
+                    "max": -92.99
+                  },
+                  "power_gap_db": {
+                    "count": 16,
+                    "median": 14.774999999999999,
+                    "sample_sd": 0.7240890829172907,
+                    "min": 13.170000000000002,
+                    "max": 15.66000000000001
+                  },
+                  "cir_power": {
+                    "count": 16,
+                    "median": 98.5,
+                    "sample_sd": 4.647131731867877,
+                    "min": 92,
+                    "max": 107
+                  }
+                }
+              },
+              "1": {
+                "count": 23,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 23,
+                    "median": -76.21,
+                    "sample_sd": 0.21083402984881924,
+                    "min": -76.71,
+                    "max": -75.99
+                  },
+                  "first_path_dbm": {
+                    "count": 23,
+                    "median": -90.62,
+                    "sample_sd": 0.6280520735692424,
+                    "min": -91.23,
+                    "max": -89.16
+                  },
+                  "power_gap_db": {
+                    "count": 23,
+                    "median": 14.41000000000001,
+                    "sample_sd": 0.7117231219874358,
+                    "min": 12.870000000000005,
+                    "max": 15.240000000000009
+                  },
+                  "cir_power": {
+                    "count": 23,
+                    "median": 56,
+                    "sample_sd": 2.6360228756197306,
+                    "min": 50,
+                    "max": 59
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 39,
+            "median": 1.781,
+            "sample_sd": 0.038745580044818616,
+            "min": 1.725,
+            "max": 1.861
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 39,
+              "pearson_r": -0.11949317826323531
+            },
+            "first_path_dbm": {
+              "count": 39,
+              "pearson_r": 0.03722673373482382
+            },
+            "power_gap_db": {
+              "count": 39,
+              "pearson_r": -0.39102932641644494
+            }
+          }
+        },
+        "N2:peer=N3:response": {
+          "edge": "N2-N3",
+          "unique_quality_records_in_source_window": 51,
+          "transmitting_node": "N3",
+          "transmitter_is_power_test_node": false,
+          "all_quality": {
+            "valid_count": 51,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 51,
+                "median": -79.61,
+                "sample_sd": 1.7653945623526521,
+                "min": -80.25,
+                "max": -75.95
+              },
+              "first_path_dbm": {
+                "count": 51,
+                "median": -93.29,
+                "sample_sd": 2.225315593392559,
+                "min": -96.36,
+                "max": -88.67
+              },
+              "power_gap_db": {
+                "count": 51,
+                "median": 14.550000000000011,
+                "sample_sd": 0.8633648264374765,
+                "min": 12.670000000000002,
+                "max": 16.25
+              },
+              "cir_power": {
+                "count": 51,
+                "median": 89,
+                "sample_sd": 24.56608534177979,
+                "min": 4,
+                "max": 104
+              },
+              "accum_count": {
+                "count": 51,
+                "median": 115,
+                "sample_sd": 13.16093446828269,
+                "min": 30,
+                "max": 115
+              },
+              "fp_index_q6": {
+                "count": 51,
+                "median": 47235,
+                "sample_sd": 182.46954513551236,
+                "min": 46754,
+                "max": 47563
+              },
+              "read_us": {
+                "count": 51,
+                "median": 185,
+                "sample_sd": 6.079731676225683,
+                "min": 168,
+                "max": 193
+              }
+            },
+            "dgc_counts": {
+              "0": 28,
+              "1": 23
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 28,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 28,
+                    "median": -79.9,
+                    "sample_sd": 0.21174757858600668,
+                    "min": -80.25,
+                    "max": -79.53
+                  },
+                  "first_path_dbm": {
+                    "count": 28,
+                    "median": -94.77000000000001,
+                    "sample_sd": 0.9809143639574198,
+                    "min": -96.36,
+                    "max": -92.71
+                  },
+                  "power_gap_db": {
+                    "count": 28,
+                    "median": 15.010000000000005,
+                    "sample_sd": 0.9426599621458454,
+                    "min": 12.919999999999987,
+                    "max": 16.25
+                  },
+                  "cir_power": {
+                    "count": 28,
+                    "median": 95.5,
+                    "sample_sd": 4.680252333449758,
+                    "min": 88,
+                    "max": 104
+                  }
+                }
+              },
+              "1": {
+                "count": 23,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 23,
+                    "median": -76.45,
+                    "sample_sd": 0.20997082424844904,
+                    "min": -76.8,
+                    "max": -75.95
+                  },
+                  "first_path_dbm": {
+                    "count": 23,
+                    "median": -90.86,
+                    "sample_sd": 0.6976604041549823,
+                    "min": -91.76,
+                    "max": -88.67
+                  },
+                  "power_gap_db": {
+                    "count": 23,
+                    "median": 14.340000000000003,
+                    "sample_sd": 0.6307317414275829,
+                    "min": 12.670000000000002,
+                    "max": 15.25
+                  },
+                  "cir_power": {
+                    "count": 23,
+                    "median": 52,
+                    "sample_sd": 11.678330326270368,
+                    "min": 4,
+                    "max": 57
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 51,
+          "edge_unique_range_count": 61,
+          "matched_quality": {
+            "valid_count": 51,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 51,
+                "median": -79.61,
+                "sample_sd": 1.7653945623526521,
+                "min": -80.25,
+                "max": -75.95
+              },
+              "first_path_dbm": {
+                "count": 51,
+                "median": -93.29,
+                "sample_sd": 2.225315593392559,
+                "min": -96.36,
+                "max": -88.67
+              },
+              "power_gap_db": {
+                "count": 51,
+                "median": 14.550000000000011,
+                "sample_sd": 0.8633648264374765,
+                "min": 12.670000000000002,
+                "max": 16.25
+              },
+              "cir_power": {
+                "count": 51,
+                "median": 89,
+                "sample_sd": 24.56608534177979,
+                "min": 4,
+                "max": 104
+              },
+              "accum_count": {
+                "count": 51,
+                "median": 115,
+                "sample_sd": 13.16093446828269,
+                "min": 30,
+                "max": 115
+              },
+              "fp_index_q6": {
+                "count": 51,
+                "median": 47235,
+                "sample_sd": 182.46954513551236,
+                "min": 46754,
+                "max": 47563
+              },
+              "read_us": {
+                "count": 51,
+                "median": 185,
+                "sample_sd": 6.079731676225683,
+                "min": 168,
+                "max": 193
+              }
+            },
+            "dgc_counts": {
+              "0": 28,
+              "1": 23
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 28,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 28,
+                    "median": -79.9,
+                    "sample_sd": 0.21174757858600668,
+                    "min": -80.25,
+                    "max": -79.53
+                  },
+                  "first_path_dbm": {
+                    "count": 28,
+                    "median": -94.77000000000001,
+                    "sample_sd": 0.9809143639574198,
+                    "min": -96.36,
+                    "max": -92.71
+                  },
+                  "power_gap_db": {
+                    "count": 28,
+                    "median": 15.010000000000005,
+                    "sample_sd": 0.9426599621458454,
+                    "min": 12.919999999999987,
+                    "max": 16.25
+                  },
+                  "cir_power": {
+                    "count": 28,
+                    "median": 95.5,
+                    "sample_sd": 4.680252333449758,
+                    "min": 88,
+                    "max": 104
+                  }
+                }
+              },
+              "1": {
+                "count": 23,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 23,
+                    "median": -76.45,
+                    "sample_sd": 0.20997082424844904,
+                    "min": -76.8,
+                    "max": -75.95
+                  },
+                  "first_path_dbm": {
+                    "count": 23,
+                    "median": -90.86,
+                    "sample_sd": 0.6976604041549823,
+                    "min": -91.76,
+                    "max": -88.67
+                  },
+                  "power_gap_db": {
+                    "count": 23,
+                    "median": 14.340000000000003,
+                    "sample_sd": 0.6307317414275829,
+                    "min": 12.670000000000002,
+                    "max": 15.25
+                  },
+                  "cir_power": {
+                    "count": 23,
+                    "median": 52,
+                    "sample_sd": 11.678330326270368,
+                    "min": 4,
+                    "max": 57
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 51,
+            "median": 1.785,
+            "sample_sd": 0.03570974492142084,
+            "min": 1.725,
+            "max": 1.861
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 51,
+              "pearson_r": -0.3577852676090088
+            },
+            "first_path_dbm": {
+              "count": 51,
+              "pearson_r": -0.1819408480373501
+            },
+            "power_gap_db": {
+              "count": 51,
+              "pearson_r": -0.2626425733023222
+            }
+          }
+        },
+        "N3:peer=N1:poll": {
+          "edge": "N1-N3",
+          "unique_quality_records_in_source_window": 15,
+          "transmitting_node": "N1",
+          "transmitter_is_power_test_node": false,
+          "all_quality": {
+            "valid_count": 15,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 15,
+                "median": -81.57,
+                "sample_sd": 0.18863418869032367,
+                "min": -81.99,
+                "max": -81.26
+              },
+              "first_path_dbm": {
+                "count": 15,
+                "median": -84.09,
+                "sample_sd": 0.3162473414155141,
+                "min": -84.82,
+                "max": -83.71
+              },
+              "power_gap_db": {
+                "count": 15,
+                "median": 2.549999999999997,
+                "sample_sd": 0.214358400370788,
+                "min": 2.2700000000000102,
+                "max": 3.009999999999991
+              },
+              "cir_power": {
+                "count": 15,
+                "median": 63,
+                "sample_sd": 3.394673699166022,
+                "min": 58,
+                "max": 71
+              },
+              "accum_count": {
+                "count": 15,
+                "median": 114,
+                "sample_sd": 1.759328876372492,
+                "min": 111,
+                "max": 117
+              },
+              "fp_index_q6": {
+                "count": 15,
+                "median": 47434,
+                "sample_sd": 171.1179487399039,
+                "min": 47108,
+                "max": 47627
+              },
+              "read_us": {
+                "count": 15,
+                "median": 181,
+                "sample_sd": 5.737927284639421,
+                "min": 171,
+                "max": 189
+              }
+            },
+            "dgc_counts": {
+              "0": 15
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 15,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 15,
+                    "median": -81.57,
+                    "sample_sd": 0.18863418869032367,
+                    "min": -81.99,
+                    "max": -81.26
+                  },
+                  "first_path_dbm": {
+                    "count": 15,
+                    "median": -84.09,
+                    "sample_sd": 0.3162473414155141,
+                    "min": -84.82,
+                    "max": -83.71
+                  },
+                  "power_gap_db": {
+                    "count": 15,
+                    "median": 2.549999999999997,
+                    "sample_sd": 0.214358400370788,
+                    "min": 2.2700000000000102,
+                    "max": 3.009999999999991
+                  },
+                  "cir_power": {
+                    "count": 15,
+                    "median": 63,
+                    "sample_sd": 3.394673699166022,
+                    "min": 58,
+                    "max": 71
+                  }
+                }
+              }
+            }
+          },
+          "same_exchange_matched_count": 15,
+          "edge_unique_range_count": 31,
+          "matched_quality": {
+            "valid_count": 15,
+            "invalid_count": 0,
+            "metrics": {
+              "rssi_dbm": {
+                "count": 15,
+                "median": -81.57,
+                "sample_sd": 0.18863418869032367,
+                "min": -81.99,
+                "max": -81.26
+              },
+              "first_path_dbm": {
+                "count": 15,
+                "median": -84.09,
+                "sample_sd": 0.3162473414155141,
+                "min": -84.82,
+                "max": -83.71
+              },
+              "power_gap_db": {
+                "count": 15,
+                "median": 2.549999999999997,
+                "sample_sd": 0.214358400370788,
+                "min": 2.2700000000000102,
+                "max": 3.009999999999991
+              },
+              "cir_power": {
+                "count": 15,
+                "median": 63,
+                "sample_sd": 3.394673699166022,
+                "min": 58,
+                "max": 71
+              },
+              "accum_count": {
+                "count": 15,
+                "median": 114,
+                "sample_sd": 1.759328876372492,
+                "min": 111,
+                "max": 117
+              },
+              "fp_index_q6": {
+                "count": 15,
+                "median": 47434,
+                "sample_sd": 171.1179487399039,
+                "min": 47108,
+                "max": 47627
+              },
+              "read_us": {
+                "count": 15,
+                "median": 181,
+                "sample_sd": 5.737927284639421,
+                "min": 171,
+                "max": 189
+              }
+            },
+            "dgc_counts": {
+              "0": 15
+            },
+            "metrics_by_dgc": {
+              "0": {
+                "count": 15,
+                "metrics": {
+                  "rssi_dbm": {
+                    "count": 15,
+                    "median": -81.57,
+                    "sample_sd": 0.18863418869032367,
+                    "min": -81.99,
+                    "max": -81.26
+                  },
+                  "first_path_dbm": {
+                    "count": 15,
+                    "median": -84.09,
+                    "sample_sd": 0.3162473414155141,
+                    "min": -84.82,
+                    "max": -83.71
+                  },
+                  "power_gap_db": {
+                    "count": 15,
+                    "median": 2.549999999999997,
+                    "sample_sd": 0.214358400370788,
+                    "min": 2.2700000000000102,
+                    "max": 3.009999999999991
+                  },
+                  "cir_power": {
+                    "count": 15,
+                    "median": 63,
+                    "sample_sd": 3.394673699166022,
+                    "min": 58,
+                    "max": 71
+                  }
+                }
+              }
+            }
+          },
+          "matched_range_repeatability_m": {
+            "count": 15,
+            "median": 2.548,
+            "sample_sd": 0.006595091970187936,
+            "min": 2.539,
+            "max": 2.562
+          },
+          "range_quality_correlations": {
+            "rssi_dbm": {
+              "count": 15,
+              "pearson_r": 0.14491723865133307
+            },
+            "first_path_dbm": {
+              "count": 15,
+              "pearson_r": -0.19607625414476929
+            },
+            "power_gap_db": {
+              "count": 15,
+              "pearson_r": 0.41680167268316587
+            }
+          }
+        }
+      },
+      "N1_traffic": {
+        "fresh_traffic_observed": true,
+        "boots": [
+          39
+        ],
+        "unique_fresh_poll_identities": 44,
+        "unique_fresh_origin_payloads": 118,
+        "responder_attempts_to_N1_observed": 0,
+        "expected_boot": 39,
+        "matches_expected_boot": true
+      }
+    }
+  },
+  "findings": [
+    "The received-signal stimulus is visible at N3 on N2-origin poll/final frames and reverses on restoring N2 power; unchanged transmitter comparisons are comparatively stable.",
+    "The N1-N2 sample spread remains large at all three power conditions. This does not support lower N2 transmit power as the current drift fix.",
+    "N1-N2 medians also change within conditions, so whole-phase median shifts cannot safely be attributed to power.",
+    "DGC populations change across power conditions; stratified summaries are retained. Receiver-estimated RSSI does not establish a calibrated4dB radiated-power change.",
+    "N1-side response quality remains unavailable over the two current USB observers. Observing that receiver is the next missing measurement.",
+    "No fresh distance truth is assumed. These observations are about repeatability and power sensitivity, not demonstrated physical accuracy."
+  ],
+  "final_restored_identities": {
+    "88E80DCAE67A7A54": {
+      "v": 1,
+      "type": "identity",
+      "source": "N2",
+      "node_id": 2,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "88E80DCAE67A7A54",
+      "boot": 29,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16354,
+      "rx_ant_delay": 16354,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 1
+    },
+    "0ACD77FCB0F57A4B": {
+      "v": 1,
+      "type": "identity",
+      "source": "N3",
+      "node_id": 3,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "0ACD77FCB0F57A4B",
+      "boot": 31,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16387,
+      "rx_ant_delay": 16387,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 1
+    }
+  },
+  "final_readiness": {
+    "passed": true,
+    "issues": [],
+    "coordinate_frame": "relative-n1-n2-positive-y",
+    "reflection_ambiguous": true,
+    "ranges": {
+      "N1-N2": {
+        "distance_m": 2.267,
+        "age_ms": 871
+      },
+      "N1-N3": {
+        "distance_m": 2.564,
+        "age_ms": 2042
+      },
+      "N2-N3": {
+        "distance_m": 1.788,
+        "age_ms": 479
+      }
+    },
+    "node_reports": {
+      "N1": {
+        "status": "reference",
+        "x_m": 0.0,
+        "y_m": 0.0,
+        "boot": 39,
+        "seq": 44141,
+        "age_ms": 2786
+      },
+      "N2": {
+        "status": "relative",
+        "x_m": 2.267,
+        "y_m": 0.0,
+        "boot": 29,
+        "seq": 1800,
+        "age_ms": 2048
+      },
+      "N3": {
+        "status": "relative",
+        "x_m": 1.821,
+        "y_m": 1.805,
+        "boot": 31,
+        "seq": 1715,
+        "age_ms": 2791
+      }
+    },
+    "accuracy_validated": false
+  },
+  "raw_manifest": "node-firmware/.deps/experiments/tx-power/manifest.json",
+  "raw_analysis": "node-firmware/.deps/experiments/tx-power/analysis.json",
+  "next_physical_action": "Requested N1/N2 USB and N3 power-bank connection. Cables cannot reach with geometry fixed, so a new measured triangle was requested.",
+  "verification": {
+    "harness_command_mock": "Baseline/lower/restore SET commands, newline framing and full six-field recovery on both boards passed",
+    "analyzer_self_tests": "passed",
+    "independent_actual_data_validation": "passed",
+    "original_fields_restored": "all eight identity/RF keys verified on both USB boards"
+  }
+}

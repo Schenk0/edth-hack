@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-08",
+  "status": "historical pair: one-metre check passed; 1.8-metre check failed; N2 removed for repair",
+  "known_distance_mm": 1000,
+  "scope": "N1-N2 pair only; does not identify per-module antenna delays",
+  "channel": 5,
+  "tx_power": "fdfdfdfd",
+  "nodes": [
+    {
+      "id": 1,
+      "board_id": "1598712C6E2499A8",
+      "original_tx_ant_delay": 16385,
+      "original_rx_ant_delay": 16385,
+      "current_tx_ant_delay": 16387,
+      "current_rx_ant_delay": 16387,
+      "verified_boot": 23
+    },
+    {
+      "id": 2,
+      "board_id": "0ACD77FCB0F57A4B",
+      "original_tx_ant_delay": 16385,
+      "original_rx_ant_delay": 16385,
+      "current_tx_ant_delay": 16387,
+      "current_rx_ant_delay": 16387,
+      "verified_boot": 15
+    }
+  ],
+  "captures": [
+    {
+      "capture": "calibration-1m-before",
+      "tx_rx_delay_dtu_each_board": 16385,
+      "shared_exchanges": 32,
+      "median_mm": 1053.5,
+      "min_mm": 767,
+      "max_mm": 1293,
+      "nearby_movement": "reported by operator"
+    },
+    {
+      "capture": "calibration-1m-after",
+      "tx_rx_delay_dtu_each_board": 16391,
+      "shared_exchanges": 46,
+      "median_mm": 1108.0,
+      "min_mm": 829,
+      "max_mm": 1329,
+      "nearby_movement": "reported by operator"
+    },
+    {
+      "capture": "calibration-1m-refined",
+      "tx_rx_delay_dtu_each_board": 16403,
+      "shared_exchanges": 47,
+      "median_mm": 854,
+      "min_mm": 651,
+      "max_mm": 1149,
+      "nearby_movement": "reported by operator"
+    },
+    {
+      "capture": "calibration-1m-settled",
+      "tx_rx_delay_dtu_each_board": 16403,
+      "shared_exchanges": 19,
+      "median_mm": 976,
+      "min_mm": 895,
+      "max_mm": 1066,
+      "nearby_movement": "reported by operator"
+    },
+    {
+      "capture": "calibration-1m-clear-before",
+      "tx_rx_delay_dtu_each_board": 16403,
+      "shared_exchanges": 0,
+      "condition": "area clear; no completed exchanges before radio reinitialization"
+    },
+    {
+      "capture": "calibration-1m-clear-restart",
+      "tx_rx_delay_dtu_each_board": 16403,
+      "shared_exchanges": 13,
+      "condition": "area clear; radios reinitialized without changing saved settings",
+      "median_mm": 852,
+      "mean_mm": 856.6153846153846,
+      "sample_stdev_mm": 13.665884905720898,
+      "min_mm": 840,
+      "max_mm": 884
+    },
+    {
+      "capture": "calibration-1m-clear-validation",
+      "tx_rx_delay_dtu_each_board": 16387,
+      "shared_exchanges": 44,
+      "condition": "area clear; fresh validation after saving correction and restarting",
+      "median_mm": 1013.0,
+      "mean_mm": 1013.0227272727273,
+      "sample_stdev_mm": 15.634619660352792,
+      "min_mm": 981,
+      "max_mm": 1039
+    }
+  ],
+  "limitations": [
+    "Earlier captures had nearby movement and were not accepted as calibration validation.",
+    "One radio dropout required TEST on both boards to restore packet exchange; the cause and long-term reliability remain unverified.",
+    "Firmware calibrated flag remains false because complete per-node/network calibration is unverified.",
+    "A 1.8-metre validation failed by approximately +0.28 m; antenna orientation may have changed. Do not infer accuracy across distances from the one-metre result.",
+    "Obstruction, third-node and independent per-module calibration remain unverified."
+  ],
+  "validation": {
+    "duration_s": 45,
+    "matching_exchanges": 44,
+    "median_mm": 1013.0,
+    "mean_mm": 1013.0227272727273,
+    "sample_stdev_mm": 15.634619660352792,
+    "min_mm": 981,
+    "max_mm": 1039,
+    "first_half_median_mm": 1014.5,
+    "second_half_median_mm": 1011.5,
+    "samples_within_100mm": 44,
+    "pass": true,
+    "criteria": {
+      "min_shared_exchanges": 25,
+      "max_absolute_median_error_mm": 25,
+      "min_fraction_within_100mm": 0.8,
+      "max_half_median_difference_mm": 50
+    }
+  },
+  "distance_checks": [
+    {
+      "capture": "validation-1800mm",
+      "duration_s": 40,
+      "known_distance_mm": 1800,
+      "tx_rx_delay_dtu_each_board": 16387,
+      "matching_exchanges": 43,
+      "median_mm": 2084,
+      "mean_mm": 2085.3023255813955,
+      "sample_stdev_mm": 21.516920123608735,
+      "min_mm": 2046,
+      "max_mm": 2131,
+      "first_half_median_mm": 2083,
+      "second_half_median_mm": 2085.0,
+      "samples_within_100mm": 0,
+      "conditions": "Operator confirmed antenna-to-antenna reference; module orientation may have changed since one-metre calibration.",
+      "pass": false
+    },
+    {
+      "capture": "validation-1800mm-radio-restart",
+      "duration_s": 25,
+      "known_distance_mm": 1800,
+      "tx_rx_delay_dtu_each_board": 16387,
+      "matching_exchanges": 26,
+      "median_mm": 2081.5,
+      "mean_mm": 2080.153846153846,
+      "sample_stdev_mm": 21.614240320108053,
+      "min_mm": 2043,
+      "max_mm": 2124,
+      "first_half_median_mm": 2087,
+      "second_half_median_mm": 2068,
+      "samples_within_100mm": 0,
+      "conditions": "Operator confirmed antenna-to-antenna reference; module orientation may have changed since one-metre calibration.",
+      "pass": false
+    }
+  ],
+  "active_pair": false,
+  "replacement_board_id": "88E80DCAE67A7A54"
+}

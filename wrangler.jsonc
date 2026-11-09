@@ -1,0 +1,9 @@
+{
+  "name": "selflocating-mesh-nodes",
+  "compatibility_date": "2026-11-08",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./dist-demo",
+    "not_found_handling": "single-page-application"
+  }
+}

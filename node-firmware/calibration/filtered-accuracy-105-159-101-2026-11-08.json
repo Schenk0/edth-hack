@@ -1,0 +1,1454 @@
+{
+  "date": "2026-11-08",
+  "status": "Reference assignment confirmed; correctedaccuracy from unchanged capture",
+  "reference": {
+    "n1n2M": 1.05,
+    "n1n3M": 1.59,
+    "n2n3M": 1.01
+  },
+  "reference_uncertainty": "User supplied cm values without marking approximation; uncertainty unquantified",
+  "geometry_note": "Fresh tape triangle after swapping N3 toMac/N1 tobank; do not reuse older placement measurements",
+  "operator_area_clear": true,
+  "settle_ms": 15000,
+  "measurement_window_ms": 60000,
+  "firmware_sha256": "380483e218507964c66cc0831b6b920279afc9ba1819f0014fd64c9d7358e189",
+  "before_identities": {
+    "88E80DCAE67A7A54": {
+      "v": 1,
+      "type": "identity",
+      "source": "N2",
+      "node_id": 2,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "88E80DCAE67A7A54",
+      "boot": 33,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16354,
+      "rx_ant_delay": 16354,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "position_filter": "median3-3s",
+      "usb_delay_ms": 0
+    },
+    "0ACD77FCB0F57A4B": {
+      "v": 1,
+      "type": "identity",
+      "source": "N3",
+      "node_id": 3,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "0ACD77FCB0F57A4B",
+      "boot": 35,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16387,
+      "rx_ant_delay": 16387,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "position_filter": "median3-3s",
+      "usb_delay_ms": 1
+    }
+  },
+  "calibration_changed": false,
+  "own_node_results": {
+    "N2": {
+      "id": "N2",
+      "count": 57,
+      "median": {
+        "xM": 1.445,
+        "yM": 0
+      },
+      "stdXM": 0.022669702546214317,
+      "stdYM": 0,
+      "p95RadiusM": 0.04580000000000002,
+      "firstLastShiftM": 0.0030000000000001137,
+      "constrained": false,
+      "accuracy": {
+        "meanErrorM": 0.39236842105263137,
+        "rmseM": 0.3930112939763722,
+        "p95ErrorM": 0.431
+      }
+    },
+    "N3": {
+      "id": "N3",
+      "count": 58,
+      "median": {
+        "xM": 0.933,
+        "yM": 1.302
+      },
+      "stdXM": 0.02871107401900637,
+      "stdYM": 0.010150605166144524,
+      "p95RadiusM": 0.047026619825446,
+      "firstLastShiftM": 0.009604686356149464,
+      "constrained": false,
+      "accuracy": {
+        "meanErrorM": 0.43894927152561847,
+        "rmseM": 0.4393004677780655,
+        "p95ErrorM": 0.4641781731399392
+      }
+    }
+  },
+  "raw_ranges_by_observer": {
+    "N2": [
+      {
+        "edge": "N1-N2",
+        "count": 30,
+        "medianM": 1.4465,
+        "stdDevM": 0.026145679408348523,
+        "p95RadiusM": 0.05359999999999999,
+        "accuracy": {
+          "biasM": 0.39649999999999996,
+          "rmseM": 0.393141323190529,
+          "p95ErrorM": 0.43065
+        }
+      },
+      {
+        "edge": "N1-N3",
+        "count": 30,
+        "medianM": 1.607,
+        "stdDevM": 0.028169866512114422,
+        "p95RadiusM": 0.053899999999999997,
+        "accuracy": {
+          "biasM": 0.016999999999999904,
+          "rmseM": 0.030553232234904366,
+          "p95ErrorM": 0.05449999999999991
+        }
+      },
+      {
+        "edge": "N2-N3",
+        "count": 61,
+        "medianM": 1.398,
+        "stdDevM": 0.011869969455031808,
+        "p95RadiusM": 0.020999999999999908,
+        "accuracy": {
+          "biasM": 0.3879999999999999,
+          "rmseM": 0.38783444583617,
+          "p95ErrorM": 0.4039999999999999
+        }
+      }
+    ],
+    "N3": [
+      {
+        "edge": "N1-N2",
+        "count": 30,
+        "medianM": 1.4465,
+        "stdDevM": 0.026145679408348523,
+        "p95RadiusM": 0.05359999999999999,
+        "accuracy": {
+          "biasM": 0.39649999999999996,
+          "rmseM": 0.393141323190529,
+          "p95ErrorM": 0.43065
+        }
+      },
+      {
+        "edge": "N1-N3",
+        "count": 31,
+        "medianM": 1.609,
+        "stdDevM": 0.027744572267789272,
+        "p95RadiusM": 0.05500000000000005,
+        "accuracy": {
+          "biasM": 0.018999999999999906,
+          "rmseM": 0.030315012782448227,
+          "p95ErrorM": 0.05399999999999994
+        }
+      },
+      {
+        "edge": "N2-N3",
+        "count": 61,
+        "medianM": 1.398,
+        "stdDevM": 0.011869969455031808,
+        "p95RadiusM": 0.020999999999999908,
+        "accuracy": {
+          "biasM": 0.3879999999999999,
+          "rmseM": 0.38783444583617,
+          "p95ErrorM": 0.4039999999999999
+        }
+      }
+    ]
+  },
+  "availability": {
+    "N2": {
+      "fraction": 1,
+      "readyMs": 60000,
+      "totalMs": 60000
+    },
+    "N3": {
+      "fraction": 1,
+      "readyMs": 60000,
+      "totalMs": 60000
+    }
+  },
+  "solver_replay_validation": {
+    "N2": {
+      "count": 60,
+      "all_positions_match_within_1mm": true,
+      "checks": [
+        {
+          "identity": [
+            "N2",
+            33,
+            13220
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13239
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13258
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13277
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13299
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13318
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13337
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13357
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13377
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13395
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13416
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13436
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13457
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13478
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 4
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13497
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13517
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13539
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13558
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13579
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13597
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13617
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13637
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13657
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13679
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13699
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13718
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13738
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13758
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13778
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13799
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13821
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13842
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13864
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13885
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13905
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13926
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13945
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13966
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            13988
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14009
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14027
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14046
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14068
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14090
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14109
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14128
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14152
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14172
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14193
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14212
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14232
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -3
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14252
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14272
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14293
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14312
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14332
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14351
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14372
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14392
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N2",
+            33,
+            14412
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        }
+      ],
+      "FIFO_reconstruction": {
+        "FIFO_order_time_backsteps_clamped": 182,
+        "maximum_clamp_ms": 4
+      },
+      "parsing": {
+        "blank_lines": 0,
+        "malformed_json": 0,
+        "non_record_json": 0,
+        "invalid_envelope": 0,
+        "unknown_record_types": 0,
+        "type:identity": 76,
+        "type:report": 226,
+        "type:diagnostics": 75,
+        "type:radio-quality": 225,
+        "type:measurement": 152
+      }
+    },
+    "N3": {
+      "count": 60,
+      "all_positions_match_within_1mm": true,
+      "checks": [
+        {
+          "identity": [
+            "N3",
+            35,
+            10768
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10787
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10805
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10823
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10845
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10863
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10882
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10902
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10920
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10940
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10959
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10979
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            10996
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11016
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11035
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11053
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11073
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11092
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11111
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11129
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11151
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11169
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11187
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11208
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11227
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 5
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11244
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11262
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11282
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11301
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -4
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11320
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11340
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11359
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11376
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11396
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11415
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11434
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11454
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11474
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11493
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11512
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11531
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11550
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11570
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11588
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11607
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11625
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11643
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11662
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11681
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11702
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11721
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11740
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11759
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -1
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11778
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11796
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11814
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11833
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11850
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 3
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11869
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": -2
+        },
+        {
+          "identity": [
+            "N3",
+            35,
+            11888
+          ],
+          "same_status": true,
+          "position_error_m": 0.0,
+          "input_age_difference_ms": 0
+        }
+      ],
+      "FIFO_reconstruction": {
+        "FIFO_order_time_backsteps_clamped": 70,
+        "maximum_clamp_ms": 1
+      },
+      "parsing": {
+        "blank_lines": 0,
+        "malformed_json": 0,
+        "non_record_json": 0,
+        "invalid_envelope": 0,
+        "unknown_record_types": 0,
+        "type:identity": 76,
+        "type:measurement": 154,
+        "type:report": 225,
+        "type:diagnostics": 75,
+        "type:radio-quality": 150
+      }
+    }
+  },
+  "file_sha256": {
+    "filtered-reference-N2.json": "5e4cd04b74d2af03a02171025cf4023eb934fc2e156a6233ce42c47b655f39f2",
+    "filtered-reference-N3.json": "165e4e15268c4902a5372c50e2461ee6f700dc80af642a2fd64e400e2b89a837"
+  },
+  "limitations": [
+    "Tape uncertainty was not quantified. No offsets or scale were fitted.",
+    "N1 origin and N2 y=0 are imposed conventions. Reflection and room alignment remain unresolved.",
+    "The 60-second settled capture supports this stationary placement only. It does not establish field or motion performance.",
+    "Replay verifies solver math and serialization against emitted measurements, not physical correctness of ranging timestamps or RF propagation.",
+    "These measurements are now calibrationtrainingdata if used tochooseN2delay; they cannotindependentlyvalidate thatcandidate."
+  ],
+  "accuracy_results_valid": true,
+  "reference_assignment_confirmed": true,
+  "reference_assignment_note": "User explicitly corrected N2-N3 to101cm and confirmed N1-N3=159cm; N1-N2=105cm. Old105/102/159 calculation superseded.",
+  "corrected_analysis_utc": "2026-11-08T09:35:12.410931+00:00",
+  "next_investigation": "One provisionalN2 commonTX/RX antenna-delay candidate fitted on this trainingplacement; require separatephysicalholdout before adopting."
+}

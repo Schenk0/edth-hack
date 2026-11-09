@@ -1,0 +1,239 @@
+{
+  "status": "Resolved: userconfirmed all3 nodesvisible inliveOpera demo withoneMacUSBconnection",
+  "initial": {
+    "observer": "N3",
+    "file": "N3-after-remote-power-cycle.json",
+    "summary": {
+      "passed": false,
+      "issues": [
+        "N1-N2 range is missing or stale",
+        "N2-N3 range is missing or stale",
+        "N1 reports missing-measurements",
+        "N2 report is missing or stale",
+        "N3 reports missing-measurements"
+      ],
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "ranges": {
+        "N1-N3": {
+          "distance_m": 2.105,
+          "age_ms": 214
+        }
+      },
+      "node_reports": {},
+      "accuracy_validated": false
+    },
+    "observed_N2_payloads": 0
+  },
+  "with_N2_on_Mac": {
+    "N3_summary": {
+      "passed": true,
+      "issues": [],
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "ranges": {
+        "N1-N2": {
+          "distance_m": 1.744,
+          "age_ms": 863
+        },
+        "N1-N3": {
+          "distance_m": 2.146,
+          "age_ms": 2096
+        },
+        "N2-N3": {
+          "distance_m": 1.143,
+          "age_ms": 981
+        }
+      },
+      "node_reports": {
+        "N1": {
+          "status": "reference",
+          "x_m": 0.0,
+          "y_m": 0.0,
+          "boot": 46,
+          "seq": 3641,
+          "age_ms": 3815
+        },
+        "N2": {
+          "status": "relative",
+          "x_m": 1.743,
+          "y_m": 0.0,
+          "boot": 42,
+          "seq": 1143,
+          "age_ms": 2918
+        },
+        "N3": {
+          "status": "relative",
+          "x_m": 1.818,
+          "y_m": 1.141,
+          "boot": 39,
+          "seq": 7040,
+          "age_ms": 2909
+        }
+      },
+      "accuracy_validated": false
+    },
+    "N2_summary": {
+      "passed": true,
+      "issues": [],
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "ranges": {
+        "N1-N2": {
+          "distance_m": 1.744,
+          "age_ms": 861
+        },
+        "N1-N3": {
+          "distance_m": 2.146,
+          "age_ms": 2101
+        },
+        "N2-N3": {
+          "distance_m": 1.143,
+          "age_ms": 980
+        }
+      },
+      "node_reports": {
+        "N1": {
+          "status": "reference",
+          "x_m": 0.0,
+          "y_m": 0.0,
+          "boot": 46,
+          "seq": 3641,
+          "age_ms": 3813
+        },
+        "N2": {
+          "status": "relative",
+          "x_m": 1.743,
+          "y_m": 0.0,
+          "boot": 42,
+          "seq": 1143,
+          "age_ms": 2909
+        },
+        "N3": {
+          "status": "relative",
+          "x_m": 1.818,
+          "y_m": 1.141,
+          "boot": 39,
+          "seq": 7040,
+          "age_ms": 2916
+        }
+      },
+      "accuracy_validated": false
+    }
+  },
+  "findings": [
+    "N3 andN1 were communicating beforeN2 was movedtoMac.",
+    "N2directidentityonMac was valid, network60785, radio_ready:true, testedmedianfilter, originalantenna delay16354.",
+    "BothUSBobservers then receivedfresh3ranges and3positionedreports.",
+    "MovingN2 toMac changes power/startup and maychangeplacement; rootcauseofearlierN2silence is not established."
+  ],
+  "firmware_changed": false,
+  "settings_changed": false,
+  "UI_fix": "Missingnodes/ranges visible outsideDetails; pendingLocate automaticallyrecoversaftertimeoutwhenallstrictfreshnessconditions satisfied",
+  "next": "Keepworkingpower/connections; functionalmovementdemocanproceed",
+  "one_USB_N2_Mac": {
+    "file": "N2-only-mac.json",
+    "summary": {
+      "passed": false,
+      "issues": [
+        "N1-N3 range is missing or stale",
+        "N2-N3 range is missing or stale",
+        "N1 reports missing-measurements",
+        "N2 reports missing-measurements",
+        "N3 report is missing or stale"
+      ],
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "ranges": {
+        "N1-N2": {
+          "distance_m": 2.271,
+          "age_ms": 1896
+        }
+      },
+      "node_reports": {},
+      "accuracy_validated": false
+    }
+  },
+  "after_N3_alternate_supply": {
+    "file": "N2-only-mac-stable-source.json",
+    "sha256": "c3461fd25a216821d28e1783aba5252593c9323918de503ac6f4c142b80e02fc",
+    "summary": {
+      "passed": true,
+      "issues": [],
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "ranges": {
+        "N1-N2": {
+          "distance_m": 2.14,
+          "age_ms": 1368
+        },
+        "N1-N3": {
+          "distance_m": 1.752,
+          "age_ms": 2508
+        },
+        "N2-N3": {
+          "distance_m": 2.233,
+          "age_ms": 576
+        }
+      },
+      "node_reports": {
+        "N1": {
+          "status": "reference",
+          "x_m": 0.0,
+          "y_m": 0.0,
+          "boot": 46,
+          "seq": 10606,
+          "age_ms": 3749
+        },
+        "N2": {
+          "status": "relative",
+          "x_m": 2.14,
+          "y_m": 0.0,
+          "boot": 42,
+          "seq": 8080,
+          "age_ms": 2545
+        },
+        "N3": {
+          "status": "relative",
+          "x_m": 0.795,
+          "y_m": 1.561,
+          "boot": 44,
+          "seq": 1061,
+          "age_ms": 3749
+        }
+      },
+      "accuracy_validated": false
+    },
+    "availability_after5s_settling": {
+      "fraction": 1,
+      "readyMs": 40000,
+      "totalMs": 40000
+    },
+    "boots": {
+      "N1": [
+        46
+      ],
+      "N2": [
+        42
+      ],
+      "N3": [
+        44
+      ]
+    },
+    "wall_duration_ms": 45000,
+    "duration_ms": 45000
+  },
+  "verification": [
+    "Actual singleUSB15s failcaptures, bothUSB15s pass, finalsingleUSB45s pass",
+    "FocusedbrowsermissingN2case",
+    "Timeoutrecoverystress test reproducedfailurebeforefix andpassedafterfix",
+    "Full browser suite and demoTS/Vitebuild pass",
+    "MissingN2actualcapturereplayed inmanagedbrowser showedexplicitWaitingforN2 andonlylocalmapnode"
+  ],
+  "user_confirmation_utc": "2026-11-08T10:06:35.209732+00:00",
+  "working_setup": {
+    "N1": "externalUSBpower",
+    "N2": "MacUSBdataandpower",
+    "N3": "alternateexternalUSBpowersupply"
+  }
+}

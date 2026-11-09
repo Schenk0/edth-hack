@@ -1,0 +1,389 @@
+{
+  "status": "All three shared-firmware boards verified through one USB observer in a stationary broad triangle; layout available throughout the 40-second settled window; accuracy unverified",
+  "firmware_sha256": "51bf39df31294a6929eba6ce6e454f40ecf891a3bd1562c3b6c54ef938a8c405",
+  "wire_version": 2,
+  "geometry": "relative-triangle",
+  "frame": "relative-n1-n2-positive-y",
+  "node_identities": {
+    "1598712C6E2499A8": {
+      "v": 1,
+      "type": "identity",
+      "source": "N1",
+      "node_id": 1,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "1598712C6E2499A8",
+      "boot": 36,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16387,
+      "rx_ant_delay": 16387,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 1
+    },
+    "88E80DCAE67A7A54": {
+      "v": 1,
+      "type": "identity",
+      "source": "N2",
+      "node_id": 2,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "88E80DCAE67A7A54",
+      "boot": 16,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16354,
+      "rx_ant_delay": 16354,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 0
+    },
+    "0ACD77FCB0F57A4B": {
+      "v": 1,
+      "type": "identity",
+      "source": "N3",
+      "node_id": 3,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "0ACD77FCB0F57A4B",
+      "boot": 19,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16387,
+      "rx_ant_delay": 16387,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 1
+    }
+  },
+  "physical_three_node_layout_validated": true,
+  "two_node_negative_check": {
+    "duration_ms": 8000,
+    "parsed_without_invalid_lines": true,
+    "coordinates_withheld": true,
+    "summary": {
+      "passed": false,
+      "issues": [
+        "N1-N3 range is missing or stale",
+        "N2-N3 range is missing or stale",
+        "N1 reports missing-measurements",
+        "N2 reports missing-measurements",
+        "N3 report is missing or stale"
+      ],
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "ranges": {
+        "N1-N2": {
+          "distance_m": 1.584,
+          "age_ms": 336
+        }
+      },
+      "node_reports": {},
+      "accuracy_validated": false
+    }
+  },
+  "n3_self_tests_passed": 3,
+  "settings_preserved": true,
+  "n3_previous_logical_id": 2,
+  "functional_three_node_ranging_and_reports_verified": true,
+  "accuracy_validated": false,
+  "n1_running_off_mac_usb": true,
+  "first_three_node_capture": {
+    "duration_ms": 30000,
+    "observer": "N2",
+    "all_three_links_present": true,
+    "final_readiness": {
+      "passed": true,
+      "issues": [],
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "ranges": {
+        "N1-N2": {
+          "distance_m": 1.503,
+          "age_ms": 961
+        },
+        "N1-N3": {
+          "distance_m": 1.128,
+          "age_ms": 2080
+        },
+        "N2-N3": {
+          "distance_m": 0.779,
+          "age_ms": 729
+        }
+      },
+      "node_reports": {
+        "N1": {
+          "status": "reference",
+          "x_m": 0.0,
+          "y_m": 0.0,
+          "boot": 37,
+          "seq": 2198,
+          "age_ms": 2084
+        },
+        "N2": {
+          "status": "relative",
+          "x_m": 1.503,
+          "y_m": 0.0,
+          "boot": 16,
+          "seq": 6885,
+          "age_ms": 2079
+        },
+        "N3": {
+          "status": "relative",
+          "x_m": 0.973,
+          "y_m": 0.571,
+          "boot": 19,
+          "seq": 1545,
+          "age_ms": 2080
+        }
+      },
+      "accuracy_validated": false
+    },
+    "readiness_after_first_5_seconds": {
+      "sample_interval_ms": 100,
+      "ready_samples": 144,
+      "total_samples": 251,
+      "fraction": 0.5737051792828686
+    },
+    "unique_range_statistics": {
+      "N1-N2": {
+        "unique_exchanges": 16,
+        "median_mm": 1682.0,
+        "sample_stdev_mm": 303.56808681634067,
+        "min_mm": 1334,
+        "max_mm": 2297
+      },
+      "N1-N3": {
+        "unique_exchanges": 16,
+        "median_mm": 1125.0,
+        "sample_stdev_mm": 133.66519118055132,
+        "min_mm": 949,
+        "max_mm": 1407
+      },
+      "N2-N3": {
+        "unique_exchanges": 31,
+        "median_mm": 722,
+        "sample_stdev_mm": 51.856335870291424,
+        "min_mm": 640,
+        "max_mm": 808
+      }
+    },
+    "report_status_counts": {
+      "N1": {
+        "inconsistent-ranges": 10,
+        "reference": 19,
+        "poor-geometry": 1
+      },
+      "N2": {
+        "inconsistent-ranges": 13,
+        "relative": 17
+      },
+      "N3": {
+        "inconsistent-ranges": 11,
+        "relative": 19
+      }
+    },
+    "n2_diagnostic_counter_delta": {
+      "ranges_ok": 47,
+      "ranges_failed": 0,
+      "rx_errors": 576,
+      "tx_errors": 0,
+      "decode_errors": 575,
+      "usb_dropped": 0
+    },
+    "accuracy_validated": false,
+    "placement_surveyed": false
+  },
+  "stationary_triangle_capture": {
+    "duration_ms": 45000,
+    "observer": "N2",
+    "operator_conditions": "Broad stationary triangle, area clear, confirmed by Noah before capture; geometry not independently surveyed",
+    "firmware_and_settings_changed": false,
+    "first_complete_layout_ms": 1600,
+    "final_readiness": {
+      "passed": true,
+      "issues": [],
+      "coordinate_frame": "relative-n1-n2-positive-y",
+      "reflection_ambiguous": true,
+      "ranges": {
+        "N1-N2": {
+          "distance_m": 1.449,
+          "age_ms": 416
+        },
+        "N1-N3": {
+          "distance_m": 1.391,
+          "age_ms": 1565
+        },
+        "N2-N3": {
+          "distance_m": 1.058,
+          "age_ms": 1168
+        }
+      },
+      "node_reports": {
+        "N1": {
+          "status": "reference",
+          "x_m": 0.0,
+          "y_m": 0.0,
+          "boot": 37,
+          "seq": 8264,
+          "age_ms": 2622
+        },
+        "N2": {
+          "status": "relative",
+          "x_m": 1.5,
+          "y_m": 0.0,
+          "boot": 16,
+          "seq": 12997,
+          "age_ms": 2623
+        },
+        "N3": {
+          "status": "relative",
+          "x_m": 1.022,
+          "y_m": 0.944,
+          "boot": 19,
+          "seq": 7329,
+          "age_ms": 2633
+        }
+      },
+      "accuracy_validated": false
+    },
+    "readiness_after_first_5_seconds": {
+      "sample_interval_ms": 100,
+      "ready_samples": 401,
+      "total_samples": 401,
+      "fraction": 1.0
+    },
+    "unique_range_statistics": {
+      "N1-N2": {
+        "unique_exchanges": 25,
+        "median_mm": 1670,
+        "sample_stdev_mm": 168.11234338977016,
+        "min_mm": 1291,
+        "max_mm": 1853
+      },
+      "N1-N3": {
+        "unique_exchanges": 24,
+        "median_mm": 1485.5,
+        "sample_stdev_mm": 80.32027150410258,
+        "min_mm": 1318,
+        "max_mm": 1690
+      },
+      "N2-N3": {
+        "unique_exchanges": 47,
+        "median_mm": 1115,
+        "sample_stdev_mm": 40.22632548213464,
+        "min_mm": 1041,
+        "max_mm": 1201
+      }
+    },
+    "node_report_coordinate_statistics": {
+      "N1": {
+        "x_m": {
+          "median": 0.0,
+          "sample_stdev": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "y_m": {
+          "median": 0.0,
+          "sample_stdev": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "N2": {
+        "x_m": {
+          "median": 1.676,
+          "sample_stdev": 0.17036426215078623,
+          "min": 1.291,
+          "max": 1.853
+        },
+        "y_m": {
+          "median": 0.0,
+          "sample_stdev": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "N3": {
+        "x_m": {
+          "median": 1.1105,
+          "sample_stdev": 0.09646434599534266,
+          "min": 0.9,
+          "max": 1.323
+        },
+        "y_m": {
+          "median": 0.982,
+          "sample_stdev": 0.06094970207945958,
+          "min": 0.881,
+          "max": 1.131
+        }
+      }
+    },
+    "report_status_counts": {
+      "N1": {
+        "reference": 45
+      },
+      "N2": {
+        "relative": 45
+      },
+      "N3": {
+        "relative": 46
+      }
+    },
+    "n2_diagnostic_counter_delta": {
+      "ranges_ok": 69,
+      "ranges_failed": 0,
+      "rx_errors": 873,
+      "tx_errors": 0,
+      "decode_errors": 873,
+      "usb_dropped": 0
+    },
+    "accuracy_validated": false,
+    "placement_surveyed": false,
+    "monitor_parse_check": {
+      "parsed_lines": 458,
+      "invalid_lines": 0,
+      "all_three_ranges_and_reports_fresh": true
+    }
+  },
+  "physical_three_node_layout_validation_scope": "Functional relative layout availability in this one operator-confirmed stationary triangle, not surveyed coordinate accuracy, motion tracking or arbitrary placements",
+  "remaining_limitations": [
+    "Stationary position jitter remains; no independent coordinate or distance ground truth for this triangle",
+    "This short capture does not establish long-term uptime or power-bank cutoff behavior",
+    "Room-wall alignment and true mirror orientation remain unknown",
+    "Moving-node behavior, other placements and obstructions still require checks"
+  ],
+  "browser_connection_fix": {
+    "symptom": "Opera reported Failed to open serial port; embedded T3 picker cancellation was silent",
+    "observed_port_owner": "UltiMaker Cura held /dev/cu.usbmodem101, logical N3",
+    "resolution": "Closed idle Cura through its normal Quit menu; lsof then showed both XIAO ports free",
+    "ui_change": "Show USB selection cancellation and name Cura among apps that can occupy serial ports",
+    "verified": {
+      "demo_build": true,
+      "browser_regression_suite": true,
+      "new_cancelled_picker_test_failed_before_fix": true,
+      "embedded_picker_now_shows_retry_message": true,
+      "opera_live_state": "N3 connected via USB; Network located",
+      "operator_confirmed_map_visible": true
+    },
+    "firmware_and_radio_settings_changed": false,
+    "live_opera_tab_left_connected": true
+  }
+}

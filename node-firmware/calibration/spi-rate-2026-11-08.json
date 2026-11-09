@@ -1,0 +1,516 @@
+{
+  "date": "2026-11-08",
+  "status": "Completed; exact normal firmware restored and full triangle verified",
+  "purpose": "Test SPI-rate hypothesis for original ranging variation using the working diagnostic image",
+  "actual_system_change": "Calibration, RF settings and normal firmware unchanged. Capture tools now reject sleep/clock-interrupted timing and preserve raw data.",
+  "investigation_only": "CRC path isolated as diagnostic failure; full timestamp capture/replay established a working investigation path. This has not improved original physical ranging accuracy.",
+  "controls": {
+    "probe_image_sha256": "bf5cfe1007cac1c1cab697151305c31ec2a1012c9c328ee2b526273fe08383d6",
+    "normal_image_sha256": "51bf39df31294a6929eba6ce6e454f40ecf891a3bd1562c3b6c54ef938a8c405",
+    "SPI_actual_hz": [
+      15000000,
+      7500000,
+      15000000
+    ],
+    "radio_restarts_between_rate_changes": false,
+    "CRC_enabled": false,
+    "settle_ms": 15000,
+    "measurement_window_ms": 25000,
+    "N1_boot": 39,
+    "N2_probe_boot": 23,
+    "N3_probe_boot": 27,
+    "settings_and_calibration_unchanged": true,
+    "no_new_distance_truth_assumed": true,
+    "wall_clock_checks": "passed;40000-40003mswall windows",
+    "host_device_elapsed_disagreement_max_ms": 4
+  },
+  "phases": {
+    "baseline-before": {
+      "timing_valid": true,
+      "ranges": {
+        "N1-N2": {
+          "count": 12,
+          "median_m": 2.117,
+          "sample_sd_m": 0.13766590542015664,
+          "min_m": 2.067,
+          "max_m": 2.491
+        },
+        "N1-N3": {
+          "count": 12,
+          "median_m": 2.5525,
+          "sample_sd_m": 0.009000000000000083,
+          "min_m": 2.54,
+          "max_m": 2.567
+        },
+        "N2-N3": {
+          "count": 22,
+          "median_m": 1.825,
+          "sample_sd_m": 0.02263506837511918,
+          "min_m": 1.772,
+          "max_m": 1.859
+        }
+      },
+      "observed_attempts": {},
+      "full40_N2_N3_replay": {
+        "completed_pairs": 0,
+        "exact_mm_matches": 0,
+        "invalid_full40_intervals": 0,
+        "disagrees_with_uint32_replay": 0,
+        "mismatches": []
+      },
+      "N1_boots": [
+        39
+      ],
+      "probe_counters": {
+        "N2": null,
+        "N3": null
+      }
+    },
+    "A1-15MHz": {
+      "timing_valid": true,
+      "ranges": {
+        "N1-N2": {
+          "count": 12,
+          "median_m": 2.284,
+          "sample_sd_m": 0.16827005261204564,
+          "min_m": 2.071,
+          "max_m": 2.488
+        },
+        "N1-N3": {
+          "count": 13,
+          "median_m": 2.549,
+          "sample_sd_m": 0.009595004041901306,
+          "min_m": 2.536,
+          "max_m": 2.564
+        },
+        "N2-N3": {
+          "count": 25,
+          "median_m": 1.818,
+          "sample_sd_m": 0.0233243077782243,
+          "min_m": 1.772,
+          "max_m": 1.871
+        }
+      },
+      "observed_attempts": {
+        "N2:initiator:peer=N3": {
+          "attempts_observed": 25,
+          "completed": 25,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 25,
+          "stages": {
+            "ready": 25
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N2:responder:peer=N1": {
+          "attempts_observed": 12,
+          "completed": 12,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 12,
+          "stages": {
+            "ready": 12
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N1": {
+          "attempts_observed": 13,
+          "completed": 13,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 13,
+          "stages": {
+            "ready": 13
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N2": {
+          "attempts_observed": 25,
+          "completed": 25,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 25,
+          "stages": {
+            "ready": 25
+          },
+          "attempts_with_fault_counter_change": 0
+        }
+      },
+      "full40_N2_N3_replay": {
+        "completed_pairs": 25,
+        "exact_mm_matches": 25,
+        "invalid_full40_intervals": 0,
+        "disagrees_with_uint32_replay": 0,
+        "mismatches": []
+      },
+      "N1_boots": [
+        39
+      ],
+      "probe_counters": {
+        "N2": {
+          "crc_read_errors": 0,
+          "crc_write_errors": 0,
+          "status_faults": 0,
+          "duplicate_reads": 945,
+          "timestamp_mismatches": 0
+        },
+        "N3": {
+          "crc_read_errors": 0,
+          "crc_write_errors": 0,
+          "status_faults": 0,
+          "duplicate_reads": 972,
+          "timestamp_mismatches": 0
+        }
+      }
+    },
+    "B-7p5MHz": {
+      "timing_valid": true,
+      "ranges": {
+        "N1-N2": {
+          "count": 14,
+          "median_m": 2.117,
+          "sample_sd_m": 0.16476930259281639,
+          "min_m": 2.041,
+          "max_m": 2.477
+        },
+        "N1-N3": {
+          "count": 12,
+          "median_m": 2.558,
+          "sample_sd_m": 0.015084358746326566,
+          "min_m": 2.533,
+          "max_m": 2.577
+        },
+        "N2-N3": {
+          "count": 26,
+          "median_m": 1.8375,
+          "sample_sd_m": 0.02730714192294757,
+          "min_m": 1.782,
+          "max_m": 1.878
+        }
+      },
+      "observed_attempts": {
+        "N2:responder:peer=N1": {
+          "attempts_observed": 14,
+          "completed": 14,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 14,
+          "stages": {
+            "ready": 14
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N2:initiator:peer=N3": {
+          "attempts_observed": 26,
+          "completed": 26,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 26,
+          "stages": {
+            "ready": 26
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N2": {
+          "attempts_observed": 26,
+          "completed": 26,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 26,
+          "stages": {
+            "ready": 26
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N1": {
+          "attempts_observed": 12,
+          "completed": 12,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 12,
+          "stages": {
+            "ready": 12
+          },
+          "attempts_with_fault_counter_change": 0
+        }
+      },
+      "full40_N2_N3_replay": {
+        "completed_pairs": 26,
+        "exact_mm_matches": 26,
+        "invalid_full40_intervals": 0,
+        "disagrees_with_uint32_replay": 0,
+        "mismatches": []
+      },
+      "N1_boots": [
+        39
+      ],
+      "probe_counters": {
+        "N2": {
+          "crc_read_errors": 0,
+          "crc_write_errors": 0,
+          "status_faults": 0,
+          "duplicate_reads": 975,
+          "timestamp_mismatches": 0
+        },
+        "N3": {
+          "crc_read_errors": 0,
+          "crc_write_errors": 0,
+          "status_faults": 0,
+          "duplicate_reads": 972,
+          "timestamp_mismatches": 0
+        }
+      }
+    },
+    "A2-15MHz": {
+      "timing_valid": true,
+      "ranges": {
+        "N1-N2": {
+          "count": 14,
+          "median_m": 2.1915,
+          "sample_sd_m": 0.16328193106093825,
+          "min_m": 2.075,
+          "max_m": 2.485
+        },
+        "N1-N3": {
+          "count": 13,
+          "median_m": 2.549,
+          "sample_sd_m": 0.018986162302433877,
+          "min_m": 2.525,
+          "max_m": 2.581
+        },
+        "N2-N3": {
+          "count": 27,
+          "median_m": 1.834,
+          "sample_sd_m": 0.023730742680079533,
+          "min_m": 1.767,
+          "max_m": 1.868
+        }
+      },
+      "observed_attempts": {
+        "N2:responder:peer=N1": {
+          "attempts_observed": 14,
+          "completed": 14,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 14,
+          "stages": {
+            "ready": 14
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N2:initiator:peer=N3": {
+          "attempts_observed": 27,
+          "completed": 27,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 27,
+          "stages": {
+            "ready": 27
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N2": {
+          "attempts_observed": 27,
+          "completed": 27,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 27,
+          "stages": {
+            "ready": 27
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N1": {
+          "attempts_observed": 13,
+          "completed": 13,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 13,
+          "stages": {
+            "ready": 13
+          },
+          "attempts_with_fault_counter_change": 0
+        }
+      },
+      "full40_N2_N3_replay": {
+        "completed_pairs": 27,
+        "exact_mm_matches": 27,
+        "invalid_full40_intervals": 0,
+        "disagrees_with_uint32_replay": 0,
+        "mismatches": []
+      },
+      "N1_boots": [
+        39
+      ],
+      "probe_counters": {
+        "N2": {
+          "crc_read_errors": 0,
+          "crc_write_errors": 0,
+          "status_faults": 0,
+          "duplicate_reads": 954,
+          "timestamp_mismatches": 0
+        },
+        "N3": {
+          "crc_read_errors": 0,
+          "crc_write_errors": 0,
+          "status_faults": 0,
+          "duplicate_reads": 966,
+          "timestamp_mismatches": 0
+        }
+      }
+    },
+    "baseline-after": {
+      "timing_valid": true,
+      "ranges": {
+        "N1-N2": {
+          "count": 14,
+          "median_m": 2.1334999999999997,
+          "sample_sd_m": 0.17205627752965783,
+          "min_m": 2.061,
+          "max_m": 2.534
+        },
+        "N1-N3": {
+          "count": 13,
+          "median_m": 2.55,
+          "sample_sd_m": 0.010459322917734023,
+          "min_m": 2.537,
+          "max_m": 2.566
+        },
+        "N2-N3": {
+          "count": 23,
+          "median_m": 1.815,
+          "sample_sd_m": 0.034343015123122725,
+          "min_m": 1.73,
+          "max_m": 1.857
+        }
+      },
+      "observed_attempts": {},
+      "full40_N2_N3_replay": {
+        "completed_pairs": 0,
+        "exact_mm_matches": 0,
+        "invalid_full40_intervals": 0,
+        "disagrees_with_uint32_replay": 0,
+        "mismatches": []
+      },
+      "N1_boots": [
+        39
+      ],
+      "probe_counters": {
+        "N2": null,
+        "N3": null
+      }
+    }
+  },
+  "conclusion": [
+    "Lower SPI rate did not consistently improve stationary scatter. N1-N2 sample SD stayed16.3-16.8cm; production SPI speed remains unchanged.",
+    "N1-N2 median dipped at7.5MHz and partly returned. This possible effect is unresolved in one short A/B/A, with12-14 unique samples per window.",
+    "The result weakens high SPI rate as the explanation for the original scatter. It cannot exclude rare/deterministic errors or establish correct physical first-path timestamps.",
+    "The three rate phases completed every observed trace attempt. All78 pairedN2-N3 full40/low32/result replays agreed.",
+    "No fresh tape reference was confirmed after N1 recovery. These results describe repeatability, not physical accuracy.",
+    "Further optional CRC repair is outside this bounded investigation. Original bias remains unresolved; no placement-specific offsets or quality thresholds were fitted."
+  ],
+  "cpp_replay": {
+    "cases": 156,
+    "exact_matches": 156,
+    "sanitizers": "ASan/UBSan, no errors",
+    "source_ref": "../crc-isolation/source-off/src/mesh.cpp",
+    "scope": "Arithmetic/serialization only, not physical timestamp accuracy"
+  },
+  "final_readiness": {
+    "passed": true,
+    "issues": [],
+    "coordinate_frame": "relative-n1-n2-positive-y",
+    "reflection_ambiguous": true,
+    "ranges": {
+      "N1-N2": {
+        "distance_m": 2.061,
+        "age_ms": 585
+      },
+      "N1-N3": {
+        "distance_m": 2.554,
+        "age_ms": 1428
+      },
+      "N2-N3": {
+        "distance_m": 1.829,
+        "age_ms": 1696
+      }
+    },
+    "node_reports": {
+      "N1": {
+        "status": "reference",
+        "x_m": 0.0,
+        "y_m": 0.0,
+        "boot": 39,
+        "seq": 17393,
+        "age_ms": 2343
+      },
+      "N2": {
+        "status": "relative",
+        "x_m": 2.079,
+        "y_m": 0.0,
+        "boot": 24,
+        "seq": 823,
+        "age_ms": 2341
+      },
+      "N3": {
+        "status": "relative",
+        "x_m": 1.804,
+        "y_m": 1.808,
+        "boot": 28,
+        "seq": 742,
+        "age_ms": 2350
+      }
+    },
+    "accuracy_validated": false
+  },
+  "restored_identities": {
+    "88E80DCAE67A7A54": {
+      "v": 1,
+      "type": "identity",
+      "source": "N2",
+      "node_id": 2,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "88E80DCAE67A7A54",
+      "boot": 24,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16354,
+      "rx_ant_delay": 16354,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 0
+    },
+    "0ACD77FCB0F57A4B": {
+      "v": 1,
+      "type": "identity",
+      "source": "N3",
+      "node_id": 3,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "0ACD77FCB0F57A4B",
+      "boot": 28,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16387,
+      "rx_ant_delay": 16387,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 1
+    }
+  },
+  "evidence_directory": "node-firmware/.deps/experiments/spi-rate-no-crc/",
+  "raw_analysis": "node-firmware/.deps/experiments/spi-rate-no-crc/analysis.json",
+  "prior_crc_control": "crc-isolation-2026-11-08.json"
+}

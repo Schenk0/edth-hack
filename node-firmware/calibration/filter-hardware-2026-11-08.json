@@ -1,0 +1,2398 @@
+{
+  "date": "2026-11-08",
+  "status": "Comparison complete; same tested firmware subsequently deployed to all3 nodes",
+  "purpose": "Test stationary jitter filtering, preserving raw telemetry, persistent RF settings and geometry",
+  "reference": null,
+  "absolute_accuracy_assessed": false,
+  "operator_area_clear": true,
+  "images": {
+    "baseline_sha256": "51bf39df31294a6929eba6ce6e454f40ecf891a3bd1562c3b6c54ef938a8c405",
+    "filtered_sha256": "380483e218507964c66cc0831b6b920279afc9ba1819f0014fd64c9d7358e189"
+  },
+  "controlled_conditions": {
+    "geometry": "Operator-confirmed still; no new tape distances assigned",
+    "settings": "All11 direct USB identity/RF/wiring keys unchanged",
+    "N3": "Baseline firmware on power bank throughout comparison, origin boot32 unchanged",
+    "settle_ms": 15000,
+    "measured_ms_per_phase": 60000,
+    "restarts": "A1 not freshly restarted; B/A2 each flashed once on both USB nodes"
+  },
+  "same_input_N2_check": {
+    "observer": "N2",
+    "matched_report_count": 60,
+    "raw": {
+      "report_count": 60,
+      "located_count": 60,
+      "local_report_availability_fraction": 1.0,
+      "status_counts": {
+        "relative": 60
+      },
+      "component_median_xy_m": [
+        1.334,
+        0.0
+      ],
+      "sample_sd_x_m": 0.16937921216644117,
+      "sample_sd_y_m": 0.0,
+      "p95_radius_about_component_median_m": 0.383,
+      "reported_input_age_ms": {
+        "count": 60,
+        "median": 1502.5,
+        "sample_sd": 432.9903545982765,
+        "min": 820,
+        "max": 2669
+      },
+      "reference_xy_m": null,
+      "accuracy": null,
+      "imposed_coordinates": "y=0"
+    },
+    "filtered": {
+      "report_count": 60,
+      "located_count": 60,
+      "local_report_availability_fraction": 1.0,
+      "status_counts": {
+        "relative": 60
+      },
+      "component_median_xy_m": [
+        1.3265,
+        0.0
+      ],
+      "sample_sd_x_m": 0.14967087338217497,
+      "sample_sd_y_m": 0.0,
+      "p95_radius_about_component_median_m": 0.3049999999999997,
+      "reported_input_age_ms": {
+        "count": 60,
+        "median": 2567.5,
+        "sample_sd": 299.26534293203076,
+        "min": 1984,
+        "max": 2994
+      },
+      "reference_xy_m": null,
+      "accuracy": null,
+      "imposed_coordinates": "y=0"
+    },
+    "actual": {
+      "report_count": 60,
+      "located_count": 60,
+      "local_report_availability_fraction": 1.0,
+      "status_counts": {
+        "relative": 60
+      },
+      "component_median_xy_m": [
+        1.3265,
+        0.0
+      ],
+      "sample_sd_x_m": 0.14967087338217497,
+      "sample_sd_y_m": 0.0,
+      "p95_radius_about_component_median_m": 0.3049999999999997,
+      "reported_input_age_ms": {
+        "count": 60,
+        "median": 2566.0,
+        "sample_sd": 299.48481706042713,
+        "min": 1984,
+        "max": 2994
+      },
+      "reference_xy_m": null,
+      "accuracy": null,
+      "imposed_coordinates": "y=0"
+    },
+    "filtered_replay_all_within_1mm": true,
+    "comparisons": [
+      {
+        "key": 156,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 2
+      },
+      {
+        "key": 167,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 176,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 187,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 2
+      },
+      {
+        "key": 195,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 207,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 216,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 2
+      },
+      {
+        "key": 228,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 237,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 0
+      },
+      {
+        "key": 248,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 257,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 268,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 2
+      },
+      {
+        "key": 278,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 289,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 300,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 308,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 2
+      },
+      {
+        "key": 319,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 329,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 3
+      },
+      {
+        "key": 339,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 0
+      },
+      {
+        "key": 348,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 360,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 2
+      },
+      {
+        "key": 368,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 379,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 389,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 400,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 408,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 420,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 428,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 4
+      },
+      {
+        "key": 439,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 0
+      },
+      {
+        "key": 449,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 460,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 0
+      },
+      {
+        "key": 469,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 479,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 488,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 2
+      },
+      {
+        "key": 498,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 509,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 0
+      },
+      {
+        "key": 518,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 528,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 539,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 4
+      },
+      {
+        "key": 549,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 559,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -2
+      },
+      {
+        "key": 569,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 580,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 589,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 0
+      },
+      {
+        "key": 600,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 610,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 0
+      },
+      {
+        "key": 620,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -3
+      },
+      {
+        "key": 630,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 640,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -2
+      },
+      {
+        "key": 651,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      },
+      {
+        "key": 661,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 0
+      },
+      {
+        "key": 671,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 3
+      },
+      {
+        "key": 681,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 2
+      },
+      {
+        "key": 691,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 701,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 710,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 721,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -2
+      },
+      {
+        "key": 731,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 1
+      },
+      {
+        "key": 742,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": 2
+      },
+      {
+        "key": 752,
+        "same_status": true,
+        "coordinate_error_m": 0.0,
+        "input_age_delta_ms": -1
+      }
+    ],
+    "time_reconstruction": {
+      "FIFO_order_time_backsteps_clamped": 194,
+      "maximum_clamp_ms": 2
+    },
+    "reference": null,
+    "limitation": "Same measured B inputs only; timing reconstruction approximates radio arrivals using USB emission time and preserves FIFO. No independent absolute accuracy reference."
+  },
+  "analysis": {
+    "manifest_status": "comparison-complete-baseline-restored",
+    "reference": null,
+    "absolute_accuracy_assessed": false,
+    "settle_ms": 15000,
+    "measurement_window_ms": 60000,
+    "phases": {
+      "A1-baseline": {
+        "expected_filter_mode": null,
+        "image_sha256": "51bf39df31294a6929eba6ce6e454f40ecf891a3bd1562c3b6c54ef938a8c405",
+        "restart_note": "Initial settled normal firmware, no fresh restart",
+        "observers": {
+          "N1": {
+            "file": "node-firmware/.deps/experiments/firmware-filter-aba/A1-baseline-N1.json",
+            "declared_duration_ms": 75000,
+            "wall_duration_ms": 75003,
+            "timing_valid": true,
+            "parse_counts": {
+              "blank_lines": 0,
+              "malformed_json": 0,
+              "non_record_json": 0,
+              "invalid_envelope": 0,
+              "unknown_record_types": 0,
+              "type:identity": 76,
+              "type:report": 225,
+              "type:diagnostics": 75,
+              "type:radio-quality": 75,
+              "type:measurement": 152
+            },
+            "payload_counts": {
+              "outside_source_window": 79
+            },
+            "unknown_experimental_records": [],
+            "identities": {
+              "sources": [
+                "N1"
+              ],
+              "boots": [
+                40
+              ],
+              "configurations": [
+                {
+                  "board_id": "1598712C6E2499A8",
+                  "node_id": 1,
+                  "network": 60785,
+                  "line_length_mm": 0,
+                  "channel": 5,
+                  "tx_power": "fdfdfdfd",
+                  "tx_ant_delay": 16387,
+                  "rx_ant_delay": 16387
+                }
+              ],
+              "frozen_setting_mismatches": [],
+              "radio_ready_all": true,
+              "actual_spi_hz": [],
+              "expected_boot_generations": [
+                40
+              ],
+              "matches_expected_boot_generation": true
+            },
+            "multiple_boot_generations_observed": false,
+            "identity_heartbeat": {
+              "settled_count": 60,
+              "first_host_ms": 15122,
+              "last_host_ms": 74121,
+              "max_host_receive_gap_ms_including_boundaries": 1003,
+              "max_device_usb_delay_ms": 1,
+              "within_five_second_limit": true
+            },
+            "diagnostic_counters": {
+              "snapshot_count": 60,
+              "interval_ms": 59003,
+              "deltas": {
+                "ranges_ok": 62,
+                "ranges_failed": 3,
+                "accepted": 121,
+                "rejected": 114,
+                "rx_errors": 1279,
+                "tx_errors": 0,
+                "decode_errors": 1279,
+                "usb_dropped": 0
+              },
+              "counter_regressions": [],
+              "raw_boundary_snapshots": {
+                "first_within_settled_window": {
+                  "at_ms": 15122,
+                  "produced_ms": 15121,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N1",
+                    "uptime_ms": 5016094,
+                    "ranges_ok": 5090,
+                    "ranges_failed": 162,
+                    "accepted": 10229,
+                    "rejected": 9682,
+                    "rx_errors": 109324,
+                    "tx_errors": 0,
+                    "usb_dropped": 38989,
+                    "rx_frames": [
+                      0,
+                      5129,
+                      0,
+                      5090,
+                      44471,
+                      44377
+                    ],
+                    "decode_errors": 109274,
+                    "rx_last_error": "04000170",
+                    "respond_stage": "not-attempted",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 1
+                  }
+                },
+                "last_within_settled_window": {
+                  "at_ms": 74125,
+                  "produced_ms": 74124,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N1",
+                    "uptime_ms": 5075094,
+                    "ranges_ok": 5152,
+                    "ranges_failed": 165,
+                    "accepted": 10350,
+                    "rejected": 9796,
+                    "rx_errors": 110603,
+                    "tx_errors": 0,
+                    "usb_dropped": 38989,
+                    "rx_frames": [
+                      0,
+                      5192,
+                      0,
+                      5152,
+                      44991,
+                      44894
+                    ],
+                    "decode_errors": 110553,
+                    "rx_last_error": "04000170",
+                    "respond_stage": "not-attempted",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 1
+                  }
+                }
+              },
+              "firmware_elapsed_ms": 59000,
+              "firmware_minus_host_elapsed_ms": -3,
+              "largest_inter_snapshot_clock_offset_step_ms": 4,
+              "rx_frames_deltas": [
+                0,
+                63,
+                0,
+                62,
+                520,
+                517
+              ],
+              "observed_node_ranging_attempts": 65,
+              "observed_node_ranging_failure_fraction": 0.046153846153846156,
+              "receive_packet_loss_fraction": null,
+              "loss_denominator_limit": "RX/decode errors include frames not accepted by this node; missing quality and global seq gaps do not measure packet loss.",
+              "sampled_stage_values": {
+                "respond_stage": {
+                  "not-attempted": 60
+                },
+                "initiate_stage": {
+                  "ready": 58,
+                  "response-timeout": 2
+                }
+              }
+            },
+            "actual_own_reports": {
+              "report_count": 60,
+              "located_count": 60,
+              "local_report_availability_fraction": 1.0,
+              "status_counts": {
+                "reference": 60
+              },
+              "component_median_xy_m": [
+                0.0,
+                0.0
+              ],
+              "sample_sd_x_m": 0.0,
+              "sample_sd_y_m": 0.0,
+              "p95_radius_about_component_median_m": 0.0,
+              "reported_input_age_ms": {
+                "count": 60,
+                "median": 1582.0,
+                "sample_sd": 520.9982798696351,
+                "min": 759,
+                "max": 3819
+              },
+              "reference_xy_m": null,
+              "accuracy": null,
+              "imposed_coordinates": "x=0,y=0"
+            },
+            "own_report_failures": {
+              "count": 0,
+              "status_counts": {
+                "reference": 60
+              }
+            },
+            "filter_metadata": {
+              "expected": null,
+              "observed_modes": [
+                "None"
+              ],
+              "all_match_expected": true
+            },
+            "network_model_availability": {
+              "availability": {
+                "fraction": 1,
+                "readyMs": 60000,
+                "totalMs": 60000
+              },
+              "warnings": [
+                "N1 is the defined origin; its zero movement is not an independent accuracy measurement. N2 y=0 is also imposed by the coordinate convention.",
+                "First-to-last shift describes this window only; it does not prove long-term drift or its cause.",
+                "No measured distances supplied. Repeatability is available; absolute error is unknown."
+              ]
+            },
+            "raw_range_statistics": {
+              "N1-N2": {
+                "count": 31,
+                "median_m": 1.399,
+                "sample_sd_m": 0.19559531955611328,
+                "min_m": 1.243,
+                "max_m": 1.957
+              },
+              "N1-N3": {
+                "count": 31,
+                "median_m": 1.993,
+                "sample_sd_m": 0.017041883887986498,
+                "min_m": 1.964,
+                "max_m": 2.067
+              },
+              "N2-N3": {
+                "count": 60,
+                "median_m": 2.334,
+                "sample_sd_m": 0.02699246075949925,
+                "min_m": 2.276,
+                "max_m": 2.405
+              }
+            }
+          },
+          "N2": {
+            "file": "node-firmware/.deps/experiments/firmware-filter-aba/A1-baseline-N2.json",
+            "declared_duration_ms": 75000,
+            "wall_duration_ms": 75003,
+            "timing_valid": true,
+            "parse_counts": {
+              "blank_lines": 0,
+              "malformed_json": 0,
+              "non_record_json": 0,
+              "invalid_envelope": 0,
+              "unknown_record_types": 0,
+              "type:identity": 76,
+              "type:measurement": 153,
+              "type:report": 225,
+              "type:diagnostics": 75,
+              "type:radio-quality": 225
+            },
+            "payload_counts": {
+              "outside_source_window": 79
+            },
+            "unknown_experimental_records": [],
+            "identities": {
+              "sources": [
+                "N2"
+              ],
+              "boots": [
+                29
+              ],
+              "configurations": [
+                {
+                  "board_id": "88E80DCAE67A7A54",
+                  "node_id": 2,
+                  "network": 60785,
+                  "line_length_mm": 0,
+                  "channel": 5,
+                  "tx_power": "fdfdfdfd",
+                  "tx_ant_delay": 16354,
+                  "rx_ant_delay": 16354
+                }
+              ],
+              "frozen_setting_mismatches": [],
+              "radio_ready_all": true,
+              "actual_spi_hz": [],
+              "expected_boot_generations": [
+                29
+              ],
+              "matches_expected_boot_generation": true
+            },
+            "multiple_boot_generations_observed": false,
+            "identity_heartbeat": {
+              "settled_count": 60,
+              "first_host_ms": 15705,
+              "last_host_ms": 74718,
+              "max_host_receive_gap_ms_including_boundaries": 1004,
+              "max_device_usb_delay_ms": 2,
+              "within_five_second_limit": true
+            },
+            "diagnostic_counters": {
+              "snapshot_count": 60,
+              "interval_ms": 59013,
+              "deltas": {
+                "ranges_ok": 90,
+                "ranges_failed": 1,
+                "accepted": 121,
+                "rejected": 321,
+                "rx_errors": 1159,
+                "tx_errors": 0,
+                "decode_errors": 1159,
+                "usb_dropped": 0
+              },
+              "counter_regressions": [],
+              "raw_boundary_snapshots": {
+                "first_within_settled_window": {
+                  "at_ms": 15705,
+                  "produced_ms": 15703,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N2",
+                    "uptime_ms": 5331354,
+                    "ranges_ok": 8111,
+                    "ranges_failed": 180,
+                    "accepted": 10796,
+                    "rejected": 28392,
+                    "rx_errors": 104349,
+                    "tx_errors": 0,
+                    "usb_dropped": 50686,
+                    "rx_frames": [
+                      2715,
+                      5485,
+                      2688,
+                      5427,
+                      46774,
+                      46818
+                    ],
+                    "decode_errors": 104297,
+                    "rx_last_error": "00001370",
+                    "respond_stage": "ready",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 2
+                  }
+                },
+                "last_within_settled_window": {
+                  "at_ms": 74718,
+                  "produced_ms": 74716,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N2",
+                    "uptime_ms": 5390368,
+                    "ranges_ok": 8201,
+                    "ranges_failed": 181,
+                    "accepted": 10917,
+                    "rejected": 28713,
+                    "rx_errors": 105508,
+                    "tx_errors": 0,
+                    "usb_dropped": 50686,
+                    "rx_frames": [
+                      2746,
+                      5545,
+                      2719,
+                      5486,
+                      47300,
+                      47337
+                    ],
+                    "decode_errors": 105456,
+                    "rx_last_error": "00001370",
+                    "respond_stage": "ready",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 2
+                  }
+                }
+              },
+              "firmware_elapsed_ms": 59014,
+              "firmware_minus_host_elapsed_ms": 1,
+              "largest_inter_snapshot_clock_offset_step_ms": 5,
+              "rx_frames_deltas": [
+                31,
+                60,
+                31,
+                59,
+                526,
+                519
+              ],
+              "observed_node_ranging_attempts": 91,
+              "observed_node_ranging_failure_fraction": 0.01098901098901099,
+              "receive_packet_loss_fraction": null,
+              "loss_denominator_limit": "RX/decode errors include frames not accepted by this node; missing quality and global seq gaps do not measure packet loss.",
+              "sampled_stage_values": {
+                "respond_stage": {
+                  "ready": 60
+                },
+                "initiate_stage": {
+                  "ready": 59,
+                  "result-timeout": 1
+                }
+              }
+            },
+            "actual_own_reports": {
+              "report_count": 60,
+              "located_count": 60,
+              "local_report_availability_fraction": 1.0,
+              "status_counts": {
+                "relative": 60
+              },
+              "component_median_xy_m": [
+                1.399,
+                0.0
+              ],
+              "sample_sd_x_m": 0.18488219718555435,
+              "sample_sd_y_m": 0.0,
+              "p95_radius_about_component_median_m": 0.4210499999999997,
+              "reported_input_age_ms": {
+                "count": 60,
+                "median": 1431.5,
+                "sample_sd": 538.8086615198512,
+                "min": 872,
+                "max": 3527
+              },
+              "reference_xy_m": null,
+              "accuracy": null,
+              "imposed_coordinates": "y=0"
+            },
+            "own_report_failures": {
+              "count": 0,
+              "status_counts": {
+                "relative": 60
+              }
+            },
+            "filter_metadata": {
+              "expected": null,
+              "observed_modes": [
+                "None"
+              ],
+              "all_match_expected": true
+            },
+            "network_model_availability": {
+              "availability": {
+                "fraction": 1,
+                "readyMs": 60000,
+                "totalMs": 60000
+              },
+              "warnings": [
+                "N1 is the defined origin; its zero movement is not an independent accuracy measurement. N2 y=0 is also imposed by the coordinate convention.",
+                "First-to-last shift describes this window only; it does not prove long-term drift or its cause.",
+                "No measured distances supplied. Repeatability is available; absolute error is unknown."
+              ]
+            },
+            "raw_range_statistics": {
+              "N1-N2": {
+                "count": 32,
+                "median_m": 1.3980000000000001,
+                "sample_sd_m": 0.19334329061075162,
+                "min_m": 1.243,
+                "max_m": 1.957
+              },
+              "N1-N3": {
+                "count": 31,
+                "median_m": 1.993,
+                "sample_sd_m": 0.017041883887986498,
+                "min_m": 1.964,
+                "max_m": 2.067
+              },
+              "N2-N3": {
+                "count": 60,
+                "median_m": 2.334,
+                "sample_sd_m": 0.02699246075949925,
+                "min_m": 2.276,
+                "max_m": 2.405
+              }
+            }
+          }
+        },
+        "timing_valid": true,
+        "origin_boot_generations": {
+          "N1": {
+            "observed_origin_boot_generations": [
+              40
+            ],
+            "multiple_generations_observed": false,
+            "N3_source_limit": null
+          },
+          "N2": {
+            "observed_origin_boot_generations": [
+              29
+            ],
+            "multiple_generations_observed": false,
+            "N3_source_limit": null
+          },
+          "N3": {
+            "observed_origin_boot_generations": [
+              32
+            ],
+            "multiple_generations_observed": false,
+            "N3_source_limit": "Origin reports only; no direct USB identity for N3"
+          }
+        },
+        "N1_traffic": {
+          "fresh_traffic_observed": true,
+          "boots": [
+            40
+          ],
+          "unique_fresh_poll_identities": 32,
+          "unique_fresh_origin_payloads": 121,
+          "responder_attempts_to_N1_observed": 0,
+          "expected_boot": 40,
+          "matches_expected_boot": true
+        },
+        "raw_range_union": {
+          "N1-N2": {
+            "count": 32,
+            "median_m": 1.3980000000000001,
+            "sample_sd_m": 0.19334329061075162,
+            "min_m": 1.243,
+            "max_m": 1.957
+          },
+          "N1-N3": {
+            "count": 31,
+            "median_m": 1.993,
+            "sample_sd_m": 0.017041883887986498,
+            "min_m": 1.964,
+            "max_m": 2.067
+          },
+          "N2-N3": {
+            "count": 60,
+            "median_m": 2.334,
+            "sample_sd_m": 0.02699246075949925,
+            "min_m": 2.276,
+            "max_m": 2.405
+          }
+        }
+      },
+      "B-filtered": {
+        "expected_filter_mode": "median3-3s",
+        "image_sha256": "380483e218507964c66cc0831b6b920279afc9ba1819f0014fd64c9d7358e189",
+        "restart_note": "Both USB nodes flashed once, then equal15s settling; N3 firmware/power unchanged",
+        "observers": {
+          "N1": {
+            "file": "node-firmware/.deps/experiments/firmware-filter-aba/B-filtered-N1.json",
+            "declared_duration_ms": 75000,
+            "wall_duration_ms": 75003,
+            "timing_valid": true,
+            "parse_counts": {
+              "blank_lines": 0,
+              "malformed_json": 0,
+              "non_record_json": 0,
+              "invalid_envelope": 0,
+              "unknown_record_types": 0,
+              "type:identity": 76,
+              "type:measurement": 155,
+              "type:report": 223,
+              "type:diagnostics": 75,
+              "type:radio-quality": 75
+            },
+            "payload_counts": {
+              "outside_source_window": 84
+            },
+            "unknown_experimental_records": [],
+            "identities": {
+              "sources": [
+                "N1"
+              ],
+              "boots": [
+                41
+              ],
+              "configurations": [
+                {
+                  "board_id": "1598712C6E2499A8",
+                  "node_id": 1,
+                  "network": 60785,
+                  "line_length_mm": 0,
+                  "channel": 5,
+                  "tx_power": "fdfdfdfd",
+                  "tx_ant_delay": 16387,
+                  "rx_ant_delay": 16387
+                }
+              ],
+              "frozen_setting_mismatches": [],
+              "radio_ready_all": true,
+              "actual_spi_hz": [],
+              "expected_boot_generations": [
+                41
+              ],
+              "matches_expected_boot_generation": true
+            },
+            "multiple_boot_generations_observed": false,
+            "identity_heartbeat": {
+              "settled_count": 60,
+              "first_host_ms": 15971,
+              "last_host_ms": 74973,
+              "max_host_receive_gap_ms_including_boundaries": 1003,
+              "max_device_usb_delay_ms": 1,
+              "within_five_second_limit": true
+            },
+            "diagnostic_counters": {
+              "snapshot_count": 60,
+              "interval_ms": 59003,
+              "deltas": {
+                "ranges_ok": 62,
+                "ranges_failed": 1,
+                "accepted": 121,
+                "rejected": 115,
+                "rx_errors": 1287,
+                "tx_errors": 0,
+                "decode_errors": 1285,
+                "usb_dropped": 0
+              },
+              "counter_regressions": [],
+              "raw_boundary_snapshots": {
+                "first_within_settled_window": {
+                  "at_ms": 15971,
+                  "produced_ms": 15969,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N1",
+                    "uptime_ms": 19019,
+                    "ranges_ok": 19,
+                    "ranges_failed": 2,
+                    "accepted": 37,
+                    "rejected": 32,
+                    "rx_errors": 370,
+                    "tx_errors": 0,
+                    "usb_dropped": 22,
+                    "rx_frames": [
+                      0,
+                      20,
+                      0,
+                      19,
+                      151,
+                      150
+                    ],
+                    "decode_errors": 370,
+                    "rx_last_error": "00000000",
+                    "respond_stage": "not-attempted",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 2
+                  }
+                },
+                "last_within_settled_window": {
+                  "at_ms": 74973,
+                  "produced_ms": 74972,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N1",
+                    "uptime_ms": 78019,
+                    "ranges_ok": 81,
+                    "ranges_failed": 3,
+                    "accepted": 158,
+                    "rejected": 147,
+                    "rx_errors": 1657,
+                    "tx_errors": 0,
+                    "usb_dropped": 22,
+                    "rx_frames": [
+                      0,
+                      83,
+                      0,
+                      81,
+                      677,
+                      678
+                    ],
+                    "decode_errors": 1655,
+                    "rx_last_error": "04000170",
+                    "respond_stage": "not-attempted",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 1
+                  }
+                }
+              },
+              "firmware_elapsed_ms": 59000,
+              "firmware_minus_host_elapsed_ms": -3,
+              "largest_inter_snapshot_clock_offset_step_ms": 4,
+              "rx_frames_deltas": [
+                0,
+                63,
+                0,
+                62,
+                526,
+                528
+              ],
+              "observed_node_ranging_attempts": 63,
+              "observed_node_ranging_failure_fraction": 0.015873015873015872,
+              "receive_packet_loss_fraction": null,
+              "loss_denominator_limit": "RX/decode errors include frames not accepted by this node; missing quality and global seq gaps do not measure packet loss.",
+              "sampled_stage_values": {
+                "respond_stage": {
+                  "not-attempted": 60
+                },
+                "initiate_stage": {
+                  "ready": 59,
+                  "result-timeout": 1
+                }
+              }
+            },
+            "actual_own_reports": {
+              "report_count": 60,
+              "located_count": 60,
+              "local_report_availability_fraction": 1.0,
+              "status_counts": {
+                "reference": 60
+              },
+              "component_median_xy_m": [
+                0.0,
+                0.0
+              ],
+              "sample_sd_x_m": 0.0,
+              "sample_sd_y_m": 0.0,
+              "p95_radius_about_component_median_m": 0.0,
+              "reported_input_age_ms": {
+                "count": 60,
+                "median": 2658.0,
+                "sample_sd": 244.19687054080137,
+                "min": 1922,
+                "max": 3443
+              },
+              "reference_xy_m": null,
+              "accuracy": null,
+              "imposed_coordinates": "x=0,y=0"
+            },
+            "own_report_failures": {
+              "count": 0,
+              "status_counts": {
+                "reference": 60
+              }
+            },
+            "filter_metadata": {
+              "expected": "median3-3s",
+              "observed_modes": [
+                "median3-3s"
+              ],
+              "all_match_expected": true
+            },
+            "network_model_availability": {
+              "availability": {
+                "fraction": 1,
+                "readyMs": 60000,
+                "totalMs": 60000
+              },
+              "warnings": [
+                "N1 is the defined origin; its zero movement is not an independent accuracy measurement. N2 y=0 is also imposed by the coordinate convention.",
+                "First-to-last shift describes this window only; it does not prove long-term drift or its cause.",
+                "No measured distances supplied. Repeatability is available; absolute error is unknown."
+              ]
+            },
+            "raw_range_statistics": {
+              "N1-N2": {
+                "count": 31,
+                "median_m": 1.334,
+                "sample_sd_m": 0.17044153287574088,
+                "min_m": 1.23,
+                "max_m": 2.06
+              },
+              "N1-N3": {
+                "count": 32,
+                "median_m": 1.9935,
+                "sample_sd_m": 0.01571713160237743,
+                "min_m": 1.958,
+                "max_m": 2.041
+              },
+              "N2-N3": {
+                "count": 60,
+                "median_m": 2.342,
+                "sample_sd_m": 0.027541258212993885,
+                "min_m": 2.285,
+                "max_m": 2.414
+              }
+            },
+            "B_stream_Cplusplus_replay": {
+              "actual_USB_observer": "N1",
+              "Cplusplus_meta": {
+                "type": "meta",
+                "host_sizeof_mesh": 512,
+                "host_sizeof_stored": 40,
+                "host_original_field_layout_bytes": 152,
+                "host_additional_fixed_bytes": 360
+              },
+              "emission_time_reconstruction": {
+                "FIFO_order_time_backsteps_clamped": 54,
+                "maximum_clamp_ms": 1
+              },
+              "raw_counterfactual_same_measurements": {
+                "report_count": 60,
+                "located_count": 60,
+                "local_report_availability_fraction": 1.0,
+                "status_counts": {
+                  "reference": 60
+                },
+                "component_median_xy_m": [
+                  0.0,
+                  0.0
+                ],
+                "sample_sd_x_m": 0.0,
+                "sample_sd_y_m": 0.0,
+                "p95_radius_about_component_median_m": 0.0,
+                "reported_input_age_ms": {
+                  "count": 60,
+                  "median": 1496.5,
+                  "sample_sd": 431.2303024241381,
+                  "min": 859,
+                  "max": 3445
+                },
+                "reference_xy_m": null,
+                "accuracy": null,
+                "imposed_coordinates": "x=0,y=0"
+              },
+              "filtered_same_measurements": {
+                "report_count": 60,
+                "located_count": 60,
+                "local_report_availability_fraction": 1.0,
+                "status_counts": {
+                  "reference": 60
+                },
+                "component_median_xy_m": [
+                  0.0,
+                  0.0
+                ],
+                "sample_sd_x_m": 0.0,
+                "sample_sd_y_m": 0.0,
+                "p95_radius_about_component_median_m": 0.0,
+                "reported_input_age_ms": {
+                  "count": 60,
+                  "median": 2662.0,
+                  "sample_sd": 237.03584796468863,
+                  "min": 1924,
+                  "max": 3445
+                },
+                "reference_xy_m": null,
+                "accuracy": null,
+                "imposed_coordinates": "x=0,y=0"
+              },
+              "filtered_reconstruction_validation": {
+                "scheduled_own_reports": 60,
+                "matching_status": 60,
+                "located_reports_compared": 60,
+                "positions_within_1mm": 60,
+                "input_age_difference_ms": {
+                  "count": 60,
+                  "median": 0.0,
+                  "sample_sd": 116.4338892460943,
+                  "min": -3,
+                  "max": 902
+                },
+                "position_mismatch_examples": []
+              },
+              "receive_acceptance": {
+                "True": 155
+              }
+            }
+          },
+          "N2": {
+            "file": "node-firmware/.deps/experiments/firmware-filter-aba/B-filtered-N2.json",
+            "declared_duration_ms": 75000,
+            "wall_duration_ms": 75003,
+            "timing_valid": true,
+            "parse_counts": {
+              "blank_lines": 0,
+              "malformed_json": 0,
+              "non_record_json": 0,
+              "invalid_envelope": 0,
+              "unknown_record_types": 0,
+              "type:identity": 76,
+              "type:report": 225,
+              "type:measurement": 157,
+              "type:diagnostics": 75,
+              "type:radio-quality": 224
+            },
+            "payload_counts": {
+              "outside_source_window": 86
+            },
+            "unknown_experimental_records": [],
+            "identities": {
+              "sources": [
+                "N2"
+              ],
+              "boots": [
+                30
+              ],
+              "configurations": [
+                {
+                  "board_id": "88E80DCAE67A7A54",
+                  "node_id": 2,
+                  "network": 60785,
+                  "line_length_mm": 0,
+                  "channel": 5,
+                  "tx_power": "fdfdfdfd",
+                  "tx_ant_delay": 16354,
+                  "rx_ant_delay": 16354
+                }
+              ],
+              "frozen_setting_mismatches": [],
+              "radio_ready_all": true,
+              "actual_spi_hz": [],
+              "expected_boot_generations": [
+                30
+              ],
+              "matches_expected_boot_generation": true
+            },
+            "multiple_boot_generations_observed": false,
+            "identity_heartbeat": {
+              "settled_count": 60,
+              "first_host_ms": 15511,
+              "last_host_ms": 74566,
+              "max_host_receive_gap_ms_including_boundaries": 1004,
+              "max_device_usb_delay_ms": 1,
+              "within_five_second_limit": true
+            },
+            "diagnostic_counters": {
+              "snapshot_count": 60,
+              "interval_ms": 59055,
+              "deltas": {
+                "ranges_ok": 91,
+                "ranges_failed": 2,
+                "accepted": 123,
+                "rejected": 316,
+                "rx_errors": 1184,
+                "tx_errors": 0,
+                "decode_errors": 1183,
+                "usb_dropped": 0
+              },
+              "counter_regressions": [],
+              "raw_boundary_snapshots": {
+                "first_within_settled_window": {
+                  "at_ms": 15511,
+                  "produced_ms": 15509,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N2",
+                    "uptime_ms": 16032,
+                    "ranges_ok": 26,
+                    "ranges_failed": 1,
+                    "accepted": 36,
+                    "rejected": 79,
+                    "rx_errors": 313,
+                    "tx_errors": 0,
+                    "usb_dropped": 7,
+                    "rx_frames": [
+                      10,
+                      16,
+                      10,
+                      16,
+                      135,
+                      141
+                    ],
+                    "decode_errors": 313,
+                    "rx_last_error": "00000000",
+                    "respond_stage": "ready",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 2
+                  }
+                },
+                "last_within_settled_window": {
+                  "at_ms": 74566,
+                  "produced_ms": 74564,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N2",
+                    "uptime_ms": 75089,
+                    "ranges_ok": 117,
+                    "ranges_failed": 3,
+                    "accepted": 159,
+                    "rejected": 395,
+                    "rx_errors": 1497,
+                    "tx_errors": 0,
+                    "usb_dropped": 7,
+                    "rx_frames": [
+                      41,
+                      76,
+                      41,
+                      76,
+                      662,
+                      672
+                    ],
+                    "decode_errors": 1496,
+                    "rx_last_error": "04000170",
+                    "respond_stage": "ready",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 2
+                  }
+                }
+              },
+              "firmware_elapsed_ms": 59057,
+              "firmware_minus_host_elapsed_ms": 2,
+              "largest_inter_snapshot_clock_offset_step_ms": 3,
+              "rx_frames_deltas": [
+                31,
+                60,
+                31,
+                60,
+                527,
+                531
+              ],
+              "observed_node_ranging_attempts": 93,
+              "observed_node_ranging_failure_fraction": 0.021505376344086023,
+              "receive_packet_loss_fraction": null,
+              "loss_denominator_limit": "RX/decode errors include frames not accepted by this node; missing quality and global seq gaps do not measure packet loss.",
+              "sampled_stage_values": {
+                "respond_stage": {
+                  "ready": 60
+                },
+                "initiate_stage": {
+                  "ready": 58,
+                  "response-timeout": 2
+                }
+              }
+            },
+            "actual_own_reports": {
+              "report_count": 60,
+              "located_count": 60,
+              "local_report_availability_fraction": 1.0,
+              "status_counts": {
+                "relative": 60
+              },
+              "component_median_xy_m": [
+                1.3265,
+                0.0
+              ],
+              "sample_sd_x_m": 0.14967087338217497,
+              "sample_sd_y_m": 0.0,
+              "p95_radius_about_component_median_m": 0.3049999999999997,
+              "reported_input_age_ms": {
+                "count": 60,
+                "median": 2566.0,
+                "sample_sd": 299.48481706042713,
+                "min": 1984,
+                "max": 2994
+              },
+              "reference_xy_m": null,
+              "accuracy": null,
+              "imposed_coordinates": "y=0"
+            },
+            "own_report_failures": {
+              "count": 0,
+              "status_counts": {
+                "relative": 60
+              }
+            },
+            "filter_metadata": {
+              "expected": "median3-3s",
+              "observed_modes": [
+                "median3-3s"
+              ],
+              "all_match_expected": true
+            },
+            "network_model_availability": {
+              "availability": {
+                "fraction": 1,
+                "readyMs": 60000,
+                "totalMs": 60000
+              },
+              "warnings": [
+                "N1 is the defined origin; its zero movement is not an independent accuracy measurement. N2 y=0 is also imposed by the coordinate convention.",
+                "First-to-last shift describes this window only; it does not prove long-term drift or its cause.",
+                "No measured distances supplied. Repeatability is available; absolute error is unknown."
+              ]
+            },
+            "raw_range_statistics": {
+              "N1-N2": {
+                "count": 32,
+                "median_m": 1.3330000000000002,
+                "sample_sd_m": 0.16804967583541214,
+                "min_m": 1.23,
+                "max_m": 2.06
+              },
+              "N1-N3": {
+                "count": 32,
+                "median_m": 1.9935,
+                "sample_sd_m": 0.01571713160237743,
+                "min_m": 1.958,
+                "max_m": 2.041
+              },
+              "N2-N3": {
+                "count": 60,
+                "median_m": 2.342,
+                "sample_sd_m": 0.027541258212993885,
+                "min_m": 2.285,
+                "max_m": 2.414
+              }
+            },
+            "B_stream_Cplusplus_replay": {
+              "actual_USB_observer": "N2",
+              "Cplusplus_meta": {
+                "type": "meta",
+                "host_sizeof_mesh": 512,
+                "host_sizeof_stored": 40,
+                "host_original_field_layout_bytes": 152,
+                "host_additional_fixed_bytes": 360
+              },
+              "emission_time_reconstruction": {
+                "FIFO_order_time_backsteps_clamped": 194,
+                "maximum_clamp_ms": 2
+              },
+              "raw_counterfactual_same_measurements": {
+                "report_count": 60,
+                "located_count": 60,
+                "local_report_availability_fraction": 1.0,
+                "status_counts": {
+                  "relative": 60
+                },
+                "component_median_xy_m": [
+                  1.334,
+                  0.0
+                ],
+                "sample_sd_x_m": 0.16937921216644117,
+                "sample_sd_y_m": 0.0,
+                "p95_radius_about_component_median_m": 0.383,
+                "reported_input_age_ms": {
+                  "count": 60,
+                  "median": 1502.5,
+                  "sample_sd": 432.9903545982765,
+                  "min": 820,
+                  "max": 2669
+                },
+                "reference_xy_m": null,
+                "accuracy": null,
+                "imposed_coordinates": "y=0"
+              },
+              "filtered_same_measurements": {
+                "report_count": 60,
+                "located_count": 60,
+                "local_report_availability_fraction": 1.0,
+                "status_counts": {
+                  "relative": 60
+                },
+                "component_median_xy_m": [
+                  1.3265,
+                  0.0
+                ],
+                "sample_sd_x_m": 0.14967087338217497,
+                "sample_sd_y_m": 0.0,
+                "p95_radius_about_component_median_m": 0.3049999999999997,
+                "reported_input_age_ms": {
+                  "count": 60,
+                  "median": 2567.5,
+                  "sample_sd": 299.26534293203076,
+                  "min": 1984,
+                  "max": 2994
+                },
+                "reference_xy_m": null,
+                "accuracy": null,
+                "imposed_coordinates": "y=0"
+              },
+              "filtered_reconstruction_validation": {
+                "scheduled_own_reports": 60,
+                "matching_status": 60,
+                "located_reports_compared": 60,
+                "positions_within_1mm": 60,
+                "input_age_difference_ms": {
+                  "count": 60,
+                  "median": 1.0,
+                  "sample_sd": 1.4980212937772845,
+                  "min": -3,
+                  "max": 4
+                },
+                "position_mismatch_examples": []
+              },
+              "receive_acceptance": {
+                "True": 157
+              }
+            }
+          }
+        },
+        "timing_valid": true,
+        "origin_boot_generations": {
+          "N1": {
+            "observed_origin_boot_generations": [
+              41
+            ],
+            "multiple_generations_observed": false,
+            "N3_source_limit": null
+          },
+          "N2": {
+            "observed_origin_boot_generations": [
+              30
+            ],
+            "multiple_generations_observed": false,
+            "N3_source_limit": null
+          },
+          "N3": {
+            "observed_origin_boot_generations": [
+              32
+            ],
+            "multiple_generations_observed": false,
+            "N3_source_limit": "Origin reports only; no direct USB identity for N3"
+          }
+        },
+        "N1_traffic": {
+          "fresh_traffic_observed": true,
+          "boots": [
+            41
+          ],
+          "unique_fresh_poll_identities": 32,
+          "unique_fresh_origin_payloads": 122,
+          "responder_attempts_to_N1_observed": 0,
+          "expected_boot": 41,
+          "matches_expected_boot": true
+        },
+        "raw_range_union": {
+          "N1-N2": {
+            "count": 32,
+            "median_m": 1.3330000000000002,
+            "sample_sd_m": 0.16804967583541214,
+            "min_m": 1.23,
+            "max_m": 2.06
+          },
+          "N1-N3": {
+            "count": 32,
+            "median_m": 1.9935,
+            "sample_sd_m": 0.01571713160237743,
+            "min_m": 1.958,
+            "max_m": 2.041
+          },
+          "N2-N3": {
+            "count": 60,
+            "median_m": 2.342,
+            "sample_sd_m": 0.027541258212993885,
+            "min_m": 2.285,
+            "max_m": 2.414
+          }
+        }
+      },
+      "A2-baseline": {
+        "expected_filter_mode": null,
+        "image_sha256": "51bf39df31294a6929eba6ce6e454f40ecf891a3bd1562c3b6c54ef938a8c405",
+        "restart_note": "Both USB nodes flashed once, then equal15s settling; N3 firmware/power unchanged",
+        "observers": {
+          "N1": {
+            "file": "node-firmware/.deps/experiments/firmware-filter-aba/A2-baseline-N1.json",
+            "declared_duration_ms": 75000,
+            "wall_duration_ms": 75000,
+            "timing_valid": true,
+            "parse_counts": {
+              "blank_lines": 0,
+              "malformed_json": 0,
+              "non_record_json": 0,
+              "invalid_envelope": 0,
+              "unknown_record_types": 0,
+              "type:identity": 76,
+              "type:report": 225,
+              "type:diagnostics": 75,
+              "type:radio-quality": 75,
+              "type:measurement": 150
+            },
+            "payload_counts": {
+              "outside_source_window": 81
+            },
+            "unknown_experimental_records": [],
+            "identities": {
+              "sources": [
+                "N1"
+              ],
+              "boots": [
+                42
+              ],
+              "configurations": [
+                {
+                  "board_id": "1598712C6E2499A8",
+                  "node_id": 1,
+                  "network": 60785,
+                  "line_length_mm": 0,
+                  "channel": 5,
+                  "tx_power": "fdfdfdfd",
+                  "tx_ant_delay": 16387,
+                  "rx_ant_delay": 16387
+                }
+              ],
+              "frozen_setting_mismatches": [],
+              "radio_ready_all": true,
+              "actual_spi_hz": [],
+              "expected_boot_generations": [
+                42
+              ],
+              "matches_expected_boot_generation": true
+            },
+            "multiple_boot_generations_observed": false,
+            "identity_heartbeat": {
+              "settled_count": 60,
+              "first_host_ms": 15021,
+              "last_host_ms": 74022,
+              "max_host_receive_gap_ms_including_boundaries": 1006,
+              "max_device_usb_delay_ms": 1,
+              "within_five_second_limit": true
+            },
+            "diagnostic_counters": {
+              "snapshot_count": 60,
+              "interval_ms": 58997,
+              "deltas": {
+                "ranges_ok": 60,
+                "ranges_failed": 2,
+                "accepted": 118,
+                "rejected": 112,
+                "rx_errors": 1293,
+                "tx_errors": 0,
+                "decode_errors": 1292,
+                "usb_dropped": 0
+              },
+              "counter_regressions": [],
+              "raw_boundary_snapshots": {
+                "first_within_settled_window": {
+                  "at_ms": 15025,
+                  "produced_ms": 15024,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N1",
+                    "uptime_ms": 18019,
+                    "ranges_ok": 18,
+                    "ranges_failed": 1,
+                    "accepted": 33,
+                    "rejected": 31,
+                    "rx_errors": 332,
+                    "tx_errors": 0,
+                    "usb_dropped": 17,
+                    "rx_frames": [
+                      0,
+                      18,
+                      0,
+                      18,
+                      139,
+                      141
+                    ],
+                    "decode_errors": 332,
+                    "rx_last_error": "00000000",
+                    "respond_stage": "not-attempted",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 1
+                  }
+                },
+                "last_within_settled_window": {
+                  "at_ms": 74022,
+                  "produced_ms": 74021,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N1",
+                    "uptime_ms": 77019,
+                    "ranges_ok": 78,
+                    "ranges_failed": 3,
+                    "accepted": 151,
+                    "rejected": 143,
+                    "rx_errors": 1625,
+                    "tx_errors": 0,
+                    "usb_dropped": 17,
+                    "rx_frames": [
+                      0,
+                      79,
+                      0,
+                      78,
+                      659,
+                      671
+                    ],
+                    "decode_errors": 1624,
+                    "rx_last_error": "04000170",
+                    "respond_stage": "not-attempted",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 1
+                  }
+                }
+              },
+              "firmware_elapsed_ms": 59000,
+              "firmware_minus_host_elapsed_ms": 3,
+              "largest_inter_snapshot_clock_offset_step_ms": 4,
+              "rx_frames_deltas": [
+                0,
+                61,
+                0,
+                60,
+                520,
+                530
+              ],
+              "observed_node_ranging_attempts": 62,
+              "observed_node_ranging_failure_fraction": 0.03225806451612903,
+              "receive_packet_loss_fraction": null,
+              "loss_denominator_limit": "RX/decode errors include frames not accepted by this node; missing quality and global seq gaps do not measure packet loss.",
+              "sampled_stage_values": {
+                "respond_stage": {
+                  "not-attempted": 60
+                },
+                "initiate_stage": {
+                  "ready": 57,
+                  "response-timeout": 2,
+                  "result-timeout": 1
+                }
+              }
+            },
+            "actual_own_reports": {
+              "report_count": 60,
+              "located_count": 60,
+              "local_report_availability_fraction": 1.0,
+              "status_counts": {
+                "reference": 60
+              },
+              "component_median_xy_m": [
+                0.0,
+                0.0
+              ],
+              "sample_sd_x_m": 0.0,
+              "sample_sd_y_m": 0.0,
+              "p95_radius_about_component_median_m": 0.0,
+              "reported_input_age_ms": {
+                "count": 60,
+                "median": 1402.5,
+                "sample_sd": 490.3297299448572,
+                "min": 808,
+                "max": 3887
+              },
+              "reference_xy_m": null,
+              "accuracy": null,
+              "imposed_coordinates": "x=0,y=0"
+            },
+            "own_report_failures": {
+              "count": 0,
+              "status_counts": {
+                "reference": 60
+              }
+            },
+            "filter_metadata": {
+              "expected": null,
+              "observed_modes": [
+                "None"
+              ],
+              "all_match_expected": true
+            },
+            "network_model_availability": {
+              "availability": {
+                "fraction": 1,
+                "readyMs": 60000,
+                "totalMs": 60000
+              },
+              "warnings": [
+                "N1 is the defined origin; its zero movement is not an independent accuracy measurement. N2 y=0 is also imposed by the coordinate convention.",
+                "First-to-last shift describes this window only; it does not prove long-term drift or its cause.",
+                "No measured distances supplied. Repeatability is available; absolute error is unknown."
+              ]
+            },
+            "raw_range_statistics": {
+              "N1-N2": {
+                "count": 30,
+                "median_m": 1.476,
+                "sample_sd_m": 0.23364651806157705,
+                "min_m": 1.296,
+                "max_m": 2.136
+              },
+              "N1-N3": {
+                "count": 31,
+                "median_m": 2.006,
+                "sample_sd_m": 0.013231113543137527,
+                "min_m": 1.982,
+                "max_m": 2.036
+              },
+              "N2-N3": {
+                "count": 59,
+                "median_m": 2.328,
+                "sample_sd_m": 0.03453725150719922,
+                "min_m": 2.2,
+                "max_m": 2.427
+              }
+            }
+          },
+          "N2": {
+            "file": "node-firmware/.deps/experiments/firmware-filter-aba/A2-baseline-N2.json",
+            "declared_duration_ms": 75000,
+            "wall_duration_ms": 75000,
+            "timing_valid": true,
+            "parse_counts": {
+              "blank_lines": 0,
+              "malformed_json": 0,
+              "non_record_json": 0,
+              "invalid_envelope": 0,
+              "unknown_record_types": 0,
+              "type:identity": 76,
+              "type:report": 225,
+              "type:diagnostics": 75,
+              "type:radio-quality": 225,
+              "type:measurement": 146
+            },
+            "payload_counts": {
+              "outside_source_window": 79
+            },
+            "unknown_experimental_records": [],
+            "identities": {
+              "sources": [
+                "N2"
+              ],
+              "boots": [
+                31
+              ],
+              "configurations": [
+                {
+                  "board_id": "88E80DCAE67A7A54",
+                  "node_id": 2,
+                  "network": 60785,
+                  "line_length_mm": 0,
+                  "channel": 5,
+                  "tx_power": "fdfdfdfd",
+                  "tx_ant_delay": 16354,
+                  "rx_ant_delay": 16354
+                }
+              ],
+              "frozen_setting_mismatches": [],
+              "radio_ready_all": true,
+              "actual_spi_hz": [],
+              "expected_boot_generations": [
+                31
+              ],
+              "matches_expected_boot_generation": true
+            },
+            "multiple_boot_generations_observed": false,
+            "identity_heartbeat": {
+              "settled_count": 60,
+              "first_host_ms": 15503,
+              "last_host_ms": 74522,
+              "max_host_receive_gap_ms_including_boundaries": 1005,
+              "max_device_usb_delay_ms": 2,
+              "within_five_second_limit": true
+            },
+            "diagnostic_counters": {
+              "snapshot_count": 60,
+              "interval_ms": 59019,
+              "deltas": {
+                "ranges_ok": 87,
+                "ranges_failed": 3,
+                "accepted": 117,
+                "rejected": 322,
+                "rx_errors": 1176,
+                "tx_errors": 0,
+                "decode_errors": 1176,
+                "usb_dropped": 0
+              },
+              "counter_regressions": [],
+              "raw_boundary_snapshots": {
+                "first_within_settled_window": {
+                  "at_ms": 15503,
+                  "produced_ms": 15501,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N2",
+                    "uptime_ms": 16024,
+                    "ranges_ok": 22,
+                    "ranges_failed": 3,
+                    "accepted": 31,
+                    "rejected": 83,
+                    "rx_errors": 314,
+                    "tx_errors": 0,
+                    "usb_dropped": 7,
+                    "rx_frames": [
+                      9,
+                      15,
+                      9,
+                      13,
+                      140,
+                      140
+                    ],
+                    "decode_errors": 314,
+                    "rx_last_error": "00000000",
+                    "respond_stage": "ready",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 2
+                  }
+                },
+                "last_within_settled_window": {
+                  "at_ms": 74522,
+                  "produced_ms": 74520,
+                  "data": {
+                    "v": 1,
+                    "type": "diagnostics",
+                    "source": "N2",
+                    "uptime_ms": 75043,
+                    "ranges_ok": 109,
+                    "ranges_failed": 6,
+                    "accepted": 148,
+                    "rejected": 405,
+                    "rx_errors": 1490,
+                    "tx_errors": 0,
+                    "usb_dropped": 7,
+                    "rx_frames": [
+                      39,
+                      73,
+                      39,
+                      70,
+                      670,
+                      665
+                    ],
+                    "decode_errors": 1490,
+                    "rx_last_error": "00000000",
+                    "respond_stage": "ready",
+                    "initiate_stage": "ready",
+                    "usb_delay_ms": 2
+                  }
+                }
+              },
+              "firmware_elapsed_ms": 59019,
+              "firmware_minus_host_elapsed_ms": 0,
+              "largest_inter_snapshot_clock_offset_step_ms": 5,
+              "rx_frames_deltas": [
+                30,
+                58,
+                30,
+                57,
+                530,
+                525
+              ],
+              "observed_node_ranging_attempts": 90,
+              "observed_node_ranging_failure_fraction": 0.03333333333333333,
+              "receive_packet_loss_fraction": null,
+              "loss_denominator_limit": "RX/decode errors include frames not accepted by this node; missing quality and global seq gaps do not measure packet loss.",
+              "sampled_stage_values": {
+                "respond_stage": {
+                  "ready": 60
+                },
+                "initiate_stage": {
+                  "ready": 57,
+                  "result-timeout": 1,
+                  "response-timeout": 2
+                }
+              }
+            },
+            "actual_own_reports": {
+              "report_count": 60,
+              "located_count": 60,
+              "local_report_availability_fraction": 1.0,
+              "status_counts": {
+                "relative": 60
+              },
+              "component_median_xy_m": [
+                1.47,
+                0.0
+              ],
+              "sample_sd_x_m": 0.2352174231603435,
+              "sample_sd_y_m": 0.0,
+              "p95_radius_about_component_median_m": 0.643,
+              "reported_input_age_ms": {
+                "count": 60,
+                "median": 1745.5,
+                "sample_sd": 503.32272531568555,
+                "min": 728,
+                "max": 3383
+              },
+              "reference_xy_m": null,
+              "accuracy": null,
+              "imposed_coordinates": "y=0"
+            },
+            "own_report_failures": {
+              "count": 0,
+              "status_counts": {
+                "relative": 60
+              }
+            },
+            "filter_metadata": {
+              "expected": null,
+              "observed_modes": [
+                "None"
+              ],
+              "all_match_expected": true
+            },
+            "network_model_availability": {
+              "availability": {
+                "fraction": 1,
+                "readyMs": 60000,
+                "totalMs": 60000
+              },
+              "warnings": [
+                "N1 is the defined origin; its zero movement is not an independent accuracy measurement. N2 y=0 is also imposed by the coordinate convention.",
+                "First-to-last shift describes this window only; it does not prove long-term drift or its cause.",
+                "No measured distances supplied. Repeatability is available; absolute error is unknown."
+              ]
+            },
+            "raw_range_statistics": {
+              "N1-N2": {
+                "count": 30,
+                "median_m": 1.476,
+                "sample_sd_m": 0.23364651806157705,
+                "min_m": 1.296,
+                "max_m": 2.136
+              },
+              "N1-N3": {
+                "count": 30,
+                "median_m": 2.0065,
+                "sample_sd_m": 0.013370924021749648,
+                "min_m": 1.982,
+                "max_m": 2.036
+              },
+              "N2-N3": {
+                "count": 58,
+                "median_m": 2.3265000000000002,
+                "sample_sd_m": 0.03414665357532451,
+                "min_m": 2.2,
+                "max_m": 2.427
+              }
+            }
+          }
+        },
+        "timing_valid": true,
+        "origin_boot_generations": {
+          "N1": {
+            "observed_origin_boot_generations": [
+              42
+            ],
+            "multiple_generations_observed": false,
+            "N3_source_limit": null
+          },
+          "N2": {
+            "observed_origin_boot_generations": [
+              31
+            ],
+            "multiple_generations_observed": false,
+            "N3_source_limit": null
+          },
+          "N3": {
+            "observed_origin_boot_generations": [
+              32
+            ],
+            "multiple_generations_observed": false,
+            "N3_source_limit": "Origin reports only; no direct USB identity for N3"
+          }
+        },
+        "N1_traffic": {
+          "fresh_traffic_observed": true,
+          "boots": [
+            42
+          ],
+          "unique_fresh_poll_identities": 30,
+          "unique_fresh_origin_payloads": 119,
+          "responder_attempts_to_N1_observed": 0,
+          "expected_boot": 42,
+          "matches_expected_boot": true
+        },
+        "raw_range_union": {
+          "N1-N2": {
+            "count": 30,
+            "median_m": 1.476,
+            "sample_sd_m": 0.23364651806157705,
+            "min_m": 1.296,
+            "max_m": 2.136
+          },
+          "N1-N3": {
+            "count": 31,
+            "median_m": 2.006,
+            "sample_sd_m": 0.013231113543137527,
+            "min_m": 1.982,
+            "max_m": 2.036
+          },
+          "N2-N3": {
+            "count": 59,
+            "median_m": 2.328,
+            "sample_sd_m": 0.03453725150719922,
+            "min_m": 2.2,
+            "max_m": 2.427
+          }
+        }
+      }
+    },
+    "limitations": [
+      "Current geometry is unconfirmed. All statistics describe raw ranges, report repeatability, ages and availability; there are no bias or absolute position-error claims.",
+      "Only each actual USB observer's own reports support filter comparisons. N1 zero coordinates are imposed. N3 remains baseline firmware on its power bank; forwarded N3 reports do not measure a filtered hardware N3.",
+      "A1 has no fresh restart. B and A2 each flash both USB nodes once before the same15s settling. Different initialization/warm-up and time-varying radio inputs remain confounds in an inter-phase comparison.",
+      "Raw measurement distributions are shown alongside reports. B-stream raw versus filtered C++ replay holds its captured inputs fixed, separating local math from between-phase input changes.",
+      "Replay uses accepted measurement emissions and own-report emission times reconstructed from USB queue delay, preserving serial FIFO across millisecond timestamp backsteps. Startup cache is unknown; the first15s are excluded.",
+      "Network availability comes from the actual demo/accuracy.ts Monitor model separately for each observer, including six cache entries and their exact freshness expiries. Local own-report availability is a separate metric.",
+      "Origin report age includes input age, so fresh report bytes can contain older measurements. Filtered reports truthfully carry the oldest selected age.",
+      "Node ranging failure fractions cover first-to-last diagnostic snapshots; adding nodes double-counts exchanges. Missing quality records and RX/decode counts do not establish network packet loss.",
+      "Reported settings/boot checks cover direct USB identities; N3 boot continuity is inferred from origin reports. Physical placement and environmental stability are operator-confirmed, not independently observed.",
+      "Lower stationary scatter does not establish accuracy. The filter retains its demonstrated motion delay and raw-geometry fallback behavior; no threshold is tuned to this hardware ABA."
+    ],
+    "B_replay_source_hashes": {
+      "mesh.cpp": "e7779121af3783c875c0c2d9feff122c3f732a7d172d4d07e0103629e857661c",
+      "mesh.hpp": "5c4f78c42e49dacb5ceb10358e15aa658792c3122b8a7eb52cc31f2dd119f001",
+      "config.hpp": "27828cdd3a7b2ca4b654678190bd0029055db881f1ea3fdd2cec6a8e7c54efb9"
+    },
+    "N3_origin_boots_by_phase": {
+      "A1-baseline": [
+        32
+      ],
+      "B-filtered": [
+        32
+      ],
+      "A2-baseline": [
+        32
+      ]
+    },
+    "N3_single_boot_unchanged_across_completed_phases": true,
+    "actual_N2_report_summary_by_phase": {
+      "A1-baseline": {
+        "report_count": 60,
+        "located_count": 60,
+        "local_report_availability_fraction": 1.0,
+        "status_counts": {
+          "relative": 60
+        },
+        "component_median_xy_m": [
+          1.399,
+          0.0
+        ],
+        "sample_sd_x_m": 0.18488219718555435,
+        "sample_sd_y_m": 0.0,
+        "p95_radius_about_component_median_m": 0.4210499999999997,
+        "reported_input_age_ms": {
+          "count": 60,
+          "median": 1431.5,
+          "sample_sd": 538.8086615198512,
+          "min": 872,
+          "max": 3527
+        },
+        "reference_xy_m": null,
+        "accuracy": null,
+        "imposed_coordinates": "y=0"
+      },
+      "B-filtered": {
+        "report_count": 60,
+        "located_count": 60,
+        "local_report_availability_fraction": 1.0,
+        "status_counts": {
+          "relative": 60
+        },
+        "component_median_xy_m": [
+          1.3265,
+          0.0
+        ],
+        "sample_sd_x_m": 0.14967087338217497,
+        "sample_sd_y_m": 0.0,
+        "p95_radius_about_component_median_m": 0.3049999999999997,
+        "reported_input_age_ms": {
+          "count": 60,
+          "median": 2566.0,
+          "sample_sd": 299.48481706042713,
+          "min": 1984,
+          "max": 2994
+        },
+        "reference_xy_m": null,
+        "accuracy": null,
+        "imposed_coordinates": "y=0"
+      },
+      "A2-baseline": {
+        "report_count": 60,
+        "located_count": 60,
+        "local_report_availability_fraction": 1.0,
+        "status_counts": {
+          "relative": 60
+        },
+        "component_median_xy_m": [
+          1.47,
+          0.0
+        ],
+        "sample_sd_x_m": 0.2352174231603435,
+        "sample_sd_y_m": 0.0,
+        "p95_radius_about_component_median_m": 0.643,
+        "reported_input_age_ms": {
+          "count": 60,
+          "median": 1745.5,
+          "sample_sd": 503.32272531568555,
+          "min": 728,
+          "max": 3383
+        },
+        "reference_xy_m": null,
+        "accuracy": null,
+        "imposed_coordinates": "y=0"
+      }
+    }
+  },
+  "files_sha256": {
+    "A1-baseline-N1.json": "16fa4dbfc0d2734b0c654b16e987c541a72297db1e3ddd427b9bfd5544eba2bb",
+    "A1-baseline-N2.json": "dcec188b00848ad84861d2d16f5da2acd6f0326e398cb7b09bc20a8dcb17150f",
+    "B-filtered-N1.json": "7d986ad0e77222f5207c2c66343fb975524b6230d1abc3dc4acf2d18a37314ee",
+    "B-filtered-N2.json": "45cdf6511c733b65b6d58e33c0d572eb544911a41f9b3d95e7cad28337d5b486",
+    "A2-baseline-N1.json": "c30cb4462307efafb4e9242aebb86d5c917a17e2f602f875afc84a2ba78c4404",
+    "A2-baseline-N2.json": "0cbfd7d92da875db8190c6eafa8082f9a3fa00d9782e5ed19e56e377bb5f1b48"
+  },
+  "deployment": {
+    "status": "N1/N2 filtered and all3 report sources verified; N3 update pending",
+    "identities": {
+      "1598712C6E2499A8": {
+        "v": 1,
+        "type": "identity",
+        "source": "N1",
+        "node_id": 1,
+        "setup_version": 1,
+        "geometry": "relative-triangle",
+        "wire_version": 2,
+        "board_id": "1598712C6E2499A8",
+        "boot": 43,
+        "network": 60785,
+        "line_length_mm": 0,
+        "channel": 5,
+        "tx_power": "fdfdfdfd",
+        "tx_ant_delay": 16387,
+        "rx_ant_delay": 16387,
+        "radio_ready": true,
+        "cs_gpio": 26,
+        "reset_gpio": 28,
+        "irq_gpio": 27,
+        "position_filter": "median3-3s",
+        "usb_delay_ms": 1
+      },
+      "88E80DCAE67A7A54": {
+        "v": 1,
+        "type": "identity",
+        "source": "N2",
+        "node_id": 2,
+        "setup_version": 1,
+        "geometry": "relative-triangle",
+        "wire_version": 2,
+        "board_id": "88E80DCAE67A7A54",
+        "boot": 32,
+        "network": 60785,
+        "line_length_mm": 0,
+        "channel": 5,
+        "tx_power": "fdfdfdfd",
+        "tx_ant_delay": 16354,
+        "rx_ant_delay": 16354,
+        "radio_ready": true,
+        "cs_gpio": 26,
+        "reset_gpio": 28,
+        "irq_gpio": 27,
+        "position_filter": "median3-3s",
+        "usb_delay_ms": 1
+      }
+    },
+    "image_sha256": "380483e218507964c66cc0831b6b920279afc9ba1819f0014fd64c9d7358e189",
+    "N3": "baseline; USB update still needed",
+    "snapshot_note": "Historical state immediately after comparison; N3 subsequently updated, see latest_deployment"
+  },
+  "next_action": "Measure current3 antenna distances and confirm area clear for accuracy capture",
+  "latest_deployment": "node3-filter-deployment-2026-11-08.json"
+}

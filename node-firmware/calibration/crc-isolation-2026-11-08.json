@@ -1,0 +1,479 @@
+{
+  "date": "2026-11-08",
+  "purpose": "Isolate the diagnostic firmware failure after N1 recovery; no new physical-accuracy calibration",
+  "status": "CRC path reproduces failure; normal firmware restored and full triangle verified",
+  "N1_recovery": {
+    "normal_capture": "node-firmware/.deps/experiments/timestamp-spi/N1-rejoined-normal-N2.json",
+    "observed_boot": 39,
+    "complete_layout": true,
+    "cause_of_previous_silence": "Unknown; return at a new boot establishes restart, not its cause"
+  },
+  "calibration_and_RF_unchanged": true,
+  "normal_image_sha256": "51bf39df31294a6929eba6ce6e454f40ecf891a3bd1562c3b6c54ef938a8c405",
+  "diagnostic_images_sha256": {
+    "crc-on.uf2": "43a8f7b3ed0ccc2dd9bc4d1ef9166e0226857c608d84b2b977289f8f43dc52f0",
+    "crc-off.uf2": "bf5cfe1007cac1c1cab697151305c31ec2a1012c9c328ee2b526273fe08383d6"
+  },
+  "controls": {
+    "actual_SPI_hz": 15000000,
+    "settle_ms": 15000,
+    "measurement_ms": 25000,
+    "all_three_present_each_phase": true,
+    "N1_boot_stable": 39,
+    "max_host_device_elapsed_disagreement_ms": 3,
+    "host_idle_sleep_prevented": true,
+    "wall_clock_guard_passed": true,
+    "source_change": "Only CRC mode, configuration validation, mode flag and CRC-disabled SPICRCE guards changed; other instrumentation byte-identical"
+  },
+  "phases": {
+    "baseline-before": {
+      "timing_valid": true,
+      "ranges": {
+        "N1-N2": {
+          "count": 12,
+          "median_m": 2.4850000000000003,
+          "sample_sd_m": 0.1425568201444497,
+          "min_m": 2.288,
+          "max_m": 2.689
+        },
+        "N1-N3": {
+          "count": 14,
+          "median_m": 2.554,
+          "sample_sd_m": 0.014948262422454,
+          "min_m": 2.52,
+          "max_m": 2.575
+        },
+        "N2-N3": {
+          "count": 25,
+          "median_m": 1.815,
+          "sample_sd_m": 0.029193206972399164,
+          "min_m": 1.755,
+          "max_m": 1.901
+        }
+      },
+      "observed_attempts": {},
+      "full40_N2_N3_replay": {
+        "completed_pairs": 0,
+        "exact_mm_matches": 0,
+        "invalid_full40_intervals": 0,
+        "disagrees_with_uint32_replay": 0,
+        "mismatches": []
+      },
+      "N1_traffic": {
+        "fresh_traffic_observed": true,
+        "boots": [
+          39
+        ],
+        "unique_fresh_poll_identities": 18,
+        "unique_fresh_origin_payloads": 50,
+        "responder_attempts_to_N1_observed": 0,
+        "expected_boot": 39,
+        "matches_expected_boot": true
+      }
+    },
+    "A1-CRC-ON": {
+      "timing_valid": true,
+      "ranges": {
+        "N1-N2": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N1-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N2-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "min_m": null,
+          "max_m": null
+        }
+      },
+      "observed_attempts": {
+        "N2:initiator:peer=N3": {
+          "attempts_observed": 27,
+          "completed": 0,
+          "failed": 27,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "response-timeout": 27
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N2:responder:peer=N1": {
+          "attempts_observed": 13,
+          "completed": 0,
+          "failed": 13,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "final-timeout": 13
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N1": {
+          "attempts_observed": 14,
+          "completed": 0,
+          "failed": 14,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "final-timeout": 14
+          },
+          "attempts_with_fault_counter_change": 0
+        }
+      },
+      "full40_N2_N3_replay": {
+        "completed_pairs": 0,
+        "exact_mm_matches": 0,
+        "invalid_full40_intervals": 0,
+        "disagrees_with_uint32_replay": 0,
+        "mismatches": []
+      },
+      "N1_traffic": {
+        "fresh_traffic_observed": true,
+        "boots": [
+          39
+        ],
+        "unique_fresh_poll_identities": 27,
+        "unique_fresh_origin_payloads": 25,
+        "responder_attempts_to_N1_observed": 27,
+        "expected_boot": 39,
+        "matches_expected_boot": true
+      }
+    },
+    "B-CRC-OFF": {
+      "timing_valid": true,
+      "ranges": {
+        "N1-N2": {
+          "count": 12,
+          "median_m": 2.3970000000000002,
+          "sample_sd_m": 0.18504665668829354,
+          "min_m": 2.094,
+          "max_m": 2.676
+        },
+        "N1-N3": {
+          "count": 11,
+          "median_m": 2.555,
+          "sample_sd_m": 0.00823517952555874,
+          "min_m": 2.541,
+          "max_m": 2.573
+        },
+        "N2-N3": {
+          "count": 26,
+          "median_m": 1.825,
+          "sample_sd_m": 0.04882781363746881,
+          "min_m": 1.799,
+          "max_m": 2.032
+        }
+      },
+      "observed_attempts": {
+        "N2:responder:peer=N1": {
+          "attempts_observed": 13,
+          "completed": 12,
+          "failed": 1,
+          "failure_fraction": 0.07692307692307693,
+          "valid_results": 12,
+          "stages": {
+            "ready": 12,
+            "invalid-distance": 1
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N2:initiator:peer=N3": {
+          "attempts_observed": 26,
+          "completed": 26,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 26,
+          "stages": {
+            "ready": 26
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N2": {
+          "attempts_observed": 26,
+          "completed": 26,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 26,
+          "stages": {
+            "ready": 26
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N1": {
+          "attempts_observed": 11,
+          "completed": 11,
+          "failed": 0,
+          "failure_fraction": 0.0,
+          "valid_results": 11,
+          "stages": {
+            "ready": 11
+          },
+          "attempts_with_fault_counter_change": 0
+        }
+      },
+      "full40_N2_N3_replay": {
+        "completed_pairs": 26,
+        "exact_mm_matches": 26,
+        "invalid_full40_intervals": 0,
+        "disagrees_with_uint32_replay": 0,
+        "mismatches": []
+      },
+      "N1_traffic": {
+        "fresh_traffic_observed": true,
+        "boots": [
+          39
+        ],
+        "unique_fresh_poll_identities": 17,
+        "unique_fresh_origin_payloads": 46,
+        "responder_attempts_to_N1_observed": 24,
+        "expected_boot": 39,
+        "matches_expected_boot": true
+      }
+    },
+    "A2-CRC-ON": {
+      "timing_valid": true,
+      "ranges": {
+        "N1-N2": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N1-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "min_m": null,
+          "max_m": null
+        },
+        "N2-N3": {
+          "count": 0,
+          "median_m": null,
+          "sample_sd_m": null,
+          "min_m": null,
+          "max_m": null
+        }
+      },
+      "observed_attempts": {
+        "N2:initiator:peer=N3": {
+          "attempts_observed": 26,
+          "completed": 0,
+          "failed": 26,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "response-timeout": 26
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N2:responder:peer=N1": {
+          "attempts_observed": 12,
+          "completed": 0,
+          "failed": 12,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "final-timeout": 12
+          },
+          "attempts_with_fault_counter_change": 0
+        },
+        "N3:responder:peer=N1": {
+          "attempts_observed": 12,
+          "completed": 0,
+          "failed": 12,
+          "failure_fraction": 1.0,
+          "valid_results": 0,
+          "stages": {
+            "final-timeout": 12
+          },
+          "attempts_with_fault_counter_change": 0
+        }
+      },
+      "full40_N2_N3_replay": {
+        "completed_pairs": 0,
+        "exact_mm_matches": 0,
+        "invalid_full40_intervals": 0,
+        "disagrees_with_uint32_replay": 0,
+        "mismatches": []
+      },
+      "N1_traffic": {
+        "fresh_traffic_observed": true,
+        "boots": [
+          39
+        ],
+        "unique_fresh_poll_identities": 24,
+        "unique_fresh_origin_payloads": 25,
+        "responder_attempts_to_N1_observed": 24,
+        "expected_boot": 39,
+        "matches_expected_boot": true
+      }
+    },
+    "baseline-after": {
+      "timing_valid": true,
+      "ranges": {
+        "N1-N2": {
+          "count": 13,
+          "median_m": 2.458,
+          "sample_sd_m": 0.20330257228435622,
+          "min_m": 2.085,
+          "max_m": 2.69
+        },
+        "N1-N3": {
+          "count": 12,
+          "median_m": 2.5515,
+          "sample_sd_m": 0.011293266966997588,
+          "min_m": 2.537,
+          "max_m": 2.573
+        },
+        "N2-N3": {
+          "count": 26,
+          "median_m": 1.826,
+          "sample_sd_m": 0.03733229165213407,
+          "min_m": 1.766,
+          "max_m": 1.923
+        }
+      },
+      "observed_attempts": {},
+      "full40_N2_N3_replay": {
+        "completed_pairs": 0,
+        "exact_mm_matches": 0,
+        "invalid_full40_intervals": 0,
+        "disagrees_with_uint32_replay": 0,
+        "mismatches": []
+      },
+      "N1_traffic": {
+        "fresh_traffic_observed": true,
+        "boots": [
+          39
+        ],
+        "unique_fresh_poll_identities": 17,
+        "unique_fresh_origin_payloads": 48,
+        "responder_attempts_to_N1_observed": 0,
+        "expected_boot": 39,
+        "matches_expected_boot": true
+      }
+    }
+  },
+  "interpretation": [
+    "Failure follows CRC-enabled diagnostic driver path, including its changed traffic/timing; exact mechanism not identified.",
+    "This does not demonstrate improved original ranging accuracy. No new tape reference is assumed after N1 recovery.",
+    "CRC-disabled zero counters do not establish SPI integrity; duplicate reads establish repeatability only.",
+    "Full40, low32 and matching-result replay establish arithmetic/serialization consistency, not correct physical first-path timestamps."
+  ],
+  "replay": {
+    "cases": 50,
+    "exact_matches": 50,
+    "valid_results": 49,
+    "rejected_results": 1,
+    "source_sha256": "f96b90f562eff0a376ef4fe32e7455b950903d96f3e7185e04e6337a3bbf5901",
+    "sanitizers": "ASan/UBSan, no errors",
+    "interpretation": "Arithmetic/serialization replay only; physical arrival timestamp accuracy is not established"
+  },
+  "raw_manifest": "node-firmware/.deps/experiments/crc-isolation/manifest.json",
+  "raw_analysis": "node-firmware/.deps/experiments/crc-isolation/analysis.json",
+  "final_readiness": {
+    "passed": true,
+    "issues": [],
+    "coordinate_frame": "relative-n1-n2-positive-y",
+    "reflection_ambiguous": true,
+    "ranges": {
+      "N1-N2": {
+        "distance_m": 2.297,
+        "age_ms": 964
+      },
+      "N1-N3": {
+        "distance_m": 2.539,
+        "age_ms": 2165
+      },
+      "N2-N3": {
+        "distance_m": 1.795,
+        "age_ms": 381
+      }
+    },
+    "node_reports": {
+      "N1": {
+        "status": "reference",
+        "x_m": 0.0,
+        "y_m": 0.0,
+        "boot": 39,
+        "seq": 11406,
+        "age_ms": 2164
+      },
+      "N2": {
+        "status": "relative",
+        "x_m": 2.297,
+        "y_m": 0.0,
+        "boot": 22,
+        "seq": 805,
+        "age_ms": 2163
+      },
+      "N3": {
+        "status": "relative",
+        "x_m": 1.828,
+        "y_m": 1.762,
+        "boot": 26,
+        "seq": 750,
+        "age_ms": 2164
+      }
+    },
+    "accuracy_validated": false
+  },
+  "restored_identities": {
+    "88E80DCAE67A7A54": {
+      "v": 1,
+      "type": "identity",
+      "source": "N2",
+      "node_id": 2,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "88E80DCAE67A7A54",
+      "boot": 22,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16354,
+      "rx_ant_delay": 16354,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 0
+    },
+    "0ACD77FCB0F57A4B": {
+      "v": 1,
+      "type": "identity",
+      "source": "N3",
+      "node_id": 3,
+      "setup_version": 1,
+      "geometry": "relative-triangle",
+      "wire_version": 2,
+      "board_id": "0ACD77FCB0F57A4B",
+      "boot": 26,
+      "network": 60785,
+      "line_length_mm": 0,
+      "channel": 5,
+      "tx_power": "fdfdfdfd",
+      "tx_ant_delay": 16387,
+      "rx_ant_delay": 16387,
+      "radio_ready": true,
+      "cs_gpio": 26,
+      "reset_gpio": 28,
+      "irq_gpio": 27,
+      "usb_delay_ms": 0
+    }
+  }
+}

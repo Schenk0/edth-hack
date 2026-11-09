@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151719">
+  <title>Mesh</title>
+</head>
+<body>
+  <header>
+    <h1>Mesh</h1>
+    <div class="controls">
+      <span class="connection"><i id="connection-dot"></i><span id="connection">No USB node connected</span></span>
+      <button id="connect">Connect USB</button>
+      <button id="disconnect" hidden>Disconnect</button>
+      <button id="locate" class="primary" disabled>Locate nodes</button>
+    </div>
+  </header>
+  <main>
+    <section class="map-panel" aria-label="Relative node map">
+      <svg id="map" viewBox="0 0 1000 680" role="img" aria-label="Node positions in meters relative to the USB node"></svg>
+      <div class="map-status">
+        <span id="phase" role="status">Connect a USB node</span>
+        <div class="map-options"><span id="source" hidden>Recorded session</span><span id="scale">Grid in meters</span><button id="fit">Fit view</button></div>
+      </div>
+    </section>
+    <p id="frame-note">Approximate relative positions. USB node at origin; N1 to N2 sets the x axis. Mirror side and room orientation unknown.</p>
+    <p id="message" role="status" aria-live="polite"></p>
+    <p id="guidance">Power all three nodes, then connect the USB board in Chrome or Edge.</p>
+    <details class="tools">
+      <summary>Details</summary>
+      <div class="network-heading"><h2>Nodes</h2><span id="node-count">0 / 3</span></div>
+      <div id="nodes"></div>
+      <section class="ranges"><h2>Distances</h2><div id="ranges"></div></section>
+      <div class="tool-actions">
+        <button id="export" disabled>Save session</button>
+        <label class="file-button">Open recording<input id="import" type="file" accept=".json,application/json"></label>
+        <button id="play" hidden>Pause recording</button>
+        <a href="http://127.0.0.1:5191" target="_blank" rel="noreferrer">Hardware bench</a>
+      </div>
+      <section class="measurement" aria-labelledby="measurement-heading">
+        <h2 id="measurement-heading">Stationary measurement</h2>
+        <p>Keep every node still. Capture 60 seconds, including 5 seconds to settle. Jitter measures repeatability. Accuracy needs the three tape-measured distances below.</p>
+        <fieldset id="reference-distances">
+          <legend>Tape distances in metres, optional</legend>
+          <label>N1 to N2<input id="reference-12" type="number" min="0" step="0.001" inputmode="decimal" placeholder="e.g. 2.000"></label>
+          <label>N1 to N3<input id="reference-13" type="number" min="0" step="0.001" inputmode="decimal" placeholder="e.g. 2.000"></label>
+          <label>N2 to N3<input id="reference-23" type="number" min="0" step="0.001" inputmode="decimal" placeholder="e.g. 2.000"></label>
+        </fieldset>
+        <div class="tool-actions">
+          <button id="capture-stationary" disabled>Capture 60 seconds</button>
+          <button id="cancel-stationary" hidden>Cancel capture</button>
+          <button id="analyze-stationary" disabled>Analyze recording</button>
+          <button id="save-stationary" disabled>Save measurement</button>
+        </div>
+        <p id="measurement-status" role="status">Connect a room node or open a recording.</p>
+        <div id="measurement-result"></div>
+        <p>Metrics use the nodes' N1/N2 coordinate frame. N1 is the fixed origin; N2 defines the x axis. The map fixes the USB node, so noise in its estimated position also moves the other markers. The browser adds no smoothing or calibration.</p>
+      </section>
+      <p>Positions calculated on the nodes, relative to the USB node. Orientation and mirror side are unknown.</p>
+      <p id="diagnostics"></p>
+      <pre id="log"></pre>
+    </details>
+  </main>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

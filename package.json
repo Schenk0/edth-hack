@@ -1,0 +1,23 @@
+{
+  "name": "selflocating-mesh-nodes",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config demo/vite.config.ts",
+    "build": "tsc -p demo/tsconfig.json && vite build --config demo/vite.config.ts",
+    "preview": "vite preview --config demo/vite.config.ts",
+    "test": "node --test demo/accuracy.test.ts node-firmware/tests/monitor.test.mjs",
+    "test:browser": "node demo/browser-test.mjs",
+    "test:firmware": "sh node-firmware/scripts/test-host.sh && python3 -m unittest discover -s node-firmware/tests -p \"test_*.py\"",
+    "demo": "pnpm dev",
+    "build:demo": "pnpm build",
+    "test:demo": "pnpm test:browser"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6"
+  }
+}
